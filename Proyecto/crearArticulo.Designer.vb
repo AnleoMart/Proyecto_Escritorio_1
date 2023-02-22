@@ -47,9 +47,10 @@ Partial Class crearArticulo
         'btnEliminarArt
         '
         Me.btnEliminarArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarArt.Location = New System.Drawing.Point(771, 561)
+        Me.btnEliminarArt.Location = New System.Drawing.Point(1028, 690)
+        Me.btnEliminarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminarArt.Name = "btnEliminarArt"
-        Me.btnEliminarArt.Size = New System.Drawing.Size(113, 24)
+        Me.btnEliminarArt.Size = New System.Drawing.Size(151, 30)
         Me.btnEliminarArt.TabIndex = 21
         Me.btnEliminarArt.Text = "Eliminar"
         Me.btnEliminarArt.UseVisualStyleBackColor = True
@@ -57,9 +58,10 @@ Partial Class crearArticulo
         'btnGuardarArt
         '
         Me.btnGuardarArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarArt.Location = New System.Drawing.Point(770, 531)
+        Me.btnGuardarArt.Location = New System.Drawing.Point(1027, 654)
+        Me.btnGuardarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardarArt.Name = "btnGuardarArt"
-        Me.btnGuardarArt.Size = New System.Drawing.Size(113, 24)
+        Me.btnGuardarArt.Size = New System.Drawing.Size(151, 30)
         Me.btnGuardarArt.TabIndex = 20
         Me.btnGuardarArt.Text = "Guardar "
         Me.btnGuardarArt.UseVisualStyleBackColor = True
@@ -68,28 +70,31 @@ Partial Class crearArticulo
         '
         Me.picBoxAdjuntarArt.BackColor = System.Drawing.Color.White
         Me.picBoxAdjuntarArt.Image = CType(resources.GetObject("picBoxAdjuntarArt.Image"), System.Drawing.Image)
-        Me.picBoxAdjuntarArt.Location = New System.Drawing.Point(849, 485)
+        Me.picBoxAdjuntarArt.Location = New System.Drawing.Point(1132, 597)
+        Me.picBoxAdjuntarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picBoxAdjuntarArt.Name = "picBoxAdjuntarArt"
-        Me.picBoxAdjuntarArt.Size = New System.Drawing.Size(27, 26)
+        Me.picBoxAdjuntarArt.Size = New System.Drawing.Size(36, 32)
         Me.picBoxAdjuntarArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBoxAdjuntarArt.TabIndex = 19
         Me.picBoxAdjuntarArt.TabStop = False
         '
         'tboxDescripArt
         '
-        Me.tboxDescripArt.Location = New System.Drawing.Point(367, 425)
+        Me.tboxDescripArt.Location = New System.Drawing.Point(489, 523)
+        Me.tboxDescripArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxDescripArt.Multiline = True
         Me.tboxDescripArt.Name = "tboxDescripArt"
-        Me.tboxDescripArt.Size = New System.Drawing.Size(517, 93)
+        Me.tboxDescripArt.Size = New System.Drawing.Size(688, 114)
         Me.tboxDescripArt.TabIndex = 18
         '
         'LabDescripArt
         '
         Me.LabDescripArt.AutoSize = True
         Me.LabDescripArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabDescripArt.Location = New System.Drawing.Point(325, 400)
+        Me.LabDescripArt.Location = New System.Drawing.Point(433, 492)
+        Me.LabDescripArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabDescripArt.Name = "LabDescripArt"
-        Me.LabDescripArt.Size = New System.Drawing.Size(66, 16)
+        Me.LabDescripArt.Size = New System.Drawing.Size(85, 20)
         Me.LabDescripArt.TabIndex = 17
         Me.LabDescripArt.Text = "Descripcion"
         '
@@ -106,63 +111,71 @@ Partial Class crearArticulo
         Me.panelInfoArt.Controls.Add(Me.LabFechaVArt)
         Me.panelInfoArt.Controls.Add(Me.LabCodigoArt)
         Me.panelInfoArt.Controls.Add(Me.LabNombreArt)
-        Me.panelInfoArt.Location = New System.Drawing.Point(314, 152)
+        Me.panelInfoArt.Location = New System.Drawing.Point(419, 187)
+        Me.panelInfoArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelInfoArt.Name = "panelInfoArt"
-        Me.panelInfoArt.Size = New System.Drawing.Size(587, 234)
+        Me.panelInfoArt.Size = New System.Drawing.Size(783, 288)
         Me.panelInfoArt.TabIndex = 16
         '
         'tboxAreaArt
         '
-        Me.tboxAreaArt.Location = New System.Drawing.Point(62, 136)
+        Me.tboxAreaArt.Location = New System.Drawing.Point(83, 167)
+        Me.tboxAreaArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxAreaArt.Name = "tboxAreaArt"
-        Me.tboxAreaArt.Size = New System.Drawing.Size(195, 20)
+        Me.tboxAreaArt.Size = New System.Drawing.Size(259, 22)
         Me.tboxAreaArt.TabIndex = 9
         '
         'LabArticuloArt
         '
         Me.LabArticuloArt.AutoSize = True
         Me.LabArticuloArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabArticuloArt.Location = New System.Drawing.Point(14, 139)
+        Me.LabArticuloArt.Location = New System.Drawing.Point(19, 171)
+        Me.LabArticuloArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabArticuloArt.Name = "LabArticuloArt"
-        Me.LabArticuloArt.Size = New System.Drawing.Size(46, 16)
+        Me.LabArticuloArt.Size = New System.Drawing.Size(59, 20)
         Me.LabArticuloArt.TabIndex = 8
         Me.LabArticuloArt.Text = "Articulo"
         '
         'tboxCantidadArt
         '
-        Me.tboxCantidadArt.Location = New System.Drawing.Point(376, 84)
+        Me.tboxCantidadArt.Location = New System.Drawing.Point(501, 103)
+        Me.tboxCantidadArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxCantidadArt.Name = "tboxCantidadArt"
-        Me.tboxCantidadArt.Size = New System.Drawing.Size(195, 20)
+        Me.tboxCantidadArt.Size = New System.Drawing.Size(259, 22)
         Me.tboxCantidadArt.TabIndex = 7
         '
         'tboxFechaVArt
         '
-        Me.tboxFechaVArt.Location = New System.Drawing.Point(376, 40)
+        Me.tboxFechaVArt.Location = New System.Drawing.Point(501, 49)
+        Me.tboxFechaVArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxFechaVArt.Name = "tboxFechaVArt"
-        Me.tboxFechaVArt.Size = New System.Drawing.Size(195, 20)
+        Me.tboxFechaVArt.Size = New System.Drawing.Size(259, 22)
         Me.tboxFechaVArt.TabIndex = 6
         '
         'tboxCodigoArt
         '
-        Me.tboxCodigoArt.Location = New System.Drawing.Point(62, 89)
+        Me.tboxCodigoArt.Location = New System.Drawing.Point(83, 110)
+        Me.tboxCodigoArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxCodigoArt.Name = "tboxCodigoArt"
-        Me.tboxCodigoArt.Size = New System.Drawing.Size(195, 20)
+        Me.tboxCodigoArt.Size = New System.Drawing.Size(259, 22)
         Me.tboxCodigoArt.TabIndex = 5
         '
         'tboxNombreArt
         '
-        Me.tboxNombreArt.Location = New System.Drawing.Point(62, 40)
+        Me.tboxNombreArt.Location = New System.Drawing.Point(83, 49)
+        Me.tboxNombreArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tboxNombreArt.Name = "tboxNombreArt"
-        Me.tboxNombreArt.Size = New System.Drawing.Size(195, 20)
+        Me.tboxNombreArt.Size = New System.Drawing.Size(259, 22)
         Me.tboxNombreArt.TabIndex = 4
         '
         'LabCantidadArt
         '
         Me.LabCantidadArt.AutoSize = True
         Me.LabCantidadArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabCantidadArt.Location = New System.Drawing.Point(272, 87)
+        Me.LabCantidadArt.Location = New System.Drawing.Point(363, 107)
+        Me.LabCantidadArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabCantidadArt.Name = "LabCantidadArt"
-        Me.LabCantidadArt.Size = New System.Drawing.Size(51, 16)
+        Me.LabCantidadArt.Size = New System.Drawing.Size(67, 20)
         Me.LabCantidadArt.TabIndex = 3
         Me.LabCantidadArt.Text = "Cantidad"
         '
@@ -170,9 +183,10 @@ Partial Class crearArticulo
         '
         Me.LabFechaVArt.AutoSize = True
         Me.LabFechaVArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabFechaVArt.Location = New System.Drawing.Point(272, 40)
+        Me.LabFechaVArt.Location = New System.Drawing.Point(363, 49)
+        Me.LabFechaVArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabFechaVArt.Name = "LabFechaVArt"
-        Me.LabFechaVArt.Size = New System.Drawing.Size(101, 16)
+        Me.LabFechaVArt.Size = New System.Drawing.Size(132, 20)
         Me.LabFechaVArt.TabIndex = 2
         Me.LabFechaVArt.Text = "Fecha Vencimiento"
         '
@@ -180,9 +194,10 @@ Partial Class crearArticulo
         '
         Me.LabCodigoArt.AutoSize = True
         Me.LabCodigoArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabCodigoArt.Location = New System.Drawing.Point(12, 87)
+        Me.LabCodigoArt.Location = New System.Drawing.Point(16, 107)
+        Me.LabCodigoArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabCodigoArt.Name = "LabCodigoArt"
-        Me.LabCodigoArt.Size = New System.Drawing.Size(41, 16)
+        Me.LabCodigoArt.Size = New System.Drawing.Size(54, 20)
         Me.LabCodigoArt.TabIndex = 1
         Me.LabCodigoArt.Text = "Codigo"
         '
@@ -190,9 +205,10 @@ Partial Class crearArticulo
         '
         Me.LabNombreArt.AutoSize = True
         Me.LabNombreArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabNombreArt.Location = New System.Drawing.Point(12, 40)
+        Me.LabNombreArt.Location = New System.Drawing.Point(16, 49)
+        Me.LabNombreArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabNombreArt.Name = "LabNombreArt"
-        Me.LabNombreArt.Size = New System.Drawing.Size(46, 16)
+        Me.LabNombreArt.Size = New System.Drawing.Size(59, 20)
         Me.LabNombreArt.TabIndex = 0
         Me.LabNombreArt.Text = "Nombre"
         '
@@ -200,18 +216,19 @@ Partial Class crearArticulo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(517, 109)
+        Me.Label1.Location = New System.Drawing.Point(689, 134)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 25)
+        Me.Label1.Size = New System.Drawing.Size(158, 32)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Crear Articulo"
         '
         'crearArticulo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1167, 733)
+        Me.ClientSize = New System.Drawing.Size(1556, 902)
         Me.Controls.Add(Me.btnEliminarArt)
         Me.Controls.Add(Me.btnGuardarArt)
         Me.Controls.Add(Me.picBoxAdjuntarArt)
@@ -220,6 +237,7 @@ Partial Class crearArticulo
         Me.Controls.Add(Me.panelInfoArt)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "crearArticulo"
         Me.Text = "crearArticulo"
         CType(Me.picBoxAdjuntarArt, System.ComponentModel.ISupportInitialize).EndInit()

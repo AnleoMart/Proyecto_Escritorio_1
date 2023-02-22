@@ -42,87 +42,97 @@ Partial Class Perfil
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(812, 554)
+        Me.Button5.Location = New System.Drawing.Point(1083, 682)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(80, 38)
+        Me.Button5.Size = New System.Drawing.Size(107, 47)
         Me.Button5.TabIndex = 21
         Me.Button5.Text = "Editar"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(93, 165)
+        Me.TextBox4.Location = New System.Drawing.Point(124, 203)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(258, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(343, 22)
         Me.TextBox4.TabIndex = 20
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(34, 172)
+        Me.Label4.Location = New System.Drawing.Point(45, 212)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 15)
+        Me.Label4.Size = New System.Drawing.Size(36, 18)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Area"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(93, 123)
+        Me.TextBox3.Location = New System.Drawing.Point(124, 151)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(258, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(343, 22)
         Me.TextBox3.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(34, 130)
+        Me.Label3.Location = New System.Drawing.Point(45, 160)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 15)
+        Me.Label3.Size = New System.Drawing.Size(41, 18)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Email"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 79)
+        Me.TextBox2.Location = New System.Drawing.Point(124, 97)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(258, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(343, 22)
         Me.TextBox2.TabIndex = 16
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(34, 86)
+        Me.Label2.Location = New System.Drawing.Point(45, 106)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
+        Me.Label2.Size = New System.Drawing.Size(55, 18)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Apellido"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(93, 37)
+        Me.TextBox1.Location = New System.Drawing.Point(124, 54)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(258, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(343, 22)
         Me.TextBox1.TabIndex = 14
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(34, 44)
+        Me.Label1.Location = New System.Drawing.Point(45, 54)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 15)
+        Me.Label1.Size = New System.Drawing.Size(55, 18)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Nombre"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(163, 202)
+        Me.PictureBox3.Location = New System.Drawing.Point(217, 249)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(269, 315)
+        Me.PictureBox3.Size = New System.Drawing.Size(359, 388)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 12
         Me.PictureBox3.TabStop = False
@@ -138,32 +148,35 @@ Partial Class Perfil
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(506, 225)
+        Me.Panel1.Location = New System.Drawing.Point(675, 277)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(386, 269)
+        Me.Panel1.Size = New System.Drawing.Size(515, 331)
         Me.Panel1.TabIndex = 22
         '
         'usuarioPerfil
         '
         Me.usuarioPerfil.AutoSize = True
         Me.usuarioPerfil.Font = New System.Drawing.Font("Franklin Gothic Medium", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.usuarioPerfil.Location = New System.Drawing.Point(407, 51)
+        Me.usuarioPerfil.Location = New System.Drawing.Point(543, 63)
+        Me.usuarioPerfil.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.usuarioPerfil.Name = "usuarioPerfil"
-        Me.usuarioPerfil.Size = New System.Drawing.Size(343, 50)
+        Me.usuarioPerfil.Size = New System.Drawing.Size(424, 68)
         Me.usuarioPerfil.TabIndex = 23
         Me.usuarioPerfil.Text = "Perfil de usuario"
         '
         'Perfil
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1167, 733)
+        Me.ClientSize = New System.Drawing.Size(1556, 902)
         Me.Controls.Add(Me.usuarioPerfil)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Perfil"
         Me.Text = "Perfil"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

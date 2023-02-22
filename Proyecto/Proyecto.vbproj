@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.vb" />
     <Compile Include="crearArticulo.Designer.vb">
       <DependentUpon>crearArticulo.vb</DependentUpon>
     </Compile>
@@ -119,6 +120,12 @@
     <Compile Include="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="verArticulos.Designer.vb">
+      <DependentUpon>verArticulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="verArticulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="crearArticulo.resx">
@@ -141,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verArticulos.resx">
+      <DependentUpon>verArticulos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
