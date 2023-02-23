@@ -16,10 +16,10 @@ Public Class Form1
     End Sub
 
     Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
-        If (Me.panelLateral.Controls.Count > V) Then
-            panelLateral.Controls.Remove(V)
+        'If (Me.panelLateral.Controls.Count > V) Then'
+        'panelLateral.Controls.Remove(V)'
 
 
-        End If
+        'End If'
     End Sub
 End Class
