@@ -80,6 +80,12 @@
     <Compile Include="crearArticulo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditarPerfil.Designer.vb">
+      <DependentUpon>EditarPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio_sesion.Designer.vb">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="crearArticulo.resx">
       <DependentUpon>crearArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>

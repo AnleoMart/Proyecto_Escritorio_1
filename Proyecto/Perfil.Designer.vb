@@ -42,8 +42,8 @@ Partial Class Perfil
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(1083, 682)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Location = New System.Drawing.Point(1187, 574)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 47)
         Me.Button5.TabIndex = 21
@@ -52,8 +52,8 @@ Partial Class Perfil
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(124, 203)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox4.Location = New System.Drawing.Point(124, 212)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(343, 22)
         Me.TextBox4.TabIndex = 20
@@ -71,8 +71,8 @@ Partial Class Perfil
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(124, 151)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Location = New System.Drawing.Point(124, 160)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(343, 22)
         Me.TextBox3.TabIndex = 18
@@ -90,8 +90,8 @@ Partial Class Perfil
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(124, 97)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Location = New System.Drawing.Point(124, 106)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(343, 22)
         Me.TextBox2.TabIndex = 16
@@ -110,7 +110,7 @@ Partial Class Perfil
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(124, 54)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(343, 22)
         Me.TextBox1.TabIndex = 14
@@ -130,7 +130,7 @@ Partial Class Perfil
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(217, 249)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(359, 388)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -148,10 +148,10 @@ Partial Class Perfil
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(675, 277)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(609, 277)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(515, 331)
+        Me.Panel1.Size = New System.Drawing.Size(685, 289)
         Me.Panel1.TabIndex = 22
         '
         'usuarioPerfil
@@ -176,7 +176,7 @@ Partial Class Perfil
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Perfil"
         Me.Text = "Perfil"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
