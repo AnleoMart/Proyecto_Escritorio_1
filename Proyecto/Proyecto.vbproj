@@ -73,11 +73,41 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarUsuarios.Designer.vb">
+      <DependentUpon>BuscarUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaProveedor.Designer.vb">
+      <DependentUpon>BusquedaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracionProveedor.Designer.vb">
+      <DependentUpon>ConfiguracionProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguracionProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurarArticulo.Designer.vb">
+      <DependentUpon>ConfigurarArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurarArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Connection.vb" />
     <Compile Include="crearArticulo.Designer.vb">
       <DependentUpon>crearArticulo.vb</DependentUpon>
     </Compile>
     <Compile Include="crearArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearProveedor.Designer.vb">
+      <DependentUpon>CrearProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrearProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarPerfil.Designer.vb">
@@ -134,8 +164,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscarUsuarios.resx">
+      <DependentUpon>BuscarUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaProveedor.resx">
+      <DependentUpon>BusquedaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfiguracionProveedor.resx">
+      <DependentUpon>ConfiguracionProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurarArticulo.resx">
+      <DependentUpon>ConfigurarArticulo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crearArticulo.resx">
       <DependentUpon>crearArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearProveedor.resx">
+      <DependentUpon>CrearProveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPerfil.resx">
       <DependentUpon>EditarPerfil.vb</DependentUpon>
