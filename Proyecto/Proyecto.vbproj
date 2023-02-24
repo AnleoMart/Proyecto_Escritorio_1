@@ -166,6 +166,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BD\inventario.sql" />
     <Content Include="Resouces\Foto.png" />
     <Content Include="Resouces\logo_App.ico" />
     <Content Include="Resouces\logo_Empresa.png" />
