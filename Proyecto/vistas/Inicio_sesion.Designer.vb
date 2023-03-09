@@ -105,8 +105,9 @@ Partial Class Inicio_sesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1167, 733)
+        Me.ClientSize = New System.Drawing.Size(1132, 682)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.olvidoContraseña)
         Me.Controls.Add(Me.EntrarReg)
