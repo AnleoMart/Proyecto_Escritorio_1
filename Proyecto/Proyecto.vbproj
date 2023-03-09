@@ -96,59 +96,59 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuscarUsuarios.Designer.vb">
+    <Compile Include="vistas\BuscarUsuarios.Designer.vb">
       <DependentUpon>BuscarUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="BuscarUsuarios.vb">
+    <Compile Include="vistas\BuscarUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BusquedaProveedor.Designer.vb">
+    <Compile Include="vistas\BusquedaProveedor.Designer.vb">
       <DependentUpon>BusquedaProveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="BusquedaProveedor.vb">
+    <Compile Include="vistas\BusquedaProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfiguracionProveedor.Designer.vb">
+    <Compile Include="vistas\ConfiguracionProveedor.Designer.vb">
       <DependentUpon>ConfiguracionProveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConfiguracionProveedor.vb">
+    <Compile Include="vistas\ConfiguracionProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigurarArticulo.Designer.vb">
+    <Compile Include="vistas\ConfigurarArticulo.Designer.vb">
       <DependentUpon>ConfigurarArticulo.vb</DependentUpon>
     </Compile>
-    <Compile Include="ConfigurarArticulo.vb">
+    <Compile Include="vistas\ConfigurarArticulo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Connection.vb" />
-    <Compile Include="crearArticulo.Designer.vb">
+    <Compile Include="vistas\crearArticulo.Designer.vb">
       <DependentUpon>crearArticulo.vb</DependentUpon>
     </Compile>
-    <Compile Include="crearArticulo.vb">
+    <Compile Include="vistas\crearArticulo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearProveedor.Designer.vb">
+    <Compile Include="vistas\CrearProveedor.Designer.vb">
       <DependentUpon>CrearProveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="CrearProveedor.vb">
+    <Compile Include="vistas\CrearProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarPerfil.Designer.vb">
+    <Compile Include="vistas\EditarPerfil.Designer.vb">
       <DependentUpon>EditarPerfil.vb</DependentUpon>
     </Compile>
-    <Compile Include="EditarPerfil.vb">
+    <Compile Include="vistas\EditarPerfil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio_sesion.Designer.vb">
+    <Compile Include="vistas\Inicio_sesion.Designer.vb">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inicio_sesion.vb">
+    <Compile Include="vistas\Inicio_sesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Padre.vb">
+    <Compile Include="vistas\Padre.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Padre.Designer.vb">
+    <Compile Include="vistas\Padre.Designer.vb">
       <DependentUpon>Padre.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -167,51 +167,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Perfil.Designer.vb">
+    <Compile Include="vistas\Perfil.Designer.vb">
       <DependentUpon>Perfil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Perfil.vb">
+    <Compile Include="vistas\Perfil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro.Designer.vb">
+    <Compile Include="vistas\Registro.Designer.vb">
       <DependentUpon>Registro.vb</DependentUpon>
     </Compile>
-    <Compile Include="Registro.vb">
+    <Compile Include="vistas\Registro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="verArticulos.Designer.vb">
+    <Compile Include="vistas\verArticulos.Designer.vb">
       <DependentUpon>verArticulos.vb</DependentUpon>
     </Compile>
-    <Compile Include="verArticulos.vb">
+    <Compile Include="vistas\verArticulos.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BuscarUsuarios.resx">
+    <EmbeddedResource Include="vistas\BuscarUsuarios.resx">
       <DependentUpon>BuscarUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BusquedaProveedor.resx">
+    <EmbeddedResource Include="vistas\BusquedaProveedor.resx">
       <DependentUpon>BusquedaProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfiguracionProveedor.resx">
+    <EmbeddedResource Include="vistas\ConfiguracionProveedor.resx">
       <DependentUpon>ConfiguracionProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigurarArticulo.resx">
+    <EmbeddedResource Include="vistas\ConfigurarArticulo.resx">
       <DependentUpon>ConfigurarArticulo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crearArticulo.resx">
+    <EmbeddedResource Include="vistas\crearArticulo.resx">
       <DependentUpon>crearArticulo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearProveedor.resx">
+    <EmbeddedResource Include="vistas\CrearProveedor.resx">
       <DependentUpon>CrearProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarPerfil.resx">
+    <EmbeddedResource Include="vistas\EditarPerfil.resx">
       <DependentUpon>EditarPerfil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio_sesion.resx">
+    <EmbeddedResource Include="vistas\Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Padre.resx">
+    <EmbeddedResource Include="vistas\Padre.resx">
       <DependentUpon>Padre.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -220,13 +220,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Perfil.resx">
+    <EmbeddedResource Include="vistas\Perfil.resx">
       <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro.resx">
+    <EmbeddedResource Include="vistas\Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="verArticulos.resx">
+    <EmbeddedResource Include="vistas\verArticulos.resx">
       <DependentUpon>verArticulos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
