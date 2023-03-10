@@ -96,6 +96,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vistas\RecuperarContrasena.Designer.vb">
+      <DependentUpon>RecuperarContrasena.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\RecuperarContrasena.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\BuscarUsuarios.Designer.vb">
       <DependentUpon>BuscarUsuarios.vb</DependentUpon>
     </Compile>
@@ -223,6 +229,9 @@
     <EmbeddedResource Include="vistas\Perfil.resx">
       <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\RecuperarContrasena.resx">
+      <DependentUpon>RecuperarContrasena.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +258,7 @@
     <Content Include="Resouces\logo_App.ico" />
     <Content Include="Resouces\logo_Empresa.png" />
     <Content Include="Resouces\adjuntar.png" />
+    <Content Include="Resouces\Recuperar contraseña.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
