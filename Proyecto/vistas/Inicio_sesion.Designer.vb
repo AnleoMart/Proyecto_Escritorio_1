@@ -50,7 +50,7 @@ Partial Class Inicio_sesion
         Me.EntrarReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen
         Me.EntrarReg.Font = New System.Drawing.Font("Franklin Gothic Medium", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EntrarReg.Location = New System.Drawing.Point(877, 571)
-        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4)
         Me.EntrarReg.Name = "EntrarReg"
         Me.EntrarReg.Size = New System.Drawing.Size(152, 49)
         Me.EntrarReg.TabIndex = 26
@@ -83,7 +83,7 @@ Partial Class Inicio_sesion
         'ContrasenaInSes
         '
         Me.ContrasenaInSes.Location = New System.Drawing.Point(748, 448)
-        Me.ContrasenaInSes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ContrasenaInSes.Margin = New System.Windows.Forms.Padding(4)
         Me.ContrasenaInSes.Name = "ContrasenaInSes"
         Me.ContrasenaInSes.Size = New System.Drawing.Size(412, 22)
         Me.ContrasenaInSes.TabIndex = 23
@@ -91,7 +91,7 @@ Partial Class Inicio_sesion
         'nombreInSes
         '
         Me.nombreInSes.Location = New System.Drawing.Point(748, 304)
-        Me.nombreInSes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nombreInSes.Margin = New System.Windows.Forms.Padding(4)
         Me.nombreInSes.Name = "nombreInSes"
         Me.nombreInSes.Size = New System.Drawing.Size(412, 22)
         Me.nombreInSes.TabIndex = 22
@@ -100,7 +100,7 @@ Partial Class Inicio_sesion
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(207, 263)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(409, 322)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -114,7 +114,7 @@ Partial Class Inicio_sesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1509, 839)
+        Me.ClientSize = New System.Drawing.Size(1435, 850)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.olvidoContraseña)
         Me.Controls.Add(Me.EntrarReg)
@@ -123,7 +123,7 @@ Partial Class Inicio_sesion
         Me.Controls.Add(Me.ContrasenaInSes)
         Me.Controls.Add(Me.nombreInSes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inicio_sesion"
         Me.Text = "Inicio_sesion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

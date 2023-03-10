@@ -1,5 +1,4 @@
-﻿Imports mySql.Data.MySqlClient
-Imports MySqlConnector
+﻿Imports MySqlConnector
 
 Module Connection
 

@@ -260,5 +260,9 @@
     <Content Include="Resouces\adjuntar.png" />
     <Content Include="Resouces\Recuperar contraseña.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controlador\" />
+    <Folder Include="modelo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

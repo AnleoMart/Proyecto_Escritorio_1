@@ -46,40 +46,31 @@ Public Class Form1
         registro.MdiParent = Me
         registro.StartPosition = FormStartPosition.Manual
         registro.Left = 0
-            registro.Top = 0
-            registro.Show()
+        registro.Top = 0
+        registro.Show()
 
-        'End If
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'fr = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
-        'Console.WriteLine(fr)
-        'If fr Is Nothing Then
 
         Dim iniciarSesion As New Inicio_sesion
         iniciarSesion.MdiParent = Me
-        iniciarSesion.StartPosition = FormStartPosition.Manual
-
+        iniciarSesion.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
         iniciarSesion.Left = 0
-            iniciarSesion.Top = 0
-            iniciarSesion.Show()
-        'End If
+        iniciarSesion.Top = 0
+        iniciarSesion.Show()
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        'fr = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Registro").SingleOrDefault()
-        'Console.WriteLine(fr)
-
-        'If fr Is Nothing Then
 
         Dim iniciarSesion As New Inicio_sesion
         iniciarSesion.MdiParent = Me
-        iniciarSesion.StartPosition = FormStartPosition.Manual
-
+        iniciarSesion.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
         iniciarSesion.Left = 0
-            iniciarSesion.Top = 0
-            iniciarSesion.Show()
-        'End If
+        iniciarSesion.Top = 0
+        iniciarSesion.Show()
+
     End Sub
 End Class
