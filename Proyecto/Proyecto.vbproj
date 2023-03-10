@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorUsuario.vb" />
     <Compile Include="modelo\Articulo.vb" />
     <Compile Include="modelo\Usuario.vb" />
     <Compile Include="vistas\RecuperarContrasena.Designer.vb">
@@ -128,7 +129,7 @@
     <Compile Include="vistas\ConfigurarArticulo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connection.vb" />
+    <Compile Include="modelo\Connection.vb" />
     <Compile Include="vistas\crearArticulo.Designer.vb">
       <DependentUpon>crearArticulo.vb</DependentUpon>
     </Compile>
@@ -262,6 +263,8 @@
     <Content Include="Resouces\adjuntar.png" />
     <Content Include="Resouces\Recuperar contraseña.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
