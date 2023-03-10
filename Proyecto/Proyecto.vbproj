@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\ControladorUsuario.vb" />
     <Compile Include="modelo\Usuario.vb" />
     <Compile Include="vistas\RecuperarContrasena.Designer.vb">
       <DependentUpon>RecuperarContrasena.vb</DependentUpon>
@@ -261,8 +262,6 @@
     <Content Include="Resouces\adjuntar.png" />
     <Content Include="Resouces\Recuperar contraseña.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controlador\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
