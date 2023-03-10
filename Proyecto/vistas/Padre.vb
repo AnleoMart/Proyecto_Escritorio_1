@@ -63,7 +63,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
 
         Dim iniciarSesion As New Inicio_sesion
         iniciarSesion.MdiParent = Me
