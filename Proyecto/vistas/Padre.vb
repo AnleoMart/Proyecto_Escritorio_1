@@ -4,7 +4,7 @@ Imports Microsoft.SqlServer.Server
 
 Public Class Form1
     Private Const V As Integer = 0
-
+    Public fr As Form
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
         If fr Is Nothing Then
@@ -37,23 +37,49 @@ Public Class Form1
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
-        Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Registro").SingleOrDefault()
-        If fr Is Nothing Then
+        'fr = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Registro").SingleOrDefault()
+        'Console.WriteLine(fr)
 
-            Dim registro As New Registro
-            registro.MdiParent = Me
+        'If fr Is Nothing Then
+
+        Dim registro As New Registro
+        registro.MdiParent = Me
+        registro.StartPosition = FormStartPosition.Manual
+        registro.Left = 0
+            registro.Top = 0
             registro.Show()
 
-        End If
+        'End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
-        If fr Is Nothing Then
+        'fr = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
+        'Console.WriteLine(fr)
+        'If fr Is Nothing Then
 
-            Dim iniciarSesion As New Inicio_sesion
-            iniciarSesion.MdiParent = Me
+        Dim iniciarSesion As New Inicio_sesion
+        iniciarSesion.MdiParent = Me
+        iniciarSesion.StartPosition = FormStartPosition.Manual
+
+        iniciarSesion.Left = 0
+            iniciarSesion.Top = 0
             iniciarSesion.Show()
-        End If
+        'End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'fr = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Registro").SingleOrDefault()
+        'Console.WriteLine(fr)
+
+        'If fr Is Nothing Then
+
+        Dim iniciarSesion As New Inicio_sesion
+        iniciarSesion.MdiParent = Me
+        iniciarSesion.StartPosition = FormStartPosition.Manual
+
+        iniciarSesion.Left = 0
+            iniciarSesion.Top = 0
+            iniciarSesion.Show()
+        'End If
     End Sub
 End Class
