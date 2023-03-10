@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="modelo\Usuario.vb" />
     <Compile Include="vistas\RecuperarContrasena.Designer.vb">
       <DependentUpon>RecuperarContrasena.vb</DependentUpon>
     </Compile>
@@ -262,7 +263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controlador\" />
-    <Folder Include="modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
