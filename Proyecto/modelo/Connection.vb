@@ -17,7 +17,7 @@ Module Connection
         Try
             If MysqlConex.State = 0 Then
                 MysqlConex.Open()
-                MsgBox("Hay Conexión")
+                ' MsgBox("Hay Conexión")
             End If
         Catch ex As Exception
             MsgBox(ex)

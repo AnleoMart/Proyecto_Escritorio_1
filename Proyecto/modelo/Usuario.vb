@@ -1,94 +1,135 @@
 ﻿Imports System.Xml
+Imports MySqlConnector
 
 Public Class Usuario
-    Private id As Integer
-    Private nombre, apellido, contraseña, correo, telefono, estado As String
-    Private fechaNacimiento As Date
+    Private adapter As MySqlDataAdapter
+    Private command As New MySqlCommand
 
-    Public Sub New(id As Integer, nombre As String, apellido As String, contraseña As String, correo As String, telefono As String, estado As String, fechaNacimineto As Date)
-        With Me
-            .id = id
-            .nombre = nombre
-            .apellido = apellido
-            .contraseña = contraseña
-            .correo = correo
-            .telefono = telefono
-            .estado = estado
-            .fechaNacimiento = fechaNacimiento
-        End With
+    Private _id As Integer
+    Private _nombre, _apellido, _contraseña, _correo, _telefono, _estado As String
+    Private _fechaNacimiento As Date
+    Public Sub New()
 
     End Sub
+    Public Sub New(correo As String, contraseña As String)
+        With Me
+            ._contraseña = contraseña
+            ._correo = correo
+        End With
+    End Sub
+    Public Sub New(id As Integer, nombre As String, apellido As String, contraseña As String, correo As String, telefono As String, estado As String, fechaNacimineto As Date)
+        With Me
+            ._id = id
+            ._nombre = nombre
+            ._apellido = apellido
+            ._contraseña = contraseña
+            ._correo = correo
+            ._telefono = telefono
+            ._estado = estado
+            ._fechaNacimiento = fechaNacimineto
+        End With
+    End Sub
 
-    Public Property Id1 As Integer
+    Public Property Id As Integer
         Get
-            Return id
+            Return _id
         End Get
         Set(value As Integer)
-            id = value
+            _id = value
         End Set
     End Property
 
-    Public Property Nombre1 As String
+    Public Property Nombre As String
         Get
-            Return nombre
+            Return _nombre
         End Get
         Set(value As String)
-            nombre = value
+            _nombre = value
         End Set
     End Property
 
-    Public Property Apellido1 As String
+    Public Property Apellido As String
         Get
-            Return apellido
+            Return _apellido
         End Get
         Set(value As String)
-            apellido = value
+            _apellido = value
         End Set
     End Property
 
-    Public Property Contraseña1 As String
+    Public Property Contraseña As String
         Get
-            Return contraseña
+            Return _contraseña
         End Get
         Set(value As String)
-            contraseña = value
+            _contraseña = value
         End Set
     End Property
 
-    Public Property Correo1 As String
+    Public Property Correo As String
         Get
-            Return correo
+            Return _correo
         End Get
         Set(value As String)
-            correo = value
+            _correo = value
         End Set
     End Property
 
-    Public Property Telefono1 As String
+    Public Property Telefono As String
         Get
-            Return telefono
+            Return _telefono
         End Get
         Set(value As String)
-            telefono = value
+            _telefono = value
         End Set
     End Property
 
-    Public Property Estado1 As String
+    Public Property Estado As String
         Get
-            Return estado
+            Return _estado
         End Get
         Set(value As String)
-            estado = value
+            _estado = value
         End Set
     End Property
 
-    Public Property FechaNacimiento1 As Date
+    Public Property FechaNacimiento As Date
         Get
-            Return fechaNacimiento
+            Return _fechaNacimiento
         End Get
         Set(value As Date)
-            fechaNacimiento = value
+            _fechaNacimiento = value
         End Set
     End Property
+    Public Function login() As Boolean
+        Dim found As Boolean = False
+        Dim query As String = "SELECT correo, contraseña FROM usuario WHERE correo =  @correo and contraseña =  @contrasena;"
+        Try
+            'adapter = New MySqlDataAdapter
+            openConn()
+            'With command
+            ' .Connection = MysqlConex
+            '.CommandText = query
+            'End With
+            'adapter.SelectCommand = command
 
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@correo", _correo)
+            comando.Parameters.AddWithValue("@contrasena", _contraseña)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            'Validar las credenciales proporcionadas por el usuario
+            If lector.Read() Then
+                found = True
+            Else
+                found = False
+            End If
+            Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return found
+    End Function
 End Class

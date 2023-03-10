@@ -36,3 +36,4 @@ create table Articulos (
     foreign key (FK_usuario) references Usuario(cedula)
 );
 
+INSERT INTO usuario (cedula, nombre, apellido, contraseña, correo, telefono, fecha_nacimiento, estado) VALUES ('1012417629', 'Juan Miguel', 'Castro', '123', '123', '12323', '2023-03-14', 'activo');

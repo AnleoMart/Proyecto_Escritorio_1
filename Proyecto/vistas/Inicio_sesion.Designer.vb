@@ -27,8 +27,8 @@ Partial Class Inicio_sesion
         Me.EntrarReg = New System.Windows.Forms.Button()
         Me.txtContrasenaInSes = New System.Windows.Forms.Label()
         Me.txtNameUserInSes = New System.Windows.Forms.Label()
-        Me.ContrasenaInSes = New System.Windows.Forms.TextBox()
-        Me.nombreInSes = New System.Windows.Forms.TextBox()
+        Me.txtContrasena = New System.Windows.Forms.TextBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,21 +80,21 @@ Partial Class Inicio_sesion
         Me.txtNameUserInSes.Text = "Nombre"
         Me.txtNameUserInSes.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'ContrasenaInSes
+        'txtContrasena
         '
-        Me.ContrasenaInSes.Location = New System.Drawing.Point(748, 448)
-        Me.ContrasenaInSes.Margin = New System.Windows.Forms.Padding(4)
-        Me.ContrasenaInSes.Name = "ContrasenaInSes"
-        Me.ContrasenaInSes.Size = New System.Drawing.Size(412, 22)
-        Me.ContrasenaInSes.TabIndex = 23
+        Me.txtContrasena.Location = New System.Drawing.Point(748, 448)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.Size = New System.Drawing.Size(412, 22)
+        Me.txtContrasena.TabIndex = 23
         '
-        'nombreInSes
+        'txtCorreo
         '
-        Me.nombreInSes.Location = New System.Drawing.Point(748, 304)
-        Me.nombreInSes.Margin = New System.Windows.Forms.Padding(4)
-        Me.nombreInSes.Name = "nombreInSes"
-        Me.nombreInSes.Size = New System.Drawing.Size(412, 22)
-        Me.nombreInSes.TabIndex = 22
+        Me.txtCorreo.Location = New System.Drawing.Point(748, 304)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(412, 22)
+        Me.txtCorreo.TabIndex = 22
         '
         'PictureBox1
         '
@@ -120,8 +120,8 @@ Partial Class Inicio_sesion
         Me.Controls.Add(Me.EntrarReg)
         Me.Controls.Add(Me.txtContrasenaInSes)
         Me.Controls.Add(Me.txtNameUserInSes)
-        Me.Controls.Add(Me.ContrasenaInSes)
-        Me.Controls.Add(Me.nombreInSes)
+        Me.Controls.Add(Me.txtContrasena)
+        Me.Controls.Add(Me.txtCorreo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inicio_sesion"
@@ -135,7 +135,7 @@ Partial Class Inicio_sesion
     Friend WithEvents EntrarReg As Button
     Friend WithEvents txtContrasenaInSes As Label
     Friend WithEvents txtNameUserInSes As Label
-    Friend WithEvents ContrasenaInSes As TextBox
-    Friend WithEvents nombreInSes As TextBox
+    Friend WithEvents txtContrasena As TextBox
+    Friend WithEvents txtCorreo As TextBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class
