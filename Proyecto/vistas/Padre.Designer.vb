@@ -24,13 +24,12 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.panelLateral = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.PanelIs = New System.Windows.Forms.Panel()
         Me.btnInicioSesion = New System.Windows.Forms.Button()
-        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PanelCP = New System.Windows.Forms.Panel()
         Me.BtnCrearPerfil = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PanelCS = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.btnCerrarSesion = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -40,7 +39,7 @@ Partial Class Form1
         Me.BarraPerfil = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.panelLateral.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.PanelCS.SuspendLayout()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BarraPerfil.SuspendLayout()
         Me.SuspendLayout()
@@ -48,11 +47,11 @@ Partial Class Form1
         'panelLateral
         '
         Me.panelLateral.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.panelLateral.Controls.Add(Me.Panel8)
+        Me.panelLateral.Controls.Add(Me.PanelIs)
         Me.panelLateral.Controls.Add(Me.btnInicioSesion)
-        Me.panelLateral.Controls.Add(Me.Panel6)
+        Me.panelLateral.Controls.Add(Me.PanelCP)
         Me.panelLateral.Controls.Add(Me.BtnCrearPerfil)
-        Me.panelLateral.Controls.Add(Me.Panel1)
+        Me.panelLateral.Controls.Add(Me.PanelCS)
         Me.panelLateral.Controls.Add(Me.btnCerrarSesion)
         Me.panelLateral.Controls.Add(Me.Button4)
         Me.panelLateral.Controls.Add(Me.Panel5)
@@ -66,14 +65,14 @@ Partial Class Form1
         Me.panelLateral.Size = New System.Drawing.Size(265, 910)
         Me.panelLateral.TabIndex = 7
         '
-        'Panel8
+        'PanelIs
         '
-        Me.Panel8.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel8.Location = New System.Drawing.Point(5, 730)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(7, 28)
-        Me.Panel8.TabIndex = 12
+        Me.PanelIs.BackColor = System.Drawing.Color.Turquoise
+        Me.PanelIs.Location = New System.Drawing.Point(5, 730)
+        Me.PanelIs.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelIs.Name = "PanelIs"
+        Me.PanelIs.Size = New System.Drawing.Size(7, 28)
+        Me.PanelIs.TabIndex = 12
         '
         'btnInicioSesion
         '
@@ -93,14 +92,14 @@ Partial Class Form1
         Me.btnInicioSesion.UseVisualStyleBackColor = False
         Me.btnInicioSesion.Visible = False
         '
-        'Panel6
+        'PanelCP
         '
-        Me.Panel6.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel6.Location = New System.Drawing.Point(5, 766)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(7, 28)
-        Me.Panel6.TabIndex = 10
+        Me.PanelCP.BackColor = System.Drawing.Color.Turquoise
+        Me.PanelCP.Location = New System.Drawing.Point(5, 766)
+        Me.PanelCP.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelCP.Name = "PanelCP"
+        Me.PanelCP.Size = New System.Drawing.Size(7, 28)
+        Me.PanelCP.TabIndex = 10
         '
         'BtnCrearPerfil
         '
@@ -119,16 +118,15 @@ Partial Class Form1
         Me.BtnCrearPerfil.Text = "Crear perfil"
         Me.BtnCrearPerfil.UseVisualStyleBackColor = False
         '
-        'Panel1
+        'PanelCS
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Location = New System.Drawing.Point(5, 802)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(7, 28)
-        Me.Panel1.TabIndex = 8
+        Me.PanelCS.BackColor = System.Drawing.Color.Turquoise
+        Me.PanelCS.Controls.Add(Me.Panel3)
+        Me.PanelCS.Location = New System.Drawing.Point(5, 802)
+        Me.PanelCS.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelCS.Name = "PanelCS"
+        Me.PanelCS.Size = New System.Drawing.Size(7, 28)
+        Me.PanelCS.TabIndex = 8
         '
         'Panel3
         '
@@ -138,23 +136,6 @@ Partial Class Form1
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(7, 28)
         Me.Panel3.TabIndex = 10
-        '
-        'Button2
-        '
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(-113, 0)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(240, 28)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Cerrar sesion"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'btnCerrarSesion
         '
@@ -271,7 +252,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Inventarianding"
         Me.panelLateral.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
+        Me.PanelCS.ResumeLayout(False)
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BarraPerfil.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -285,13 +266,12 @@ Partial Class Form1
     Friend WithEvents btnPerfil As Button
     Friend WithEvents Logo As PictureBox
     Friend WithEvents BarraPerfil As Panel
-    Friend WithEvents Panel6 As Panel
+    Friend WithEvents PanelCP As Panel
     Friend WithEvents BtnCrearPerfil As Button
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PanelCS As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button2 As Button
     Friend WithEvents btnCerrarSesion As Button
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel8 As Panel
+    Friend WithEvents PanelIs As Panel
     Friend WithEvents btnInicioSesion As Button
 End Class

@@ -76,21 +76,33 @@ Public Class Form1
     End Sub
 
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
-        ocularMostrarBotones()
+        Dim result As DialogResult = MessageBox.Show("¿Está seguro de que desea cerrar Sesion?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            ocularMostrarBotones()
+            Dim iniciarSesion As New Inicio_sesion
+            iniciarSesion.MdiParent = Me
+            iniciarSesion.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+            iniciarSesion.Left = 0
+            iniciarSesion.Top = 0
+            iniciarSesion.Show()
+        End If
+
+
     End Sub
     Public Sub ocularMostrarBotones()
-        If Me.btnInicioSesion.Visible = False Then
-            Me.btnInicioSesion.Visible = True
-            Me.btnCerrarSesion.Visible = True
-            Me.BtnCrearPerfil.Visible = True
+        If btnInicioSesion.Visible = False Then
+            btnInicioSesion.Visible = True
+            btnCerrarSesion.Visible = False
+            BtnCrearPerfil.Visible = True
 
-            Me.btnPerfil.Visible = False
+            btnPerfil.Visible = False
         Else
-            Me.btnInicioSesion.Visible = False
-            Me.btnCerrarSesion.Visible = False
-            Me.BtnCrearPerfil.Visible = False
+            btnInicioSesion.Visible = False
+            btnCerrarSesion.Visible = True
+            BtnCrearPerfil.Visible = False
 
-            Me.btnPerfil.Visible = True
+            btnPerfil.Visible = True
         End If
 
     End Sub
