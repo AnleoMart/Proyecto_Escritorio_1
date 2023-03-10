@@ -24,27 +24,27 @@ Partial Class EditarPerfil
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.txtContrasena2 = New System.Windows.Forms.TextBox()
+        Me.txtcontraseña = New System.Windows.Forms.TextBox()
+        Me.txtApellidos = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.calendar = New System.Windows.Forms.MonthCalendar()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -63,8 +63,181 @@ Partial Class EditarPerfil
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(76, 145)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1432, 579)
+        Me.Panel2.Size = New System.Drawing.Size(1432, 688)
         Me.Panel2.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(951, 607)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(309, 54)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Eliminar usuario"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.calendar)
+        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Controls.Add(Me.txtTelefono)
+        Me.Panel3.Controls.Add(Me.txtCorreo)
+        Me.Panel3.Controls.Add(Me.txtContrasena2)
+        Me.Panel3.Controls.Add(Me.txtcontraseña)
+        Me.Panel3.Controls.Add(Me.txtApellidos)
+        Me.Panel3.Controls.Add(Me.txtNombre)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.Label4)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.Label6)
+        Me.Panel3.Location = New System.Drawing.Point(74, 47)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1186, 554)
+        Me.Panel3.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(43, 466)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(309, 54)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Actualizar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.Location = New System.Drawing.Point(504, 292)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(657, 22)
+        Me.txtTelefono.TabIndex = 12
+        '
+        'txtCorreo
+        '
+        Me.txtCorreo.Location = New System.Drawing.Point(504, 252)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(657, 22)
+        Me.txtCorreo.TabIndex = 11
+        '
+        'txtContrasena2
+        '
+        Me.txtContrasena2.Location = New System.Drawing.Point(504, 211)
+        Me.txtContrasena2.Name = "txtContrasena2"
+        Me.txtContrasena2.Size = New System.Drawing.Size(657, 22)
+        Me.txtContrasena2.TabIndex = 10
+        Me.txtContrasena2.UseSystemPasswordChar = True
+        '
+        'txtcontraseña
+        '
+        Me.txtcontraseña.Location = New System.Drawing.Point(504, 172)
+        Me.txtcontraseña.Name = "txtcontraseña"
+        Me.txtcontraseña.Size = New System.Drawing.Size(657, 22)
+        Me.txtcontraseña.TabIndex = 9
+        Me.txtcontraseña.UseSystemPasswordChar = True
+        '
+        'txtApellidos
+        '
+        Me.txtApellidos.Location = New System.Drawing.Point(504, 131)
+        Me.txtApellidos.Name = "txtApellidos"
+        Me.txtApellidos.Size = New System.Drawing.Size(657, 22)
+        Me.txtApellidos.TabIndex = 8
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(504, 88)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(657, 22)
+        Me.txtNombre.TabIndex = 7
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(11, 333)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label9.Size = New System.Drawing.Size(453, 30)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "Fecha de nacimiento"
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(11, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
+        Me.Label2.Size = New System.Drawing.Size(453, 30)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Nombre"
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(11, 292)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label8.Size = New System.Drawing.Size(453, 30)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "Telefono"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(11, 131)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label4.Size = New System.Drawing.Size(453, 30)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Apellidos"
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(11, 252)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label7.Size = New System.Drawing.Size(453, 30)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "Correo"
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(11, 172)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label5.Size = New System.Drawing.Size(453, 30)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Contraseña"
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(11, 211)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
+        Me.Label6.Size = New System.Drawing.Size(453, 30)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Confirme su contraseña"
         '
         'Label3
         '
@@ -89,200 +262,34 @@ Partial Class EditarPerfil
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Editar Perfil"
         '
-        'Label2
+        'calendar
         '
-        Me.Label2.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(9, 12)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
-        Me.Label2.Size = New System.Drawing.Size(453, 30)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Nombre"
-        '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(9, 55)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label4.Size = New System.Drawing.Size(453, 30)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Apellidos"
-        '
-        'Label5
-        '
-        Me.Label5.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(9, 96)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label5.Size = New System.Drawing.Size(453, 30)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Contraseña"
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 135)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label6.Size = New System.Drawing.Size(453, 30)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Confirme su contraseña"
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(9, 176)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label7.Size = New System.Drawing.Size(453, 30)
-        Me.Label7.TabIndex = 4
-        Me.Label7.Text = "Correo"
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(9, 216)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label8.Size = New System.Drawing.Size(453, 30)
-        Me.Label8.TabIndex = 5
-        Me.Label8.Text = "Telefono"
-        '
-        'Label9
-        '
-        Me.Label9.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(9, 257)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label9.Size = New System.Drawing.Size(453, 30)
-        Me.Label9.TabIndex = 6
-        Me.Label9.Text = "Fecha de nacimiento"
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel3.Controls.Add(Me.ComboBox3)
-        Me.Panel3.Controls.Add(Me.ComboBox2)
-        Me.Panel3.Controls.Add(Me.ComboBox1)
-        Me.Panel3.Controls.Add(Me.Button1)
-        Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox5)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(74, 47)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1186, 425)
-        Me.Panel3.TabIndex = 7
+        Me.calendar.Location = New System.Drawing.Point(504, 333)
+        Me.calendar.MaxDate = New Date(2023, 3, 10, 0, 0, 0, 0)
+        Me.calendar.Name = "calendar"
+        Me.calendar.ShowToday = False
+        Me.calendar.ShowTodayCircle = False
+        Me.calendar.TabIndex = 18
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(502, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(504, 44)
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.TabIndex = 20
         '
-        'TextBox2
+        'Label10
         '
-        Me.TextBox2.Location = New System.Drawing.Point(502, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox2.TabIndex = 8
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(502, 96)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox3.TabIndex = 9
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(502, 135)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox4.TabIndex = 10
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(502, 176)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox5.TabIndex = 11
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(502, 216)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox6.TabIndex = 12
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(23, 356)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(309, 54)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Actualizar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(951, 504)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(309, 54)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Eliminar usuario"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(502, 257)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 15
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(629, 257)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 16
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(756, 257)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox3.TabIndex = 17
+        Me.Label10.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(11, 44)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
+        Me.Label10.Size = New System.Drawing.Size(453, 30)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "N° Identificacion"
         '
         'EditarPerfil
         '
@@ -310,12 +317,12 @@ Partial Class EditarPerfil
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtCorreo As TextBox
+    Friend WithEvents txtContrasena2 As TextBox
+    Friend WithEvents txtcontraseña As TextBox
+    Friend WithEvents txtApellidos As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
@@ -325,7 +332,7 @@ Partial Class EditarPerfil
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents calendar As MonthCalendar
 End Class

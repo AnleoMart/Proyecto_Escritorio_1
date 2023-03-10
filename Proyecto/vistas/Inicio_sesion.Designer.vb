@@ -87,6 +87,7 @@ Partial Class Inicio_sesion
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.Size = New System.Drawing.Size(412, 22)
         Me.txtContrasena.TabIndex = 23
+        Me.txtContrasena.UseSystemPasswordChar = True
         '
         'txtCorreo
         '

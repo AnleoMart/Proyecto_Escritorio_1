@@ -25,6 +25,13 @@ Public Class Form1
     End Sub
 
     Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
+        Dim EditarPerfil As New EditarPerfil
+        EditarPerfil.MdiParent = Me
+        EditarPerfil.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        EditarPerfil.Left = 0
+        EditarPerfil.Top = 0
+        EditarPerfil.Show()
+
         'If (Me.panelLateral.Controls.Count > V) Then'
         'panelLateral.Controls.Remove(V)'
 
@@ -104,6 +111,10 @@ Public Class Form1
 
             btnPerfil.Visible = True
         End If
+
+    End Sub
+
+    Private Sub btnCrearUsuario_Click(sender As Object, e As EventArgs) Handles btnCrearUsuario.Click
 
     End Sub
 End Class
