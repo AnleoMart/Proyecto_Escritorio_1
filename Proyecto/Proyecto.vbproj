@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="modelo\Articulo.vb" />
     <Compile Include="modelo\Usuario.vb" />
     <Compile Include="vistas\RecuperarContrasena.Designer.vb">
       <DependentUpon>RecuperarContrasena.vb</DependentUpon>
