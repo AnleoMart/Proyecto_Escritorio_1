@@ -1,4 +1,5 @@
-﻿Imports System.Security.Cryptography
+﻿Imports System.IO
+Imports System.Security.Cryptography
 Imports System.Text
 Imports MySqlConnector
 
@@ -23,5 +24,17 @@ Public Class ControladorUsuario
         Dim usuario As New Usuario()
         usuario = usuario.recuperarDatosPerfilUsuario(id)
         Return usuario
+    End Function
+    Public Function crearUsuario(cedula As String, nombre As String, email As String, contraseña As String) As Boolean
+        'Dim create As Boolean = False
+        Dim pass As String = desHashear(contraseña)
+        Dim id As Integer = CInt(cedula)
+        Dim usu = New Usuario(id, nombre, email, contraseña)
+        If usu.crearUsuario() Then
+            Return True
+        Else
+            Return False
+        End If
+
     End Function
 End Class

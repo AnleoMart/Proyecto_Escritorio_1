@@ -17,6 +17,14 @@ Public Class Usuario
             ._correo = correo
         End With
     End Sub
+    Public Sub New(id As Integer, nombre As Integer, correo As String, contraseña As String)
+        With Me
+            ._id = id
+            ._nombre = nombre
+            ._contraseña = contraseña
+            ._correo = correo
+        End With
+    End Sub
     Public Sub New(id As Integer, nombre As String, apellido As String, contraseña As String, correo As String, telefono As String, estado As String, fechaNacimineto As Date)
         With Me
             ._id = id
@@ -184,5 +192,33 @@ Public Class Usuario
 
         closeConn()
         Return usuario
+    End Function
+
+    Public Function crearUsuario() As Boolean
+
+        Dim create As Boolean = False
+        Dim query As String = "INSERT INTO usuario (cedula, nombre, correo, contraseña) VALUES (@cedula, @nombre, @correo, @contraseña)"
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", Id)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            comando.Parameters.AddWithValue("@correo", Correo)
+            comando.Parameters.AddWithValue("@contraseña", Contraseña)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            Dim rowsAffected As Integer = command.ExecuteNonQuery()
+            If rowsAffected > 0 Then
+                create = True
+            Else
+                create = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return create
     End Function
 End Class
