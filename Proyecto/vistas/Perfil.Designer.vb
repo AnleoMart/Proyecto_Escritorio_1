@@ -24,13 +24,13 @@ Partial Class Perfil
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Perfil))
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -50,13 +50,13 @@ Partial Class Perfil
         Me.Button5.Text = "Editar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'TextBox4
+        'txtTelefono
         '
-        Me.TextBox4.Location = New System.Drawing.Point(124, 212)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(343, 22)
-        Me.TextBox4.TabIndex = 20
+        Me.txtTelefono.Location = New System.Drawing.Point(124, 212)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(343, 22)
+        Me.txtTelefono.TabIndex = 20
         '
         'Label4
         '
@@ -69,13 +69,13 @@ Partial Class Perfil
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Telefono"
         '
-        'TextBox3
+        'txtEmail
         '
-        Me.TextBox3.Location = New System.Drawing.Point(124, 160)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(343, 22)
-        Me.TextBox3.TabIndex = 18
+        Me.txtEmail.Location = New System.Drawing.Point(124, 160)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(343, 22)
+        Me.txtEmail.TabIndex = 18
         '
         'Label3
         '
@@ -88,13 +88,13 @@ Partial Class Perfil
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Email"
         '
-        'TextBox2
+        'txtApellido
         '
-        Me.TextBox2.Location = New System.Drawing.Point(124, 106)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(343, 22)
-        Me.TextBox2.TabIndex = 16
+        Me.txtApellido.Location = New System.Drawing.Point(124, 106)
+        Me.txtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(343, 22)
+        Me.txtApellido.TabIndex = 16
         '
         'Label2
         '
@@ -107,13 +107,13 @@ Partial Class Perfil
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Apellido"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(124, 54)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(343, 22)
-        Me.TextBox1.TabIndex = 14
+        Me.txtNombre.Location = New System.Drawing.Point(124, 54)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(343, 22)
+        Me.txtNombre.TabIndex = 14
         '
         'Label1
         '
@@ -140,13 +140,13 @@ Partial Class Perfil
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.txtTelefono)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtApellido)
+        Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(445, 269)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -188,13 +188,13 @@ Partial Class Perfil
     End Sub
 
     Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtApellido As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel1 As Panel

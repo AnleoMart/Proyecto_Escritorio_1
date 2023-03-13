@@ -26,12 +26,15 @@ Partial Class EditarPerfil
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.calendar = New System.Windows.Forms.MonthCalendar()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.txtContrasena2 = New System.Windows.Forms.TextBox()
-        Me.txtcontraseña = New System.Windows.Forms.TextBox()
-        Me.txtApellidos = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,9 +45,6 @@ Partial Class EditarPerfil
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.calendar = New System.Windows.Forms.MonthCalendar()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -61,16 +61,16 @@ Partial Class EditarPerfil
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Location = New System.Drawing.Point(76, 145)
+        Me.Panel2.Location = New System.Drawing.Point(99, 124)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1432, 688)
+        Me.Panel2.Size = New System.Drawing.Size(1102, 676)
         Me.Panel2.TabIndex = 1
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(951, 607)
+        Me.Button2.Location = New System.Drawing.Point(682, 597)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(309, 54)
         Me.Button2.TabIndex = 15
@@ -80,15 +80,15 @@ Partial Class EditarPerfil
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.txtCedula)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.calendar)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.txtTelefono)
         Me.Panel3.Controls.Add(Me.txtCorreo)
         Me.Panel3.Controls.Add(Me.txtContrasena2)
-        Me.Panel3.Controls.Add(Me.txtcontraseña)
-        Me.Panel3.Controls.Add(Me.txtApellidos)
+        Me.Panel3.Controls.Add(Me.txtContraseña)
+        Me.Panel3.Controls.Add(Me.txtApellido)
         Me.Panel3.Controls.Add(Me.txtNombre)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -97,10 +97,39 @@ Partial Class EditarPerfil
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(74, 47)
+        Me.Panel3.Location = New System.Drawing.Point(83, 37)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1186, 554)
+        Me.Panel3.Size = New System.Drawing.Size(918, 554)
         Me.Panel3.TabIndex = 7
+        '
+        'txtCedula
+        '
+        Me.txtCedula.Location = New System.Drawing.Point(504, 44)
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.ReadOnly = True
+        Me.txtCedula.Size = New System.Drawing.Size(346, 22)
+        Me.txtCedula.TabIndex = 20
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(11, 44)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
+        Me.Label10.Size = New System.Drawing.Size(453, 30)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "N° Identificacion"
+        '
+        'calendar
+        '
+        Me.calendar.Location = New System.Drawing.Point(504, 333)
+        Me.calendar.MaxDate = New Date(2023, 3, 10, 0, 0, 0, 0)
+        Me.calendar.Name = "calendar"
+        Me.calendar.ShowToday = False
+        Me.calendar.ShowTodayCircle = False
+        Me.calendar.TabIndex = 18
         '
         'Button1
         '
@@ -115,44 +144,44 @@ Partial Class EditarPerfil
         '
         Me.txtTelefono.Location = New System.Drawing.Point(504, 292)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(657, 22)
+        Me.txtTelefono.Size = New System.Drawing.Size(346, 22)
         Me.txtTelefono.TabIndex = 12
         '
         'txtCorreo
         '
         Me.txtCorreo.Location = New System.Drawing.Point(504, 252)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(657, 22)
+        Me.txtCorreo.Size = New System.Drawing.Size(346, 22)
         Me.txtCorreo.TabIndex = 11
         '
         'txtContrasena2
         '
         Me.txtContrasena2.Location = New System.Drawing.Point(504, 211)
         Me.txtContrasena2.Name = "txtContrasena2"
-        Me.txtContrasena2.Size = New System.Drawing.Size(657, 22)
+        Me.txtContrasena2.Size = New System.Drawing.Size(346, 22)
         Me.txtContrasena2.TabIndex = 10
         Me.txtContrasena2.UseSystemPasswordChar = True
         '
-        'txtcontraseña
+        'txtContraseña
         '
-        Me.txtcontraseña.Location = New System.Drawing.Point(504, 172)
-        Me.txtcontraseña.Name = "txtcontraseña"
-        Me.txtcontraseña.Size = New System.Drawing.Size(657, 22)
-        Me.txtcontraseña.TabIndex = 9
-        Me.txtcontraseña.UseSystemPasswordChar = True
+        Me.txtContraseña.Location = New System.Drawing.Point(504, 172)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.Size = New System.Drawing.Size(346, 22)
+        Me.txtContraseña.TabIndex = 9
+        Me.txtContraseña.UseSystemPasswordChar = True
         '
-        'txtApellidos
+        'txtApellido
         '
-        Me.txtApellidos.Location = New System.Drawing.Point(504, 131)
-        Me.txtApellidos.Name = "txtApellidos"
-        Me.txtApellidos.Size = New System.Drawing.Size(657, 22)
-        Me.txtApellidos.TabIndex = 8
+        Me.txtApellido.Location = New System.Drawing.Point(504, 131)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(346, 22)
+        Me.txtApellido.TabIndex = 8
         '
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(504, 88)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(657, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(346, 22)
         Me.txtNombre.TabIndex = 7
         '
         'Label9
@@ -177,7 +206,7 @@ Partial Class EditarPerfil
         Me.Label2.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
         Me.Label2.Size = New System.Drawing.Size(453, 30)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Nombre"
+        Me.Label2.Text = "Nombres"
         '
         'Label8
         '
@@ -255,48 +284,19 @@ Partial Class EditarPerfil
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.SlateGray
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(70, 97)
+        Me.Label1.Location = New System.Drawing.Point(60, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(5, 8, 5, 5)
         Me.Label1.Size = New System.Drawing.Size(172, 45)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Editar Perfil"
         '
-        'calendar
-        '
-        Me.calendar.Location = New System.Drawing.Point(504, 333)
-        Me.calendar.MaxDate = New Date(2023, 3, 10, 0, 0, 0, 0)
-        Me.calendar.Name = "calendar"
-        Me.calendar.ShowToday = False
-        Me.calendar.ShowTodayCircle = False
-        Me.calendar.TabIndex = 18
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(504, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox1.TabIndex = 20
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(11, 44)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
-        Me.Label10.Size = New System.Drawing.Size(453, 30)
-        Me.Label10.TabIndex = 19
-        Me.Label10.Text = "N° Identificacion"
-        '
         'EditarPerfil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1556, 902)
+        Me.ClientSize = New System.Drawing.Size(1306, 829)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel2)
@@ -320,8 +320,8 @@ Partial Class EditarPerfil
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents txtCorreo As TextBox
     Friend WithEvents txtContrasena2 As TextBox
-    Friend WithEvents txtcontraseña As TextBox
-    Friend WithEvents txtApellidos As TextBox
+    Friend WithEvents txtContraseña As TextBox
+    Friend WithEvents txtApellido As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
@@ -332,7 +332,7 @@ Partial Class EditarPerfil
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents calendar As MonthCalendar
 End Class

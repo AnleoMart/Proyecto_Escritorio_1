@@ -155,8 +155,8 @@ Public Class Usuario
         closeConn()
         Return id
     End Function
-    Public Function recuperarDatosPerfilUsuario(id As Integer) As List(Of Usuario)
-        Dim lista As New List(Of Usuario)()
+    Public Function recuperarDatosPerfilUsuario(id As Integer) As Usuario
+        Dim usuario As Usuario
         Dim found As Boolean = False
         Dim query As String = "SELECT * FROM usuario WHERE cedula =  @cedula "
         Try
@@ -166,24 +166,23 @@ Public Class Usuario
             comando.Parameters.AddWithValue("@cedula", id)
             Dim lector As MySqlDataReader = comando.ExecuteReader()
 
-            'Validar las credenciales proporcionadas por el usuario
             If lector.Read() Then
                 Me._id = lector.GetInt32("cedula")
                 Me._nombre = lector.GetString("nombre")
-                Me._apellido = lector.GetString("nombre")
-                Me._contraseña = lector.GetString("nombre")
-                Me._correo = lector.GetString("nombre")
-                Me._telefono = lector.GetString("nombre")
-                Me._fechaNacimiento = lector.GetDateTime("nombre")
-                Me._estado = lector.GetString("nombre")
-                lista.Add(New Usuario(_id, _nombre, _apellido, _contraseña, _correo, _telefono, _estado, _fechaNacimiento))
+                Me._apellido = lector.GetString("apellido")
+                Me._contraseña = lector.GetString("contraseña")
+                Me._correo = lector.GetString("correo")
+                Me._telefono = lector.GetString("telefono")
+                Me._fechaNacimiento = lector.GetDateTime("fecha_nacimiento")
+                Me._estado = lector.GetString("estado")
+                usuario = New Usuario(_id, _nombre, _apellido, _contraseña, _correo, _telefono, _estado, _fechaNacimiento)
             End If
-            Console.WriteLine("aqui ---- " & lector.Read())
+            'Console.WriteLine("aqui ---- " & lector.Read())
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
 
         closeConn()
-        Return lista
+        Return usuario
     End Function
 End Class

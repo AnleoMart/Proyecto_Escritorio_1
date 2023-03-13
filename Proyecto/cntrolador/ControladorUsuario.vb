@@ -19,11 +19,9 @@ Public Class ControladorUsuario
         Return hashedPassword
     End Function
 
-    Public Function cargarDatos(id As Integer) As List(Of Usuario)
-        Dim lista As New List(Of Usuario)()
-
+    Public Function cargarDatos(id As Integer) As Usuario
         Dim usuario As New Usuario()
-        lista = usuario.recuperarDatosPerfilUsuario(id)
-        Return lista
+        usuario = usuario.recuperarDatosPerfilUsuario(id)
+        Return usuario
     End Function
 End Class
