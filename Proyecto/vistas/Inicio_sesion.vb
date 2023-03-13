@@ -22,8 +22,6 @@
         contrasena = txtContrasena.Text
         If controllerUser.login(correo, contrasena) Then
             ocularMostrarBotones()
-            'navegacion("verArticulos")
-
             Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "verArticulos").SingleOrDefault()
             If fr Is Nothing Then
 

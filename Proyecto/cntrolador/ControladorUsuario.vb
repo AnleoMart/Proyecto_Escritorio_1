@@ -9,6 +9,7 @@ Public Class ControladorUsuario
         Dim hashPass As String = desHashear(contrasena)
         Dim usuario As New Usuario(correo, contrasena)
         found = usuario.login()
+        Form1.idUuario = usuario.recuperarId()
         Return found
     End Function
     Public Function desHashear(contrasena As String) As String
@@ -18,7 +19,11 @@ Public Class ControladorUsuario
         Return hashedPassword
     End Function
 
-    Public Function cargarDatos()
-        'Dim usuario As New Usuario(id)
+    Public Function cargarDatos(id As Integer) As List(Of Usuario)
+        Dim lista As New List(Of Usuario)()
+
+        Dim usuario As New Usuario()
+        lista = usuario.recuperarDatosPerfilUsuario(id)
+        Return lista
     End Function
 End Class

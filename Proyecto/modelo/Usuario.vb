@@ -103,7 +103,7 @@ Public Class Usuario
     End Property
     Public Function login() As Boolean
         Dim found As Boolean = False
-        Dim query As String = "SELECT correo, contraseña FROM usuario WHERE correo =  @correo and contraseña =  @contrasena;"
+        Dim query As String = "SELECT correo, contraseña FROM usuario WHERE correo =  @correo and contraseña =  @contrasena and estado= 'activo';"
         Try
             'adapter = New MySqlDataAdapter
             openConn()
@@ -131,5 +131,59 @@ Public Class Usuario
 
         closeConn()
         Return found
+    End Function
+    Public Function recuperarId() As Integer
+        Dim id As Integer
+        Dim found As Boolean = False
+        Dim query As String = "SELECT cedula FROM usuario WHERE correo =  @correo "
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@correo", _correo)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            'Validar las credenciales proporcionadas por el usuario
+            If lector.Read() Then
+                id = lector.GetInt32("cedula")
+            End If
+            Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return id
+    End Function
+    Public Function recuperarDatosPerfilUsuario(id As Integer) As List(Of Usuario)
+        Dim lista As New List(Of Usuario)()
+        Dim found As Boolean = False
+        Dim query As String = "SELECT * FROM usuario WHERE cedula =  @cedula "
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", id)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            'Validar las credenciales proporcionadas por el usuario
+            If lector.Read() Then
+                Me._id = lector.GetInt32("cedula")
+                Me._nombre = lector.GetString("nombre")
+                Me._apellido = lector.GetString("nombre")
+                Me._contraseña = lector.GetString("nombre")
+                Me._correo = lector.GetString("nombre")
+                Me._telefono = lector.GetString("nombre")
+                Me._fechaNacimiento = lector.GetDateTime("nombre")
+                Me._estado = lector.GetString("nombre")
+                lista.Add(New Usuario(_id, _nombre, _apellido, _contraseña, _correo, _telefono, _estado, _fechaNacimiento))
+            End If
+            Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return lista
     End Function
 End Class

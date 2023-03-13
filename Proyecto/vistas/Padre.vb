@@ -5,6 +5,7 @@ Imports Microsoft.SqlServer.Server
 Public Class Form1
     Private Const V As Integer = 0
     Public fr As Form
+    Public idUuario As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocularMostrarBotones()
         Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
@@ -25,12 +26,12 @@ Public Class Form1
     End Sub
 
     Private Sub btnPerfil_Click(sender As Object, e As EventArgs) Handles btnPerfil.Click
-        Dim EditarPerfil As New EditarPerfil
-        EditarPerfil.MdiParent = Me
-        EditarPerfil.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-        EditarPerfil.Left = 0
-        EditarPerfil.Top = 0
-        EditarPerfil.Show()
+        Dim Perfil As New Perfil
+        Perfil.MdiParent = Me
+        Perfil.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        Perfil.Left = 0
+        Perfil.Top = 0
+        Perfil.Show()
 
         'If (Me.panelLateral.Controls.Count > V) Then'
         'panelLateral.Controls.Remove(V)'
