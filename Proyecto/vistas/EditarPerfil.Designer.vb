@@ -151,6 +151,7 @@ Partial Class EditarPerfil
         '
         Me.txtCorreo.Location = New System.Drawing.Point(504, 252)
         Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.ReadOnly = True
         Me.txtCorreo.Size = New System.Drawing.Size(346, 22)
         Me.txtCorreo.TabIndex = 11
         '

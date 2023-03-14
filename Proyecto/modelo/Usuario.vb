@@ -17,7 +17,7 @@ Public Class Usuario
             ._correo = correo
         End With
     End Sub
-    Public Sub New(id As Integer, nombre As Integer, correo As String, contraseña As String)
+    Public Sub New(id As Integer, nombre As String, correo As String, contraseña As String)
         With Me
             ._id = id
             ._nombre = nombre
@@ -166,9 +166,10 @@ Public Class Usuario
             comando.Parameters.AddWithValue("@correo", _correo)
             Dim lector As MySqlDataReader = comando.ExecuteReader()
 
-            'Validar las credenciales proporcionadas por el usuario
             If lector.Read() Then
                 id = lector.GetInt32("cedula")
+            Else
+                id = -1
             End If
             Console.WriteLine("aqui ---- " & lector.Read())
         Catch ex As Exception
@@ -239,5 +240,68 @@ Public Class Usuario
 
         closeConn()
         Return create
+    End Function
+    Public Function modificarUsuario() As Boolean
+
+        Dim modify As Boolean = False
+        Dim query As String = "UPDATE usuario SET nombre = @nombre, apellido = @apellido, telefono = @telefono, contraseña = @contraseña, fecha_nacimiento = @fecha_nacimiento WHERE cedula = @cedula"
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", Id)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            comando.Parameters.AddWithValue("@apellido", Apellido)
+            comando.Parameters.AddWithValue("@telefono", Telefono)
+            comando.Parameters.AddWithValue("@contraseña", Contraseña)
+            comando.Parameters.AddWithValue("@fecha_nacimiento", FechaNacimiento)
+
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            ' Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                modify = True
+            Else
+                modify = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return modify
+    End Function
+    Public Function modificarContraseña(pass As String) As Boolean
+        Dim cedula As Integer = recuperarId()
+        Dim modify As Boolean = False
+
+        If cedula <> -1 Then
+            Dim query As String = "UPDATE usuario SET contraseña = @contraseña  WHERE cedula = @cedula"
+            Try
+                openConn()
+
+                Dim comando As New MySqlCommand(query, MysqlConex)
+                comando.Parameters.AddWithValue("@cedula", cedula)
+                comando.Parameters.AddWithValue("@contraseña", pass)
+
+
+                Dim datos As Integer = comando.ExecuteNonQuery()
+                'Console.WriteLine("columnas afectadas ---- " & datos)
+                If datos > 0 Then
+                    modify = True
+                Else
+                    modify = False
+                End If
+            Catch ex As Exception
+                Console.WriteLine(ex)
+            End Try
+
+            closeConn()
+        Else
+            modify = False
+        End If
+
+
+        Return modify
     End Function
 End Class
