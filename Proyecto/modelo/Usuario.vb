@@ -113,26 +113,41 @@ Public Class Usuario
         Dim found As Boolean = False
         Dim query As String = "SELECT correo, contraseña FROM usuario WHERE correo =  @correo and contraseña =  @contrasena and estado= 'activo';"
         Try
-            'adapter = New MySqlDataAdapter
             openConn()
-            'With command
-            ' .Connection = MysqlConex
-            '.CommandText = query
-            'End With
-            'adapter.SelectCommand = command
-
             Dim comando As New MySqlCommand(query, MysqlConex)
             comando.Parameters.AddWithValue("@correo", _correo)
             comando.Parameters.AddWithValue("@contrasena", _contraseña)
             Dim lector As MySqlDataReader = comando.ExecuteReader()
 
-            'Validar las credenciales proporcionadas por el usuario
             If lector.Read() Then
                 found = True
             Else
                 found = False
             End If
-            Console.WriteLine("aqui ---- " & lector.Read())
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return found
+    End Function
+    Public Function validarCeracionUsuario() As Boolean
+        Dim found As Boolean = False
+        Dim query As String = "SELECT cedula, correo FROM usuario WHERE cedula =  @cedula or contraseña =  @correo and estado= 'activo'"
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", Id)
+            comando.Parameters.AddWithValue("@correo", Correo)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            If lector.Read() Then
+                found = True
+            Else
+                found = False
+            End If
+            'Console.WriteLine("aqui ---- " & lector.Read())
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
@@ -195,9 +210,10 @@ Public Class Usuario
     End Function
 
     Public Function crearUsuario() As Boolean
-
+        Dim estado As String = "activo"
+        Dim fchN As Date = "#1/1/2000#"
         Dim create As Boolean = False
-        Dim query As String = "INSERT INTO usuario (cedula, nombre, correo, contraseña) VALUES (@cedula, @nombre, @correo, @contraseña)"
+        Dim query As String = "INSERT INTO usuario (cedula, nombre, correo, contraseña, fecha_nacimiento, estado) VALUES (@cedula, @nombre, @correo, @contraseña, @fecha_nacimiento, @estado)"
         Try
             openConn()
 
@@ -206,10 +222,13 @@ Public Class Usuario
             comando.Parameters.AddWithValue("@nombre", Nombre)
             comando.Parameters.AddWithValue("@correo", Correo)
             comando.Parameters.AddWithValue("@contraseña", Contraseña)
-            Dim lector As MySqlDataReader = comando.ExecuteReader()
+            comando.Parameters.AddWithValue("@fecha_nacimiento", fchN)
+            comando.Parameters.AddWithValue("@estado", estado)
 
-            Dim rowsAffected As Integer = command.ExecuteNonQuery()
-            If rowsAffected > 0 Then
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
                 create = True
             Else
                 create = False

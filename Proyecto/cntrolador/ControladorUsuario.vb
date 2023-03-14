@@ -30,11 +30,17 @@ Public Class ControladorUsuario
         Dim pass As String = desHashear(contraseña)
         Dim id As Integer = CInt(cedula)
         Dim usu = New Usuario(id, nombre, email, contraseña)
-        If usu.crearUsuario() Then
-            Return True
+        If usu.validarCeracionUsuario() = False Then
+            If usu.crearUsuario() Then
+                Return True
+            Else
+                Return False
+            End If
         Else
+            MsgBox("su numero de identificacion o correo ya se encuentra registrado", vbCritical, "Error")
             Return False
         End If
+
 
     End Function
 End Class
