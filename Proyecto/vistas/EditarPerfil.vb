@@ -5,6 +5,7 @@
         calendar.MaxDate = DateTime.Now
         'Dim contUsuario As New ControladorUsuario
         usu = controllerUser.cargarDatos(Form1.idUuario)
+        Console.WriteLine(usu.Id.ToString())
         txtCedula.Text = usu.Id.ToString()
         txtNombre.Text = usu.Nombre
         txtApellido.Text = usu.Apellido
@@ -17,7 +18,13 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If valCampos() Then
-            'If  Then
+            If txtContraseña.Text = txtContraseña.Text Then
+                If (controllerUser.modificarUsuario(txtCedula.Text, txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, txtContraseña.Text, calendar.SelectionStart)) Then
+                    MsgBox("Se han modificado los valores exitosamente", vbInformation, "modificacion exitosa")
+                Else
+                    MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
+                End If
+            End If
         End If
     End Sub
     Public Function valCampos() As Boolean

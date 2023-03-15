@@ -180,41 +180,46 @@ Public Class Usuario
         Return id
     End Function
     Public Function recuperarDatosPerfilUsuario(id As Integer) As Usuario
-        Dim usuario As Usuario
+        Dim usu As Usuario
         Dim found As Boolean = False
         Dim query As String = "SELECT * FROM usuario WHERE cedula =  @cedula "
         Try
             openConn()
-
             Dim comando As New MySqlCommand(query, MysqlConex)
             comando.Parameters.AddWithValue("@cedula", id)
             Dim lector As MySqlDataReader = comando.ExecuteReader()
 
             If lector.Read() Then
-                Me._id = lector.GetInt32("cedula")
-                Me._nombre = lector.GetString("nombre")
-                Me._apellido = lector.GetString("apellido")
-                Me._contraseña = lector.GetString("contraseña")
-                Me._correo = lector.GetString("correo")
-                Me._telefono = lector.GetString("telefono")
-                Me._fechaNacimiento = lector.GetDateTime("fecha_nacimiento")
-                Me._estado = lector.GetString("estado")
-                usuario = New Usuario(_id, _nombre, _apellido, _contraseña, _correo, _telefono, _estado, _fechaNacimiento)
+                Console.WriteLine("----------------------------Si lee " & lector.GetString("apellido"))
+                Me.Id = lector.GetInt32("cedula")
+                Me.Nombre = lector.GetString("nombre")
+                Me.Apellido = lector.GetString("apellido")
+                Me.Contraseña = lector.GetString("contraseña")
+                Me.Correo = lector.GetString("correo")
+                Me.Telefono = lector.GetString("telefono")
+                Me.FechaNacimiento = lector.GetDateTime("fecha_nacimiento")
+                Me.Estado = lector.GetString("estado")
+
             End If
             'Console.WriteLine("aqui ---- " & lector.Read())
         Catch ex As Exception
             Console.WriteLine(ex)
+        Finally
+
+            usu = New Usuario(Me.Id, Me.Nombre, Me.Apellido, Me.Contraseña, Me.Correo, Me.Telefono, Me.Estado, Me.FechaNacimiento)
         End Try
 
         closeConn()
-        Return usuario
+        Return usu
     End Function
 
     Public Function crearUsuario() As Boolean
         Dim estado As String = "activo"
+        Dim apellido As String = ""
+        Dim telefono As String = ""
         Dim fchN As Date = "#1/1/2000#"
         Dim create As Boolean = False
-        Dim query As String = "INSERT INTO usuario (cedula, nombre, correo, contraseña, fecha_nacimiento, estado) VALUES (@cedula, @nombre, @correo, @contraseña, @fecha_nacimiento, @estado)"
+        Dim query As String = "INSERT INTO usuario (cedula, nombre, correo, contraseña, fecha_nacimiento, estado, apellido, telefono ) VALUES (@cedula, @nombre, @correo, @contraseña, @fecha_nacimiento, @estado,@apellido, @telefono)"
         Try
             openConn()
 
@@ -225,7 +230,8 @@ Public Class Usuario
             comando.Parameters.AddWithValue("@contraseña", Contraseña)
             comando.Parameters.AddWithValue("@fecha_nacimiento", fchN)
             comando.Parameters.AddWithValue("@estado", estado)
-
+            comando.Parameters.AddWithValue("@apellido", apellido)
+            comando.Parameters.AddWithValue("@telefono", telefono)
 
             Dim datos As Integer = comando.ExecuteNonQuery()
             Console.WriteLine("columnas afectadas ---- " & datos)

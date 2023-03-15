@@ -10,7 +10,7 @@ Public Class ControladorUsuario
     Public Function login(correo As String, contrasena As String) As Boolean
         Dim found As Boolean
         Dim hashPass As String = desHashear(contrasena)
-        Dim usuario As New Usuario(correo, contrasena)
+        Dim usuario As New Usuario(correo, hashPass)
         found = usuario.login()
         Form1.idUuario = usuario.recuperarId()
         Return found
@@ -25,6 +25,7 @@ Public Class ControladorUsuario
     Public Function cargarDatos(id As Integer) As Usuario
         Dim usuario As New Usuario()
         usuario = usuario.recuperarDatosPerfilUsuario(id)
+        Console.WriteLine("------------------- aqui pues " & usuario.Correo)
         Return usuario
     End Function
     Public Function crearUsuario(cedula As String, nombre As String, email As String, contraseña As String) As Boolean
@@ -32,7 +33,7 @@ Public Class ControladorUsuario
         Dim pass As String = desHashear(contraseña)
         'Console.WriteLine("cedula " & cedula)
         Dim id As Integer = CInt(cedula)
-        Dim usu = New Usuario(id, nombre, email, contraseña)
+        Dim usu = New Usuario(id, nombre, email, pass)
         If usu.validarCeracionUsuario() = False Then
             If usu.crearUsuario() Then
                 Return True
@@ -50,7 +51,7 @@ Public Class ControladorUsuario
         Dim usuario As New Usuario
         Dim nuevaContraseña As String = generarContraseñaRandom()
         usuario.Correo = email
-        usuario.modificarContraseña(nuevaContraseña)
+        usuario.modificarContraseña(desHashear(nuevaContraseña))
         Return nuevaContraseña
     End Function
     Private Function generarContraseñaRandom() As String
@@ -93,5 +94,17 @@ Public Class ControladorUsuario
             MsgBox("Ha ocurrido un error al enviar el mensaje", vbCritical, "Error al enviar Mensaje")
         End Try
     End Function
+    Public Function modificarUsuario(cedula As String, nombre As String, apellido As String, email As String, telefono As String, contraseña As String, fecha As Date) As Boolean
 
+        Dim pass As String = desHashear(contraseña)
+        'Console.WriteLine("cedula " & cedula)
+        Dim id As Integer = CInt(cedula)
+        Dim usu = New Usuario(id, nombre, apellido, pass, email, telefono, "activo", fecha)
+
+        If usu.modificarUsuario() Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class
