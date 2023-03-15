@@ -1,10 +1,19 @@
 ﻿Public Class EditarPerfil
     Private controllerUser As New ControladorUsuario
     Private usu As Usuario
+    Private id As String
+    Public Sub New(id As Integer)
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Me.id = id
+    End Sub
     Private Sub EditarPerfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         calendar.MaxDate = DateTime.Now
         'Dim contUsuario As New ControladorUsuario
-        usu = controllerUser.cargarDatos(Form1.idUuario)
+        usu = controllerUser.cargarDatos(id)
         Console.WriteLine(usu.Id.ToString())
         txtCedula.Text = usu.Id.ToString()
         txtNombre.Text = usu.Nombre

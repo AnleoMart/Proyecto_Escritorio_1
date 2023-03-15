@@ -1,6 +1,6 @@
 ﻿Public Class Perfil
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim EditarPerfil As New EditarPerfil
+        Dim EditarPerfil As New EditarPerfil(Form1.idUuario)
         EditarPerfil.MdiParent = Form1
         EditarPerfil.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
         EditarPerfil.Left = 0
