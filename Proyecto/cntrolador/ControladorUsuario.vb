@@ -30,7 +30,7 @@ Public Class ControladorUsuario
     Public Function crearUsuario(cedula As String, nombre As String, email As String, contraseña As String) As Boolean
         'Dim create As Boolean = False
         Dim pass As String = desHashear(contraseña)
-        Console.WriteLine("cedula " & cedula)
+        'Console.WriteLine("cedula " & cedula)
         Dim id As Integer = CInt(cedula)
         Dim usu = New Usuario(id, nombre, email, contraseña)
         If usu.validarCeracionUsuario() = False Then
@@ -63,7 +63,7 @@ Public Class ControladorUsuario
             letra = rnd.Next(0, alfabeto.Length)
             nuevaContraseña = nuevaContraseña & alfabeto.Chars(letra)
         Next
-        Console.WriteLine("<<<<<nueva contraseña>>>> = " & nuevaContraseña)
+        'Console.WriteLine("<<<<<nueva contraseña>>>> = " & nuevaContraseña)
         Return nuevaContraseña
     End Function
     Public Function recuperarContraseña(email As String)
@@ -72,33 +72,26 @@ Public Class ControladorUsuario
         Dim correo As New MailMessage()
         Dim clienteSmtp As New SmtpClient()
 
-        ' Establece el correo electrónico del remitente
-        correo.From = New MailAddress("proyecto.escritorio2023@gmail.com")
+        Try
+            With correo
+                .From = New System.Net.Mail.MailAddress("proyecto.escritorio2023@outlook.es")
+                .To.Add(email)
+                .Body = "Se reestablecio la contraseña para su usuario '" & email & "' Su nueva contraseña es: " & nuevaPass & ". Por favor, al ingresar cambie su contraseña por cuestiones de seguridad"
+                .Subject = "Recuepracion de contraseña"
+                .Priority = System.Net.Mail.MailPriority.Normal
+            End With
+            With clienteSmtp
+                .EnableSsl = True
+                .Port = "587"
+                .Host = "smtp.outlook.com"
+                .Credentials = New Net.NetworkCredential("proyecto.escritorio2023@outlook.es", "proyectoEcritorio23")
+                .Send(correo)
+            End With
 
-        ' Establece el correo electrónico del destinatario
-        correo.To.Add(email)
-
-        ' Establece el asunto del correo
-        correo.Subject = "Recuepracion de contraseña"
-
-        ' Establece el cuerpo del correo
-        correo.Body = "Se reestablecio la contraseña para su usuario '" & email & "' Su nueva contraseña es: " & nuevaPass & ". Por favor, al ingresar cambie su contraseña por cuestiones de seguridad"
-
-        ' Establece las credenciales del correo electrónico del remitente (si es necesario)
-        clienteSmtp.Credentials = New NetworkCredential("proyecto.escritorio2023@gmail.com", "proyectoEcritorio23")
-
-        ' Establece el servidor SMTP y el puerto
-        clienteSmtp.Host = "smtp.ejemplo.com"
-        clienteSmtp.Port = 587
-
-        ' Habilita SSL si es necesario
-        clienteSmtp.EnableSsl = True
-
-        ' Envía el correo electrónico
-        clienteSmtp.Send(correo)
-
-        ' Libera los recursos del correo electrónico
-        correo.Dispose()
+            MsgBox("Por favor revise su bandeja de entrada, se ha enviado su nueva contraseña de acceso.", "Mensaje enviado", MessageBoxButtons.OK)
+        Catch ex As Exception
+            MsgBox("Ha ocurrido un error al enviar el mensaje", vbCritical, "Error al enviar Mensaje")
+        End Try
     End Function
 
 End Class
