@@ -122,4 +122,10 @@ Public Class ControladorUsuario
         usu.Id = id
         Return usu.modificarEstado()
     End Function
+    Public Sub buscarUsuario(data As Object)
+        Dim usu = New Usuario()
+        usu.buscarUsuarios(data)
+
+    End Sub
+
 End Class

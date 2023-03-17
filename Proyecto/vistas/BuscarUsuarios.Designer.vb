@@ -23,20 +23,27 @@ Partial Class BuscarUsuarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DgConsultaUsuarios = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.cedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fecha_nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgConsultaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.DgConsultaUsuarios)
         Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -45,6 +52,17 @@ Partial Class BuscarUsuarios
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1175, 710)
         Me.Panel1.TabIndex = 1
+        '
+        'DgConsultaUsuarios
+        '
+        Me.DgConsultaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgConsultaUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cedula, Me.nombre, Me.apellido, Me.correo, Me.telefono, Me.fecha_nacimiento, Me.estado})
+        Me.DgConsultaUsuarios.Location = New System.Drawing.Point(41, 219)
+        Me.DgConsultaUsuarios.Name = "DgConsultaUsuarios"
+        Me.DgConsultaUsuarios.RowHeadersWidth = 51
+        Me.DgConsultaUsuarios.RowTemplate.Height = 24
+        Me.DgConsultaUsuarios.Size = New System.Drawing.Size(1076, 341)
+        Me.DgConsultaUsuarios.TabIndex = 22
         '
         'ComboBox1
         '
@@ -81,16 +99,6 @@ Partial Class BuscarUsuarios
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Buscar"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(75, 205)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(992, 443)
-        Me.DataGridView1.TabIndex = 22
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -101,6 +109,62 @@ Partial Class BuscarUsuarios
         Me.Label2.Size = New System.Drawing.Size(184, 32)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Buscar Usuarios"
+        '
+        'cedula
+        '
+        Me.cedula.DataPropertyName = "cedula"
+        Me.cedula.HeaderText = "Identificacion"
+        Me.cedula.MinimumWidth = 6
+        Me.cedula.Name = "cedula"
+        Me.cedula.Width = 125
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "nombre"
+        Me.nombre.MinimumWidth = 6
+        Me.nombre.Name = "nombre"
+        Me.nombre.Width = 125
+        '
+        'apellido
+        '
+        Me.apellido.DataPropertyName = "apellido"
+        Me.apellido.HeaderText = "apellido"
+        Me.apellido.MinimumWidth = 6
+        Me.apellido.Name = "apellido"
+        Me.apellido.Width = 125
+        '
+        'correo
+        '
+        Me.correo.DataPropertyName = "correo"
+        Me.correo.HeaderText = "correo"
+        Me.correo.MinimumWidth = 6
+        Me.correo.Name = "correo"
+        Me.correo.Width = 125
+        '
+        'telefono
+        '
+        Me.telefono.DataPropertyName = "telefono"
+        Me.telefono.HeaderText = "telefono"
+        Me.telefono.MinimumWidth = 6
+        Me.telefono.Name = "telefono"
+        Me.telefono.Width = 125
+        '
+        'fecha_nacimiento
+        '
+        Me.fecha_nacimiento.DataPropertyName = "fecha_nacimiento"
+        Me.fecha_nacimiento.HeaderText = "fecha de nacimiento"
+        Me.fecha_nacimiento.MinimumWidth = 6
+        Me.fecha_nacimiento.Name = "fecha_nacimiento"
+        Me.fecha_nacimiento.Width = 125
+        '
+        'estado
+        '
+        Me.estado.DataPropertyName = "estado"
+        Me.estado.HeaderText = "estado"
+        Me.estado.MinimumWidth = 6
+        Me.estado.Name = "estado"
+        Me.estado.Width = 125
         '
         'BuscarUsuarios
         '
@@ -115,7 +179,7 @@ Partial Class BuscarUsuarios
         Me.Text = "BuscarUsuarios"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgConsultaUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,6 +190,13 @@ Partial Class BuscarUsuarios
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgConsultaUsuarios As DataGridView
     Friend WithEvents Label2 As Label
+    Friend WithEvents cedula As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents apellido As DataGridViewTextBoxColumn
+    Friend WithEvents correo As DataGridViewTextBoxColumn
+    Friend WithEvents telefono As DataGridViewTextBoxColumn
+    Friend WithEvents fecha_nacimiento As DataGridViewTextBoxColumn
+    Friend WithEvents estado As DataGridViewTextBoxColumn
 End Class
