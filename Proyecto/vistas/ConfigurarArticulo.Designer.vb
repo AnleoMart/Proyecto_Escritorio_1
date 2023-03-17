@@ -33,6 +33,7 @@ Partial Class ConfigurarArticulo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -43,7 +44,6 @@ Partial Class ConfigurarArticulo
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -76,42 +76,42 @@ Partial Class ConfigurarArticulo
         '
         Me.TextBox6.Location = New System.Drawing.Point(502, 216)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox6.Size = New System.Drawing.Size(420, 22)
         Me.TextBox6.TabIndex = 12
         '
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(502, 176)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(420, 22)
         Me.TextBox5.TabIndex = 11
         '
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(502, 135)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(420, 22)
         Me.TextBox4.TabIndex = 10
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(502, 55)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(420, 22)
         Me.TextBox2.TabIndex = 8
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(502, 12)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(420, 22)
         Me.TextBox1.TabIndex = 7
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(951, 504)
+        Me.Button2.Location = New System.Drawing.Point(687, 503)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(309, 54)
         Me.Button2.TabIndex = 15
@@ -152,8 +152,16 @@ Partial Class ConfigurarArticulo
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Location = New System.Drawing.Point(74, 47)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1186, 425)
+        Me.Panel3.Size = New System.Drawing.Size(1029, 425)
         Me.Panel3.TabIndex = 7
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(502, 261)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(420, 88)
+        Me.TextBox3.TabIndex = 18
         '
         'Button1
         '
@@ -243,7 +251,7 @@ Partial Class ConfigurarArticulo
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(56, 162)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1432, 579)
+        Me.Panel2.Size = New System.Drawing.Size(1191, 579)
         Me.Panel2.TabIndex = 20
         '
         'Label1
@@ -269,20 +277,12 @@ Partial Class ConfigurarArticulo
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Informacion"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(502, 261)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(657, 88)
-        Me.TextBox3.TabIndex = 18
-        '
         'ConfigurarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1538, 855)
+        Me.ClientSize = New System.Drawing.Size(1306, 829)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label1)

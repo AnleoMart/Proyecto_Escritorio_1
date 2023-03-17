@@ -345,4 +345,37 @@ Public Class Usuario
 
         Return modify
     End Function
+    Public Function buscarUsuarios() As List(Of Usuario)
+        Dim listUsuarios As List(Of Usuario)
+        Dim usu As Usuario
+        Dim found As Boolean = False
+        Dim query As String = "SELECT * FROM usuario"
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", Id)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            If lector.Read() Then
+                Me.Id = lector.GetInt32("cedula")
+                Me.Nombre = lector.GetString("nombre")
+                Me.Apellido = lector.GetString("apellido")
+                Me.Contraseña = lector.GetString("contraseña")
+                Me.Correo = lector.GetString("correo")
+                Me.Telefono = lector.GetString("telefono")
+                Me.FechaNacimiento = lector.GetDateTime("fecha_nacimiento")
+                Me.Estado = lector.GetString("estado")
+
+            End If
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        Finally
+
+            listUsuarios.Add(New Usuario(Me.Id, Me.Nombre, Me.Apellido, Me.Contraseña, Me.Correo, Me.Telefono, Me.Estado, Me.FechaNacimiento))
+        End Try
+
+        closeConn()
+        Return listUsuarios
+    End Function
 End Class
