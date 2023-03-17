@@ -43,7 +43,7 @@ Partial Class Perfil
         '
         Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(962, 574)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(107, 47)
         Me.Button5.TabIndex = 21
@@ -53,8 +53,9 @@ Partial Class Perfil
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(124, 212)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.ReadOnly = True
         Me.txtTelefono.Size = New System.Drawing.Size(343, 22)
         Me.txtTelefono.TabIndex = 20
         '
@@ -72,8 +73,9 @@ Partial Class Perfil
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(124, 160)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.ReadOnly = True
         Me.txtEmail.Size = New System.Drawing.Size(343, 22)
         Me.txtEmail.TabIndex = 18
         '
@@ -91,8 +93,9 @@ Partial Class Perfil
         'txtApellido
         '
         Me.txtApellido.Location = New System.Drawing.Point(124, 106)
-        Me.txtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.ReadOnly = True
         Me.txtApellido.Size = New System.Drawing.Size(343, 22)
         Me.txtApellido.TabIndex = 16
         '
@@ -110,8 +113,9 @@ Partial Class Perfil
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(124, 54)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ReadOnly = True
         Me.txtNombre.Size = New System.Drawing.Size(343, 22)
         Me.txtNombre.TabIndex = 14
         '
@@ -130,7 +134,7 @@ Partial Class Perfil
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(50, 233)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(359, 388)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -149,7 +153,7 @@ Partial Class Perfil
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(445, 269)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(685, 289)
         Me.Panel1.TabIndex = 22
@@ -176,7 +180,7 @@ Partial Class Perfil
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Perfil"
         Me.Text = "Perfil"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

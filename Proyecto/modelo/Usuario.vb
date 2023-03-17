@@ -299,6 +299,41 @@ Public Class Usuario
                     modify = False
                 End If
             Catch ex As Exception
+                modify = False
+                Console.WriteLine(ex)
+            End Try
+
+            closeConn()
+        Else
+            modify = False
+        End If
+
+
+        Return modify
+    End Function
+    Public Function modificarEstado() As Boolean
+        Dim cedula As Integer = Me.Id
+        Dim modify As Boolean = False
+
+        If cedula <> -1 Then
+            Dim query As String = "UPDATE usuario SET estado = @estado  WHERE cedula = @cedula"
+            Try
+                openConn()
+
+                Dim comando As New MySqlCommand(query, MysqlConex)
+                comando.Parameters.AddWithValue("@cedula", cedula)
+                comando.Parameters.AddWithValue("@estado", "inactivo")
+
+
+                Dim datos As Integer = comando.ExecuteNonQuery()
+                'Console.WriteLine("columnas afectadas ---- " & datos)
+                If datos > 0 Then
+                    modify = True
+                Else
+                    modify = False
+                End If
+            Catch ex As Exception
+                modify = False
                 Console.WriteLine(ex)
             End Try
 

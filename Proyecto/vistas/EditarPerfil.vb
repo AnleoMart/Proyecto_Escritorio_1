@@ -26,6 +26,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         If valCampos() Then
             If txtContraseña.Text = txtContraseña.Text Then
                 If (controllerUser.modificarUsuario(txtCedula.Text, txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, txtContraseña.Text, calendar.SelectionStart)) Then
@@ -33,6 +34,10 @@
                 Else
                     MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
                 End If
+            End If
+        ElseIf txtContraseña.Text <> "" And txtContraseña.Text <> "" Then
+            If txtContraseña.Text = txtContraseña.Text Then
+                controllerUser.modificarUsuario(txtCorreo.Text, txtContraseña.Text)
             End If
         End If
     End Sub
@@ -43,4 +48,20 @@
             Return False
         End If
     End Function
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim pregunta As String = MsgBox("seguro desea eliminar esta cuenta?", vbYesNo + vbQuestion, "Eliminar cuenta")
+        If pregunta = vbYes Then
+            If controllerUser.modificarEstado(txtCedula.Text) And txtCedula.Text = Form1.idUuario Then
+                Dim Inicio_sesion As New Inicio_sesion
+                Inicio_sesion.MdiParent = Form1
+                Inicio_sesion.StartPosition = FormStartPosition.Manual
+                Inicio_sesion.Left = 0
+                Inicio_sesion.Top = 0
+                Inicio_sesion.Show()
+                Me.Hide()
+            End If
+        End If
+
+    End Sub
 End Class

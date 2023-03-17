@@ -22,17 +22,13 @@
         contrasena = txtContrasena.Text
         If controllerUser.login(correo, contrasena) Then
             ocularMostrarBotones()
-            Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "verArticulos").SingleOrDefault()
-            If fr Is Nothing Then
-
-                Dim verArticulos As New verArticulos
+            Dim verArticulos As New verArticulos
                 verArticulos.MdiParent = Form1
                 verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
                 verArticulos.Left = 0
                 verArticulos.Top = 0
                 verArticulos.Show()
-                Me.Hide()
-            End If
+            Me.Hide()
         Else
             MsgBox("Ha introducido usuario o contraseña erroneamente, por favor vuelva a intetntarlo", vbCritical, "Error")
 

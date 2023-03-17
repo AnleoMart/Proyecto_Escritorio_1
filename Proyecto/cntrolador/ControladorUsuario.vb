@@ -107,4 +107,19 @@ Public Class ControladorUsuario
             Return False
         End If
     End Function
+    Public Function modificarUsuario(correo As String, contraseña As String) As Boolean
+        Dim pass As String = desHashear(contraseña)
+        Dim usu = New Usuario()
+        usu.Correo = correo
+        If usu.modificarContraseña(pass) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+    Public Function modificarEstado(id As Integer) As Boolean
+        Dim usu = New Usuario()
+        usu.Id = id
+        Return usu.modificarEstado()
+    End Function
 End Class

@@ -18,10 +18,10 @@
         Dim contUsuario As New ControladorUsuario
         Dim usu As Usuario = contUsuario.cargarDatos(Form1.idUuario)
         'Console.WriteLine("--------- nombre" & Form1.idUuario)
-        Console.WriteLine("--------- nombre" & usu.Nombre)
-        Console.WriteLine("--------- Apellido" & usu.Apellido)
-        Console.WriteLine("--------- Correo" & usu.Correo)
-        Console.WriteLine("--------- Telefono" & usu.Telefono)
+        'Console.WriteLine("--------- nombre" & usu.Nombre)
+        'Console.WriteLine("--------- Apellido" & usu.Apellido)
+        'Console.WriteLine("--------- Correo" & usu.Correo)
+        'Console.WriteLine("--------- Telefono" & usu.Telefono)
         txtNombre.Text = usu.Nombre
         txtApellido.Text = usu.Apellido
         txtEmail.Text = usu.Correo
