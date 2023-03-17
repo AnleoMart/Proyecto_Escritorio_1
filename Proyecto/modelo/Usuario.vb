@@ -346,7 +346,7 @@ Public Class Usuario
         Return modify
     End Function
     Public Sub buscarUsuarios(data As Object)
-        Dim query As String = "SELECT cedula, nombre, apellido, correo, fecha_nacimiento, estado FROM usuario"
+        Dim query As String = "SELECT cedula, nombre, apellido, correo, telefono, fecha_nacimiento, estado FROM usuario"
         Dim datatable As New DataTable
         Try
             openConn()

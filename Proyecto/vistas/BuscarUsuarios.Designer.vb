@@ -24,11 +24,6 @@ Partial Class BuscarUsuarios
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DgConsultaUsuarios = New System.Windows.Forms.DataGridView()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.cedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,6 +31,11 @@ Partial Class BuscarUsuarios
         Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecha_nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DgConsultaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,52 +63,6 @@ Partial Class BuscarUsuarios
         Me.DgConsultaUsuarios.RowTemplate.Height = 24
         Me.DgConsultaUsuarios.Size = New System.Drawing.Size(1076, 341)
         Me.DgConsultaUsuarios.TabIndex = 22
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(58, 142)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(70, 24)
-        Me.ComboBox1.TabIndex = 21
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 123)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 16)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Mostrar"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(58, 71)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(231, 22)
-        Me.TextBox1.TabIndex = 18
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 36)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 32)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Buscar"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(558, 25)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(184, 32)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Buscar Usuarios"
         '
         'cedula
         '
@@ -165,6 +119,52 @@ Partial Class BuscarUsuarios
         Me.estado.MinimumWidth = 6
         Me.estado.Name = "estado"
         Me.estado.Width = 125
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(58, 142)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(70, 24)
+        Me.ComboBox1.TabIndex = 21
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(55, 123)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 16)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Mostrar"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(58, 71)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(231, 22)
+        Me.TextBox1.TabIndex = 18
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(52, 36)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 32)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Buscar"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(558, 25)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(184, 32)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Buscar Usuarios"
         '
         'BuscarUsuarios
         '
