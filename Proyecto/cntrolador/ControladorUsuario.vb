@@ -107,6 +107,23 @@ Public Class ControladorUsuario
             Return False
         End If
     End Function
+    Public Function modificarUsuario(cedula As String, nombre As String, apellido As String, email As String, telefono As String, fecha As Date) As Boolean
+
+        Dim id As Integer = CInt(cedula)
+        Dim usu = New Usuario()
+        usu.Id = id
+        usu.Nombre = nombre
+        usu.Apellido = apellido
+        usu.Correo = email
+        usu.Telefono = telefono
+        usu.Estado = "activo"
+        usu.FechaNacimiento = fecha
+        If usu.modificarUsuario("sn") Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
     Public Function modificarUsuario(correo As String, contraseña As String) As Boolean
         Dim pass As String = desHashear(contraseña)
         Dim usu = New Usuario()

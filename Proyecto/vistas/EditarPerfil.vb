@@ -37,7 +37,17 @@
             End If
         ElseIf txtContraseña.Text <> "" And txtContraseña.Text <> "" Then
             If txtContraseña.Text = txtContraseña.Text Then
-                controllerUser.modificarUsuario(txtCorreo.Text, txtContraseña.Text)
+                If controllerUser.modificarUsuario(txtCorreo.Text, txtContraseña.Text) Then
+                    MsgBox("Se han modificado los valores exitosamente", vbInformation, "modificacion exitosa")
+                Else
+                    MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
+                End If
+            End If
+        ElseIf txtContraseña.Text = "" And txtContraseña.Text = "" Then
+            If controllerUser.modificarUsuario(txtCedula.Text, txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, calendar.SelectionStart) Then
+                MsgBox("Se han modificado los valores exitosamente", vbInformation, "modificacion exitosa")
+            Else
+                MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
             End If
         End If
     End Sub

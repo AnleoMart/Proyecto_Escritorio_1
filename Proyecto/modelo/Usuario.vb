@@ -277,6 +277,33 @@ Public Class Usuario
         closeConn()
         Return modify
     End Function
+    Public Function modificarUsuario(snPas As String) As Boolean
+
+        Dim modify As Boolean = False
+        Dim query As String = "UPDATE usuario SET nombre = @nombre, apellido = @apellido, telefono = @telefono,  fecha_nacimiento = @fecha_nacimiento WHERE cedula = @cedula"
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@cedula", Id)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            comando.Parameters.AddWithValue("@apellido", Apellido)
+            comando.Parameters.AddWithValue("@telefono", Telefono)
+            comando.Parameters.AddWithValue("@fecha_nacimiento", FechaNacimiento)
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            ' Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                modify = True
+            Else
+                modify = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return modify
+    End Function
     Public Function modificarContraseña(pass As String) As Boolean
         Dim cedula As Integer = recuperarId()
         Dim modify As Boolean = False
