@@ -15,7 +15,7 @@
 
     Private Sub Perfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim contUsuario As New ControladorUsuario
+        Dim contUsuario As New ControladorDistribuidor
         Dim usu As Usuario = contUsuario.cargarDatos(Form1.idUuario)
         'Console.WriteLine("--------- nombre" & Form1.idUuario)
         'Console.WriteLine("--------- nombre" & usu.Nombre)

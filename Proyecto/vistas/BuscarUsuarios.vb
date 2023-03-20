@@ -1,6 +1,6 @@
 ﻿Public Class BuscarUsuarios
     Private Sub BuscarUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim contrUser As New ControladorUsuario
+        Dim contrUser As New ControladorDistribuidor
         contrUser.buscarUsuario(DgConsultaUsuarios)
     End Sub
 

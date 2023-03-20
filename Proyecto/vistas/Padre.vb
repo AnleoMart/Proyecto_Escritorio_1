@@ -127,4 +127,21 @@ Public Class Form1
         BuscarUsuarios.Top = 0
         BuscarUsuarios.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCrearProvee.Click
+        Dim proveedor As New CrearProveedor
+        proveedor.MdiParent = Me
+        proveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        proveedor.Left = 0
+        proveedor.Top = 0
+        proveedor.Show()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+End Class
+
+Friend Class Proveedor
+    Friend Mdiparent As Form1
 End Class

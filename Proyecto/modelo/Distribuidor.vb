@@ -1,8 +1,14 @@
-﻿Public Class Distribuidor
+﻿Imports System.Xml
+Imports MySqlConnector
+
+Public Class Distribuidor
+    Private adapter As MySqlDataAdapter
+    Private command As New MySqlCommand
+
     Private _nit As Integer
     Private _nombre, _direccion, _ciudad, _categoria, _telefono, _descripcion As String
 
-    Public Sub New()
+    Public Sub New(id As Integer, nombre As String)
 
     End Sub
     Public Sub New(nit As Integer, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As String, descripcion As String)
@@ -13,6 +19,12 @@
         Me.Categoria = categoria
         Me.Telefono = telefono
         Me.Descripcion = descripcion
+    End Sub
+    Public Sub New(nit As Integer, nombre As String, ciudad As String, categoria As String)
+        Me.Nit = nit
+        Me.Nombre = nombre
+        Me.Ciudad = ciudad
+        Me.Categoria = categoria
     End Sub
 
     Public Property Nit As Integer
@@ -77,4 +89,62 @@
             _descripcion = value
         End Set
     End Property
+    Public Function crearDistribuidor() As Boolean
+        Dim estado As String = "activo"
+        Dim nombre As String = ""
+        Dim direccion As String = ""
+        Dim telefono As String = ""
+        Dim nit As Date = "#-#"
+        Dim ciudad As Date = ""
+        Dim categoria As Date = ""
+        Dim create As Boolean = False
+        Dim query As String = "INSERT INTO Distribuidor (nombre, direccion, telefono, nit, ciudad, categoria) VALUES (@nombre, @direccion, @telefono, @nit, @ciudad,@categoria,)"
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            comando.Parameters.AddWithValue("@direccion", direccion)
+            comando.Parameters.AddWithValue("@telefono", telefono)
+            comando.Parameters.AddWithValue("@nit", nit)
+            comando.Parameters.AddWithValue("@ciudad", ciudad)
+            comando.Parameters.AddWithValue("@estado", estado)
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                create = True
+            Else
+                create = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return create
+    End Function
+    Public Function validarCreacionDistribuidor() As Boolean
+        Dim found As Boolean = False
+        Dim query As String = "SELECT nit FROM distriudor WHERE nit =  @nit and estado = 'activo'"
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@nit", Nit)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            If lector.Read() Then
+                found = True
+            Else
+                found = False
+            End If
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return found
+    End Function
 End Class

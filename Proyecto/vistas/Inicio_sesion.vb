@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
-        Dim controllerUser As New ControladorUsuario()
+        Dim controllerUser As New ControladorDistribuidor()
         Dim correo, contrasena As String
         correo = txtCorreo.Text
         contrasena = txtContrasena.Text
@@ -64,5 +64,9 @@
             RecuperarContrasena.Show()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub Inicio_sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

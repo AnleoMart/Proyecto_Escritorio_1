@@ -23,182 +23,167 @@ Partial Class CrearProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CrearProveedor))
-        Me.btnEliminarArt = New System.Windows.Forms.Button()
-        Me.btnGuardarArt = New System.Windows.Forms.Button()
+        Me.btnEliminarProv = New System.Windows.Forms.Button()
+        Me.btnGuardarProv = New System.Windows.Forms.Button()
         Me.picBoxAdjuntarArt = New System.Windows.Forms.PictureBox()
-        Me.tboxDescripArt = New System.Windows.Forms.TextBox()
+        Me.txtDescripProv = New System.Windows.Forms.TextBox()
         Me.LabDescripArt = New System.Windows.Forms.Label()
         Me.panelInfoArt = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCategProv = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.tboxAreaArt = New System.Windows.Forms.TextBox()
+        Me.txtTelProv = New System.Windows.Forms.TextBox()
         Me.LabArticuloArt = New System.Windows.Forms.Label()
-        Me.tboxCantidadArt = New System.Windows.Forms.TextBox()
-        Me.tboxFechaVArt = New System.Windows.Forms.TextBox()
-        Me.tboxCodigoArt = New System.Windows.Forms.TextBox()
-        Me.tboxNombreArt = New System.Windows.Forms.TextBox()
+        Me.txtCiudadProv = New System.Windows.Forms.TextBox()
+        Me.txtNitProv = New System.Windows.Forms.TextBox()
+        Me.txtDireccionProv = New System.Windows.Forms.TextBox()
+        Me.txtNombreProv = New System.Windows.Forms.TextBox()
         Me.LabCantidadArt = New System.Windows.Forms.Label()
         Me.LabFechaVArt = New System.Windows.Forms.Label()
         Me.LabCodigoArt = New System.Windows.Forms.Label()
         Me.LabNombreArt = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.crerProveedor = New System.Windows.Forms.Label()
         CType(Me.picBoxAdjuntarArt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelInfoArt.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnEliminarArt
+        'btnEliminarProv
         '
-        Me.btnEliminarArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarArt.Location = New System.Drawing.Point(891, 671)
-        Me.btnEliminarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnEliminarArt.Name = "btnEliminarArt"
-        Me.btnEliminarArt.Size = New System.Drawing.Size(151, 30)
-        Me.btnEliminarArt.TabIndex = 28
-        Me.btnEliminarArt.Text = "Eliminar"
-        Me.btnEliminarArt.UseVisualStyleBackColor = True
+        Me.btnEliminarProv.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarProv.Location = New System.Drawing.Point(668, 545)
+        Me.btnEliminarProv.Name = "btnEliminarProv"
+        Me.btnEliminarProv.Size = New System.Drawing.Size(113, 24)
+        Me.btnEliminarProv.TabIndex = 28
+        Me.btnEliminarProv.Text = "Eliminar"
+        Me.btnEliminarProv.UseVisualStyleBackColor = True
         '
-        'btnGuardarArt
+        'btnGuardarProv
         '
-        Me.btnGuardarArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarArt.Location = New System.Drawing.Point(891, 635)
-        Me.btnGuardarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnGuardarArt.Name = "btnGuardarArt"
-        Me.btnGuardarArt.Size = New System.Drawing.Size(151, 30)
-        Me.btnGuardarArt.TabIndex = 27
-        Me.btnGuardarArt.Text = "Guardar Campos"
-        Me.btnGuardarArt.UseVisualStyleBackColor = True
+        Me.btnGuardarProv.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarProv.Location = New System.Drawing.Point(668, 516)
+        Me.btnGuardarProv.Name = "btnGuardarProv"
+        Me.btnGuardarProv.Size = New System.Drawing.Size(113, 24)
+        Me.btnGuardarProv.TabIndex = 27
+        Me.btnGuardarProv.Text = "Guardar Campos"
+        Me.btnGuardarProv.UseVisualStyleBackColor = True
         '
         'picBoxAdjuntarArt
         '
         Me.picBoxAdjuntarArt.BackColor = System.Drawing.Color.White
         Me.picBoxAdjuntarArt.Image = CType(resources.GetObject("picBoxAdjuntarArt.Image"), System.Drawing.Image)
-        Me.picBoxAdjuntarArt.Location = New System.Drawing.Point(995, 578)
-        Me.picBoxAdjuntarArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.picBoxAdjuntarArt.Location = New System.Drawing.Point(746, 470)
         Me.picBoxAdjuntarArt.Name = "picBoxAdjuntarArt"
-        Me.picBoxAdjuntarArt.Size = New System.Drawing.Size(36, 32)
+        Me.picBoxAdjuntarArt.Size = New System.Drawing.Size(27, 26)
         Me.picBoxAdjuntarArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBoxAdjuntarArt.TabIndex = 26
         Me.picBoxAdjuntarArt.TabStop = False
         '
-        'tboxDescripArt
+        'txtDescripProv
         '
-        Me.tboxDescripArt.Location = New System.Drawing.Point(352, 504)
-        Me.tboxDescripArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxDescripArt.Multiline = True
-        Me.tboxDescripArt.Name = "tboxDescripArt"
-        Me.tboxDescripArt.Size = New System.Drawing.Size(688, 114)
-        Me.tboxDescripArt.TabIndex = 25
+        Me.txtDescripProv.Location = New System.Drawing.Point(264, 410)
+        Me.txtDescripProv.Multiline = True
+        Me.txtDescripProv.Name = "txtDescripProv"
+        Me.txtDescripProv.Size = New System.Drawing.Size(517, 93)
+        Me.txtDescripProv.TabIndex = 25
         '
         'LabDescripArt
         '
         Me.LabDescripArt.AutoSize = True
         Me.LabDescripArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabDescripArt.Location = New System.Drawing.Point(296, 473)
-        Me.LabDescripArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabDescripArt.Location = New System.Drawing.Point(222, 384)
         Me.LabDescripArt.Name = "LabDescripArt"
-        Me.LabDescripArt.Size = New System.Drawing.Size(85, 20)
+        Me.LabDescripArt.Size = New System.Drawing.Size(66, 16)
         Me.LabDescripArt.TabIndex = 24
         Me.LabDescripArt.Text = "Descripcion"
         '
         'panelInfoArt
         '
         Me.panelInfoArt.BackColor = System.Drawing.Color.White
-        Me.panelInfoArt.Controls.Add(Me.TextBox1)
+        Me.panelInfoArt.Controls.Add(Me.txtCategProv)
         Me.panelInfoArt.Controls.Add(Me.Label2)
-        Me.panelInfoArt.Controls.Add(Me.tboxAreaArt)
+        Me.panelInfoArt.Controls.Add(Me.txtTelProv)
         Me.panelInfoArt.Controls.Add(Me.LabArticuloArt)
-        Me.panelInfoArt.Controls.Add(Me.tboxCantidadArt)
-        Me.panelInfoArt.Controls.Add(Me.tboxFechaVArt)
-        Me.panelInfoArt.Controls.Add(Me.tboxCodigoArt)
-        Me.panelInfoArt.Controls.Add(Me.tboxNombreArt)
+        Me.panelInfoArt.Controls.Add(Me.txtCiudadProv)
+        Me.panelInfoArt.Controls.Add(Me.txtNitProv)
+        Me.panelInfoArt.Controls.Add(Me.txtDireccionProv)
+        Me.panelInfoArt.Controls.Add(Me.txtNombreProv)
         Me.panelInfoArt.Controls.Add(Me.LabCantidadArt)
         Me.panelInfoArt.Controls.Add(Me.LabFechaVArt)
         Me.panelInfoArt.Controls.Add(Me.LabCodigoArt)
         Me.panelInfoArt.Controls.Add(Me.LabNombreArt)
-        Me.panelInfoArt.Location = New System.Drawing.Point(283, 168)
-        Me.panelInfoArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelInfoArt.Location = New System.Drawing.Point(212, 136)
         Me.panelInfoArt.Name = "panelInfoArt"
-        Me.panelInfoArt.Size = New System.Drawing.Size(783, 288)
+        Me.panelInfoArt.Size = New System.Drawing.Size(587, 234)
         Me.panelInfoArt.TabIndex = 23
         '
-        'TextBox1
+        'txtCategProv
         '
-        Me.TextBox1.Location = New System.Drawing.Point(501, 167)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(259, 22)
-        Me.TextBox1.TabIndex = 11
+        Me.txtCategProv.Location = New System.Drawing.Point(376, 136)
+        Me.txtCategProv.Name = "txtCategProv"
+        Me.txtCategProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtCategProv.TabIndex = 11
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(419, 167)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(314, 136)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 20)
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Categoria"
         '
-        'tboxAreaArt
+        'txtTelProv
         '
-        Me.tboxAreaArt.Location = New System.Drawing.Point(83, 167)
-        Me.tboxAreaArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxAreaArt.Name = "tboxAreaArt"
-        Me.tboxAreaArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxAreaArt.TabIndex = 9
+        Me.txtTelProv.Location = New System.Drawing.Point(62, 136)
+        Me.txtTelProv.Name = "txtTelProv"
+        Me.txtTelProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtTelProv.TabIndex = 9
         '
         'LabArticuloArt
         '
         Me.LabArticuloArt.AutoSize = True
         Me.LabArticuloArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabArticuloArt.Location = New System.Drawing.Point(19, 171)
-        Me.LabArticuloArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabArticuloArt.Location = New System.Drawing.Point(14, 139)
         Me.LabArticuloArt.Name = "LabArticuloArt"
-        Me.LabArticuloArt.Size = New System.Drawing.Size(66, 20)
+        Me.LabArticuloArt.Size = New System.Drawing.Size(48, 16)
         Me.LabArticuloArt.TabIndex = 8
-        Me.LabArticuloArt.Text = "teledono"
+        Me.LabArticuloArt.Text = "telefono"
         '
-        'tboxCantidadArt
+        'txtCiudadProv
         '
-        Me.tboxCantidadArt.Location = New System.Drawing.Point(501, 110)
-        Me.tboxCantidadArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxCantidadArt.Name = "tboxCantidadArt"
-        Me.tboxCantidadArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxCantidadArt.TabIndex = 7
+        Me.txtCiudadProv.Location = New System.Drawing.Point(376, 89)
+        Me.txtCiudadProv.Name = "txtCiudadProv"
+        Me.txtCiudadProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtCiudadProv.TabIndex = 7
         '
-        'tboxFechaVArt
+        'txtNitProv
         '
-        Me.tboxFechaVArt.Location = New System.Drawing.Point(501, 47)
-        Me.tboxFechaVArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxFechaVArt.Name = "tboxFechaVArt"
-        Me.tboxFechaVArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxFechaVArt.TabIndex = 6
+        Me.txtNitProv.Location = New System.Drawing.Point(376, 38)
+        Me.txtNitProv.Name = "txtNitProv"
+        Me.txtNitProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtNitProv.TabIndex = 6
         '
-        'tboxCodigoArt
+        'txtDireccionProv
         '
-        Me.tboxCodigoArt.Location = New System.Drawing.Point(83, 110)
-        Me.tboxCodigoArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxCodigoArt.Name = "tboxCodigoArt"
-        Me.tboxCodigoArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxCodigoArt.TabIndex = 5
+        Me.txtDireccionProv.Location = New System.Drawing.Point(62, 89)
+        Me.txtDireccionProv.Name = "txtDireccionProv"
+        Me.txtDireccionProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtDireccionProv.TabIndex = 5
         '
-        'tboxNombreArt
+        'txtNombreProv
         '
-        Me.tboxNombreArt.Location = New System.Drawing.Point(83, 49)
-        Me.tboxNombreArt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.tboxNombreArt.Name = "tboxNombreArt"
-        Me.tboxNombreArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxNombreArt.TabIndex = 4
+        Me.txtNombreProv.Location = New System.Drawing.Point(62, 40)
+        Me.txtNombreProv.Name = "txtNombreProv"
+        Me.txtNombreProv.Size = New System.Drawing.Size(195, 20)
+        Me.txtNombreProv.TabIndex = 4
         '
         'LabCantidadArt
         '
         Me.LabCantidadArt.AutoSize = True
         Me.LabCantidadArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabCantidadArt.Location = New System.Drawing.Point(419, 111)
-        Me.LabCantidadArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabCantidadArt.Location = New System.Drawing.Point(314, 90)
         Me.LabCantidadArt.Name = "LabCantidadArt"
-        Me.LabCantidadArt.Size = New System.Drawing.Size(54, 20)
+        Me.LabCantidadArt.Size = New System.Drawing.Size(41, 16)
         Me.LabCantidadArt.TabIndex = 3
         Me.LabCantidadArt.Text = "Ciudad"
         '
@@ -206,10 +191,9 @@ Partial Class CrearProveedor
         '
         Me.LabFechaVArt.AutoSize = True
         Me.LabFechaVArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabFechaVArt.Location = New System.Drawing.Point(444, 49)
-        Me.LabFechaVArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabFechaVArt.Location = New System.Drawing.Point(333, 40)
         Me.LabFechaVArt.Name = "LabFechaVArt"
-        Me.LabFechaVArt.Size = New System.Drawing.Size(29, 20)
+        Me.LabFechaVArt.Size = New System.Drawing.Size(23, 16)
         Me.LabFechaVArt.TabIndex = 2
         Me.LabFechaVArt.Text = "NIT"
         '
@@ -217,10 +201,9 @@ Partial Class CrearProveedor
         '
         Me.LabCodigoArt.AutoSize = True
         Me.LabCodigoArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabCodigoArt.Location = New System.Drawing.Point(16, 107)
-        Me.LabCodigoArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabCodigoArt.Location = New System.Drawing.Point(12, 87)
         Me.LabCodigoArt.Name = "LabCodigoArt"
-        Me.LabCodigoArt.Size = New System.Drawing.Size(70, 20)
+        Me.LabCodigoArt.Size = New System.Drawing.Size(55, 16)
         Me.LabCodigoArt.TabIndex = 1
         Me.LabCodigoArt.Text = "Direccion"
         '
@@ -228,39 +211,37 @@ Partial Class CrearProveedor
         '
         Me.LabNombreArt.AutoSize = True
         Me.LabNombreArt.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabNombreArt.Location = New System.Drawing.Point(16, 49)
-        Me.LabNombreArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabNombreArt.Location = New System.Drawing.Point(12, 40)
         Me.LabNombreArt.Name = "LabNombreArt"
-        Me.LabNombreArt.Size = New System.Drawing.Size(59, 20)
+        Me.LabNombreArt.Size = New System.Drawing.Size(46, 16)
         Me.LabNombreArt.TabIndex = 0
         Me.LabNombreArt.Text = "Nombre"
         '
-        'Label1
+        'crerProveedor
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(552, 115)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(184, 32)
-        Me.Label1.TabIndex = 22
-        Me.Label1.Text = "Crear Proveedor"
+        Me.crerProveedor.AutoSize = True
+        Me.crerProveedor.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.crerProveedor.Location = New System.Drawing.Point(414, 93)
+        Me.crerProveedor.Name = "crerProveedor"
+        Me.crerProveedor.Size = New System.Drawing.Size(152, 25)
+        Me.crerProveedor.TabIndex = 22
+        Me.crerProveedor.Text = "Crear Proveedor"
         '
         'CrearProveedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(1306, 829)
-        Me.Controls.Add(Me.btnEliminarArt)
-        Me.Controls.Add(Me.btnGuardarArt)
+        Me.ClientSize = New System.Drawing.Size(980, 674)
+        Me.Controls.Add(Me.btnEliminarProv)
+        Me.Controls.Add(Me.btnGuardarProv)
         Me.Controls.Add(Me.picBoxAdjuntarArt)
-        Me.Controls.Add(Me.tboxDescripArt)
+        Me.Controls.Add(Me.txtDescripProv)
         Me.Controls.Add(Me.LabDescripArt)
         Me.Controls.Add(Me.panelInfoArt)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.crerProveedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "CrearProveedor"
         Me.Text = "CrearProveedor"
         CType(Me.picBoxAdjuntarArt, System.ComponentModel.ISupportInitialize).EndInit()
@@ -271,23 +252,23 @@ Partial Class CrearProveedor
 
     End Sub
 
-    Friend WithEvents btnEliminarArt As Button
-    Friend WithEvents btnGuardarArt As Button
+    Friend WithEvents btnEliminarProv As Button
+    Friend WithEvents btnGuardarProv As Button
     Friend WithEvents picBoxAdjuntarArt As PictureBox
-    Friend WithEvents tboxDescripArt As TextBox
+    Friend WithEvents txtDescripProv As TextBox
     Friend WithEvents LabDescripArt As Label
     Friend WithEvents panelInfoArt As Panel
-    Friend WithEvents tboxAreaArt As TextBox
+    Friend WithEvents txtTelProv As TextBox
     Friend WithEvents LabArticuloArt As Label
-    Friend WithEvents tboxCantidadArt As TextBox
-    Friend WithEvents tboxFechaVArt As TextBox
-    Friend WithEvents tboxCodigoArt As TextBox
-    Friend WithEvents tboxNombreArt As TextBox
+    Friend WithEvents txtCiudadProv As TextBox
+    Friend WithEvents txtNitProv As TextBox
+    Friend WithEvents txtDireccionProv As TextBox
+    Friend WithEvents txtNombreProv As TextBox
     Friend WithEvents LabCantidadArt As Label
     Friend WithEvents LabFechaVArt As Label
     Friend WithEvents LabCodigoArt As Label
     Friend WithEvents LabNombreArt As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents crerProveedor As Label
+    Friend WithEvents txtCategProv As TextBox
     Friend WithEvents Label2 As Label
 End Class

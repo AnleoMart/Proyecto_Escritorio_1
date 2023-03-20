@@ -5,9 +5,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 Imports MySqlConnector
 
-Public Class ControladorUsuario
+Public Class ControladorDistribuidor
 
-    Public Function login(correo As String, contrasena As String) As Boolean
+    Public Function ToString(correo As String, contrasena As String, direccion As String, ciudad As String, categoria As String, telefono As String, descripcion As String) As Boolean
         Dim found As Boolean
         Dim hashPass As String = desHashear(contrasena)
         Dim usuario As New Usuario(correo, hashPass)

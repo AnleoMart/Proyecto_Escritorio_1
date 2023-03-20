@@ -1,5 +1,5 @@
 ﻿Public Class EditarPerfil
-    Private controllerUser As New ControladorUsuario
+    Private controllerUser As New ControladorDistribuidor
     Private usu As Usuario
     Private id As String
     Public Sub New(id As Integer)
