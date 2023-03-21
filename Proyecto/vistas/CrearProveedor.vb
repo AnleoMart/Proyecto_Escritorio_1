@@ -45,7 +45,7 @@ Public Class CrearProveedor
         telefono = txtTelProv.Text
         descripcion = txtCategProv.Text
         If controlDistribuidor.crearDistribuidor(nit, nombre, direccion, ciudad, categoria, telefono, descripcion) Then
-            Dim verArticulos As New verArticulos
+            Dim verArticulos As New VerArticulos
             verArticulos.MdiParent = Form1
             verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
             verArticulos.Left = 0

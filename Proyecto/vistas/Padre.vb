@@ -140,6 +140,15 @@ Public Class Form1
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim articulo As New CrearArticulo
+        articulo.MdiParent = Me
+        articulo.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        articulo.Left = 0
+        articulo.Top = 0
+        articulo.Show()
+    End Sub
 End Class
 
 Friend Class Proveedor

@@ -23,7 +23,7 @@
         contrasena = txtContrasena.Text
         If controllerUser.login(correo, contrasena) Then
             ocularMostrarBotones()
-            Dim verArticulos As New verArticulos
+            Dim verArticulos As New VerArticulos
                 verArticulos.MdiParent = Form1
                 verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
                 verArticulos.Left = 0

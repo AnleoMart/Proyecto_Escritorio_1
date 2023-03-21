@@ -1,4 +1,9 @@
-﻿Public Class Articulo
+﻿Imports MySqlConnector
+
+Public Class Articulo
+    Private adapter As MySqlDataAdapter
+    Private command As New MySqlCommand
+
     Private _id, _codigo, _cantidad, _distribuidor, _usuario As Integer
     Private _nombre, _bodega, _descripcion As String
     Private _fechaVencimiento As Date
@@ -99,4 +104,24 @@
             _fechaVencimiento = value
         End Set
     End Property
+
+    Public Sub buscarUsuarios(data As Object)
+        Dim query As String = "SELECT cedula, nombre, apellido, correo, telefono, fecha_nacimiento, estado FROM usuario"
+        Dim datatable As New DataTable
+        Try
+            openConn()
+            command = New MySqlCommand(query, MysqlConex)
+            adapter = New MySqlDataAdapter
+            adapter.SelectCommand = command
+            adapter.Fill(datatable)
+            data.datasource = datatable
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+
+        End Try
+
+        closeConn()
+        datatable.Dispose()
+    End Sub
 End Class

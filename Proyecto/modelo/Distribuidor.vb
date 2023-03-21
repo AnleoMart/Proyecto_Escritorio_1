@@ -1,4 +1,6 @@
-﻿Imports System.Xml
+﻿Imports System.Diagnostics.Eventing
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Xml
 Imports MySqlConnector
 
 Public Class Distribuidor
@@ -8,8 +10,12 @@ Public Class Distribuidor
     Private _nit As Integer
     Private _nombre, _direccion, _ciudad, _categoria, _telefono, _descripcion As String
 
-    Public Sub New(id As Integer, nombre As String)
+    Public Sub New()
 
+    End Sub
+    Public Sub New(id As Integer, nombre As String)
+        Me.Nit = id
+        Me.Nombre = nombre
     End Sub
     Public Sub New(nit As Integer, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As String, descripcion As String)
         Me.Nit = nit
@@ -89,6 +95,27 @@ Public Class Distribuidor
             _descripcion = value
         End Set
     End Property
+
+
+    'funcion para devolver inicialmete la lista de los distribuidores a la hora de crear el articulo
+    Public Function buscarDistribuidores() As List(Of Distribuidor)
+        Dim listaDistribuidores As New List(Of Distribuidor)
+        Dim query As String = "SELECT nit, nombre FROM distribuidor"
+        Try
+            openConn()
+            command = New MySqlCommand(query, MysqlConex)
+            Dim lector As MySqlDataReader = command.ExecuteReader()
+            Do While lector.Read()
+                listaDistribuidores.Add(New Distribuidor(lector.GetInt32("nit"), lector.GetString("nombre")))
+            Loop
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        'Console.WriteLine("--------" & listaDistribuidores.Count)
+        Return listaDistribuidores
+    End Function
     Public Function crearDistribuidor() As Boolean
 
         Dim create As Boolean = False
@@ -132,12 +159,14 @@ Public Class Distribuidor
             Else
                 found = False
             End If
-            'Console.WriteLine("aqui ---- " & lector.Read())
         Catch ex As Exception
             Console.WriteLine(ex)
         End Try
 
         closeConn()
         Return found
+    End Function
+    Public Overrides Function ToString() As String
+        Return Nombre
     End Function
 End Class

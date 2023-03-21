@@ -23,20 +23,20 @@ Partial Class verArticulos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DgConsultaArticulos = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgConsultaArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.DgConsultaArticulos)
         Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -45,6 +45,16 @@ Partial Class verArticulos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1135, 680)
         Me.Panel1.TabIndex = 0
+        '
+        'DgConsultaArticulos
+        '
+        Me.DgConsultaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgConsultaArticulos.Location = New System.Drawing.Point(71, 192)
+        Me.DgConsultaArticulos.Name = "DgConsultaArticulos"
+        Me.DgConsultaArticulos.RowHeadersWidth = 51
+        Me.DgConsultaArticulos.RowTemplate.Height = 24
+        Me.DgConsultaArticulos.Size = New System.Drawing.Size(992, 443)
+        Me.DgConsultaArticulos.TabIndex = 23
         '
         'ComboBox1
         '
@@ -92,16 +102,6 @@ Partial Class verArticulos
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Buscar Articulo"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(71, 192)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(992, 443)
-        Me.DataGridView1.TabIndex = 23
-        '
         'verArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -115,7 +115,7 @@ Partial Class verArticulos
         Me.Text = "Buscar Articulos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgConsultaArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,5 +127,5 @@ Partial Class verArticulos
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgConsultaArticulos As DataGridView
 End Class
