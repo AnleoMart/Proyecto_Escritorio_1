@@ -14,7 +14,7 @@
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
         'Dim pass As String = valContraseñas(txtContrasena1.Text, txtContrasena2.Text)
         If valContraseñas(txtContrasena1.Text, txtContrasena2.Text) Then
-            Dim contrlUsuario As New ControladorDistribuidor()
+            Dim contrlUsuario As New ControladorUsuario()
             If contrlUsuario.crearUsuario(txtDocumento.Text, txtNombre.Text, txtEmail.Text, txtContrasena1.Text) Then
                 MsgBox("Su usuario se ha creado satisfactoriamente", vbInformation, "Registro Exitoso")
                 Dim Inicio_sesion As New Inicio_sesion

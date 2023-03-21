@@ -33,9 +33,9 @@ Public Class CrearProveedor
 
     End Sub
 
-    Private Sub btnGuardarProv_Click(sender As Object, e As EventArgs, ciudad As String, descripcion As String) Handles btnGuardarProv.Click
+    Private Sub btnGuardarProv_Click(sender As Object, e As EventArgs) Handles btnGuardarProv.Click
 
-        Dim controlDistribuidor As New ControladorDistribuidor()
+        Dim controlDistribuidor As New ControlDistribuidor()
         Dim nit, nombre, direccion, ciudad, categoria, telefono, descripcion As String
         nit = txtNitProv.Text
         nombre = txtNombreProv.Text
@@ -43,7 +43,8 @@ Public Class CrearProveedor
         ciudad = txtCiudadProv.Text
         categoria = txtCategProv.Text
         telefono = txtTelProv.Text
-        If controlDistribuidor.ToString(nit, nombre, direccion, ciudad, categoria, telefono, descripcion) Then
+        descripcion = txtCategProv.Text
+        If controlDistribuidor.crearDistribuidor(nit, nombre, direccion, ciudad, categoria, telefono, descripcion) Then
             Dim verArticulos As New verArticulos
             verArticulos.MdiParent = Form1
             verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0

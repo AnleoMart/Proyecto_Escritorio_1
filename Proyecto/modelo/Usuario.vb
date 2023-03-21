@@ -353,7 +353,7 @@ Public Class Usuario
 
 
                 Dim datos As Integer = comando.ExecuteNonQuery()
-                'Console.WriteLine("columnas afectadas ---- " & datos)
+                Console.WriteLine("columnas afectadas ---- " & datos)
                 If datos > 0 Then
                     modify = True
                 Else

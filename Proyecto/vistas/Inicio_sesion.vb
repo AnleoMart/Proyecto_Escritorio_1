@@ -16,7 +16,8 @@
     End Sub
 
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
-        Dim controllerUser As New ControladorDistribuidor()
+        Dim controllerUser As New ControladorUsuario
+
         Dim correo, contrasena As String
         correo = txtCorreo.Text
         contrasena = txtContrasena.Text

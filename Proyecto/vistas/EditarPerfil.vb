@@ -1,5 +1,5 @@
 ﻿Public Class EditarPerfil
-    Private controllerUser As New ControladorDistribuidor
+    Private controllerUser As New ControladorUsuario
     Private usu As Usuario
     Private id As String
     Public Sub New(id As Integer)
@@ -69,6 +69,14 @@
                 Inicio_sesion.Left = 0
                 Inicio_sesion.Top = 0
                 Inicio_sesion.Show()
+                Me.Hide()
+            Else
+                Dim BuscarUsuarios As New BuscarUsuarios
+                BuscarUsuarios.MdiParent = Form1
+                BuscarUsuarios.StartPosition = FormStartPosition.Manual
+                BuscarUsuarios.Left = 0
+                BuscarUsuarios.Top = 0
+                BuscarUsuarios.Show()
                 Me.Hide()
             End If
         End If

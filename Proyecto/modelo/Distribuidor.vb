@@ -90,26 +90,20 @@ Public Class Distribuidor
         End Set
     End Property
     Public Function crearDistribuidor() As Boolean
-        Dim estado As String = "activo"
-        Dim nombre As String = ""
-        Dim direccion As String = ""
-        Dim telefono As String = ""
-        Dim nit As Date = "#-#"
-        Dim ciudad As Date = ""
-        Dim categoria As Date = ""
+
         Dim create As Boolean = False
-        Dim query As String = "INSERT INTO Distribuidor (nombre, direccion, telefono, nit, ciudad, categoria) VALUES (@nombre, @direccion, @telefono, @nit, @ciudad,@categoria,)"
+        Dim query As String = "INSERT INTO distribuidor ( nit, nombre, ciudad, direccion, telefono, categoria, descripcion) VALUES (@nit, @nombre, @ciudad, @direccion, @telefono, @categoria, @descripcion)"
         Try
             openConn()
 
             Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@nit", Nit)
             comando.Parameters.AddWithValue("@nombre", Nombre)
-            comando.Parameters.AddWithValue("@direccion", direccion)
-            comando.Parameters.AddWithValue("@telefono", telefono)
-            comando.Parameters.AddWithValue("@nit", nit)
-            comando.Parameters.AddWithValue("@ciudad", ciudad)
-            comando.Parameters.AddWithValue("@estado", estado)
-
+            comando.Parameters.AddWithValue("@ciudad", Ciudad)
+            comando.Parameters.AddWithValue("@direccion", Direccion)
+            comando.Parameters.AddWithValue("@telefono", Telefono)
+            comando.Parameters.AddWithValue("@categoria", Categoria)
+            comando.Parameters.AddWithValue("@descripcion", Descripcion)
             Dim datos As Integer = comando.ExecuteNonQuery()
             Console.WriteLine("columnas afectadas ---- " & datos)
             If datos > 0 Then
@@ -126,12 +120,11 @@ Public Class Distribuidor
     End Function
     Public Function validarCreacionDistribuidor() As Boolean
         Dim found As Boolean = False
-        Dim query As String = "SELECT nit FROM distriudor WHERE nit =  @nit and estado = 'activo'"
+        Dim query As String = "SELECT nit FROM distriudor WHERE nit =  @nit"
         Try
             openConn()
             Dim comando As New MySqlCommand(query, MysqlConex)
             comando.Parameters.AddWithValue("@nit", Nit)
-            comando.Parameters.AddWithValue("@nombre", Nombre)
             Dim lector As MySqlDataReader = comando.ExecuteReader()
 
             If lector.Read() Then

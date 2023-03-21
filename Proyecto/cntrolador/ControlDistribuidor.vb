@@ -1,9 +1,9 @@
 ﻿Public Class ControlDistribuidor
-    Public Function crearDistribuidor(nombre As String, direccion As String, telefono As String, nit As String, cuidad As String, categoria As String) As Boolean
+    Public Function crearDistribuidor(nit As String, nombre As String, direccion As String, cuidad As String, categoria As String, telefono As String, descripcion As String) As Boolean
         'Dim create As Boolean = False
 
         Dim id As Integer = CInt(nit)
-        Dim dist = New Distribuidor(nit, nombre, cuidad, categoria)
+        Dim dist = New Distribuidor(nit, nombre, direccion, cuidad, categoria, telefono, descripcion)
         If dist.validarCreacionDistribuidor() = False Then
             If dist.crearDistribuidor() Then
                 Return True
