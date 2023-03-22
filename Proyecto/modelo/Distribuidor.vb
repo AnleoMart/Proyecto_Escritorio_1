@@ -96,9 +96,13 @@ Public Class Distribuidor
         End Set
     End Property
 
-
+    Friend ReadOnly Property buscarDistribuidores As List(Of Distribuidor)
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
     'funcion para devolver inicialmete la lista de los distribuidores a la hora de crear el articulo
-    Public Function buscarDistribuidores() As List(Of Distribuidor)
+    Public Function buscarDistribuidor() As List(Of Distribuidor)
         Dim listaDistribuidores As New List(Of Distribuidor)
         Dim query As String = "SELECT nit, nombre FROM distribuidor"
         Try
@@ -144,6 +148,35 @@ Public Class Distribuidor
 
         closeConn()
         Return create
+    End Function
+    Public Function ModificarDistribuido(snPas As String) As Boolean
+
+        Dim modify As Boolean = False
+        Dim query As String = "UPDATE Distribuidor SET telefono = @telefono, nombre = @Nombre, direccion = @Direccion, categoria = @categoria WHERE nit = @nit"
+        Try
+            openConn()
+            Dim Modi As New MySqlCommand(query, MysqlConex)
+            Modi.Parameters.AddWithValue("@nit", Nit)
+            Modi.Parameters.AddWithValue("@Nombre", Nombre)
+            Modi.Parameters.AddWithValue("@Direccion", Direccion)
+            Modi.Parameters.AddWithValue("@Cuiudad", Ciudad)
+            Modi.Parameters.AddWithValue("@Categoria", Categoria)
+            Modi.Parameters.AddWithValue("@telefono", Telefono)
+            Modi.Parameters.AddWithValue("@Descripcion", Descripcion)
+
+            Dim datos As Integer = Modi.ExecuteNonQuery()
+            Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                modify = True
+            Else
+                modify = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return modify
     End Function
     Public Function validarCreacionDistribuidor() As Boolean
         Dim found As Boolean = False

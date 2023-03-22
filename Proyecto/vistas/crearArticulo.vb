@@ -22,7 +22,7 @@ Public Class CrearArticulo
     End Sub
 
     Private Sub btnGuardarArt_Click(sender As Object, e As EventArgs) Handles btnGuardarArt.Click
-        If (txtNo) Then
+
     End Sub
 
     Private Sub LabArticuloArt_Click(sender As Object, e As EventArgs) Handles LabArticuloArt.Click

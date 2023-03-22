@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class CrearProveedor
+Public Class ModiProveedor
     Private Sub CrearProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -45,7 +45,7 @@ Public Class CrearProveedor
         telefono = txtTelProv.Text
         descripcion = txtCategProv.Text
         If controlDistribuidor.crearDistribuidor(nit, nombre, direccion, ciudad, categoria, telefono, descripcion) Then
-            Dim verArticulos As New VerArticulos
+            Dim verArticulos As New verArticulos
             verArticulos.MdiParent = Form1
             verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
             verArticulos.Left = 0

@@ -129,7 +129,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCrearProvee.Click
-        Dim proveedor As New CrearProveedor
+        Dim proveedor As New ModiProveedor
         proveedor.MdiParent = Me
         proveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
         proveedor.Left = 0
@@ -142,12 +142,35 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim articulo As New CrearArticulo
+        Dim articulo As New crearArticulo
         articulo.MdiParent = Me
         articulo.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
         articulo.Left = 0
         articulo.Top = 0
         articulo.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim ModiProveedor As New ModiProveedor
+        ModiProveedor.MdiParent = Me
+        ModiProveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        ModiProveedor.Left = 0
+        ModiProveedor.Top = 0
+        ModiProveedor.Show()
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ModiProveedor As New ModiProveedor
+        ModiProveedor.MdiParent = Me
+        ModiProveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        ModiProveedor.Left = 0
+        ModiProveedor.Top = 0
+        ModiProveedor.Show()
     End Sub
 End Class
 

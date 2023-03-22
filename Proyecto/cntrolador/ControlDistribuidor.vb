@@ -17,13 +17,36 @@ Public Class ControlDistribuidor
         End If
     End Function
 
-    Public Function cargarListaDistribuidor() As List(Of Distribuidor)
+    Public Function CargarListaDistribuidor() As List(Of Distribuidor)
         Dim dist As New Distribuidor
         Dim lista As New List(Of Distribuidor)
-        lista = dist.buscarDistribuidores()
+        lista = dist.CargarListaDistribuidor()
         'Console.WriteLine("--------" & lista.Count)
 
         Return lista
+    End Function
+
+    Public Sub buscarDistribuidor(data As Object)
+        Dim dis = New Distribuidor()
+        Dim distribuidors = dis.buscarDistribuidores(data)
+
+    End Sub
+    Public Function ModificarDistribuidor(nit As String, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As Date) As Boolean
+
+        Dim id As Integer = CInt(nit)
+        Dim dis = New Distribuidor()
+        dis.Nit = nit
+        dis.Nombre = nombre
+        dis.Direccion = direccion
+        dis.Ciudad = ciudad
+        dis.Categoria = categoria
+        dis.Telefono = telefono
+
+        If dis.ModificarDistribuidor("sn") Then
+            Return True
+        Else
+            Return False
+        End If
     End Function
 
 
