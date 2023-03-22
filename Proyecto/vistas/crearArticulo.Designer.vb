@@ -26,12 +26,13 @@ Partial Class CrearArticulo
         Me.btnEliminarArt = New System.Windows.Forms.Button()
         Me.btnGuardarArt = New System.Windows.Forms.Button()
         Me.picBoxAdjuntarArt = New System.Windows.Forms.PictureBox()
-        Me.tboxDescripArt = New System.Windows.Forms.TextBox()
+        Me.txtDescripArt = New System.Windows.Forms.TextBox()
         Me.LabDescripArt = New System.Windows.Forms.Label()
         Me.panelInfoArt = New System.Windows.Forms.Panel()
+        Me.MCFechaVencimiento = New System.Windows.Forms.MonthCalendar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CBProveedor = New System.Windows.Forms.ComboBox()
-        Me.tboxAreaArt = New System.Windows.Forms.TextBox()
+        Me.txtAreaArt = New System.Windows.Forms.TextBox()
         Me.LabArticuloArt = New System.Windows.Forms.Label()
         Me.txtCantidadArt = New System.Windows.Forms.TextBox()
         Me.txtCodigoArt = New System.Windows.Forms.TextBox()
@@ -41,7 +42,6 @@ Partial Class CrearArticulo
         Me.LabCodigoArt = New System.Windows.Forms.Label()
         Me.LabNombreArt = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.picBoxAdjuntarArt, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelInfoArt.SuspendLayout()
@@ -81,14 +81,14 @@ Partial Class CrearArticulo
         Me.picBoxAdjuntarArt.TabIndex = 19
         Me.picBoxAdjuntarArt.TabStop = False
         '
-        'tboxDescripArt
+        'txtDescripArt
         '
-        Me.tboxDescripArt.Location = New System.Drawing.Point(156, 351)
-        Me.tboxDescripArt.Margin = New System.Windows.Forms.Padding(4)
-        Me.tboxDescripArt.Multiline = True
-        Me.tboxDescripArt.Name = "tboxDescripArt"
-        Me.tboxDescripArt.Size = New System.Drawing.Size(688, 114)
-        Me.tboxDescripArt.TabIndex = 18
+        Me.txtDescripArt.Location = New System.Drawing.Point(156, 351)
+        Me.txtDescripArt.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescripArt.Multiline = True
+        Me.txtDescripArt.Name = "txtDescripArt"
+        Me.txtDescripArt.Size = New System.Drawing.Size(688, 114)
+        Me.txtDescripArt.TabIndex = 18
         '
         'LabDescripArt
         '
@@ -106,12 +106,12 @@ Partial Class CrearArticulo
         Me.panelInfoArt.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.panelInfoArt.Controls.Add(Me.picBoxAdjuntarArt)
         Me.panelInfoArt.Controls.Add(Me.btnEliminarArt)
-        Me.panelInfoArt.Controls.Add(Me.MonthCalendar1)
+        Me.panelInfoArt.Controls.Add(Me.MCFechaVencimiento)
         Me.panelInfoArt.Controls.Add(Me.btnGuardarArt)
         Me.panelInfoArt.Controls.Add(Me.Label2)
         Me.panelInfoArt.Controls.Add(Me.CBProveedor)
-        Me.panelInfoArt.Controls.Add(Me.tboxDescripArt)
-        Me.panelInfoArt.Controls.Add(Me.tboxAreaArt)
+        Me.panelInfoArt.Controls.Add(Me.txtDescripArt)
+        Me.panelInfoArt.Controls.Add(Me.txtAreaArt)
         Me.panelInfoArt.Controls.Add(Me.LabDescripArt)
         Me.panelInfoArt.Controls.Add(Me.LabArticuloArt)
         Me.panelInfoArt.Controls.Add(Me.txtCantidadArt)
@@ -126,6 +126,13 @@ Partial Class CrearArticulo
         Me.panelInfoArt.Name = "panelInfoArt"
         Me.panelInfoArt.Size = New System.Drawing.Size(945, 557)
         Me.panelInfoArt.TabIndex = 16
+        '
+        'MCFechaVencimiento
+        '
+        Me.MCFechaVencimiento.Location = New System.Drawing.Point(563, 84)
+        Me.MCFechaVencimiento.Name = "MCFechaVencimiento"
+        Me.MCFechaVencimiento.ShowToday = False
+        Me.MCFechaVencimiento.TabIndex = 12
         '
         'Label2
         '
@@ -146,13 +153,13 @@ Partial Class CrearArticulo
         Me.CBProveedor.Size = New System.Drawing.Size(259, 24)
         Me.CBProveedor.TabIndex = 10
         '
-        'tboxAreaArt
+        'txtAreaArt
         '
-        Me.tboxAreaArt.Location = New System.Drawing.Point(203, 159)
-        Me.tboxAreaArt.Margin = New System.Windows.Forms.Padding(4)
-        Me.tboxAreaArt.Name = "tboxAreaArt"
-        Me.tboxAreaArt.Size = New System.Drawing.Size(259, 22)
-        Me.tboxAreaArt.TabIndex = 9
+        Me.txtAreaArt.Location = New System.Drawing.Point(203, 159)
+        Me.txtAreaArt.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAreaArt.Name = "txtAreaArt"
+        Me.txtAreaArt.Size = New System.Drawing.Size(259, 22)
+        Me.txtAreaArt.TabIndex = 9
         '
         'LabArticuloArt
         '
@@ -161,9 +168,9 @@ Partial Class CrearArticulo
         Me.LabArticuloArt.Location = New System.Drawing.Point(130, 163)
         Me.LabArticuloArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabArticuloArt.Name = "LabArticuloArt"
-        Me.LabArticuloArt.Size = New System.Drawing.Size(59, 20)
+        Me.LabArticuloArt.Size = New System.Drawing.Size(39, 20)
         Me.LabArticuloArt.TabIndex = 8
-        Me.LabArticuloArt.Text = "Articulo"
+        Me.LabArticuloArt.Text = "Area"
         '
         'txtCantidadArt
         '
@@ -245,13 +252,6 @@ Partial Class CrearArticulo
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Crear Articulo"
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(563, 84)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.ShowToday = False
-        Me.MonthCalendar1.TabIndex = 12
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
@@ -284,10 +284,10 @@ Partial Class CrearArticulo
     Friend WithEvents btnEliminarArt As Button
     Friend WithEvents btnGuardarArt As Button
     Friend WithEvents picBoxAdjuntarArt As PictureBox
-    Friend WithEvents tboxDescripArt As TextBox
+    Friend WithEvents txtDescripArt As TextBox
     Friend WithEvents LabDescripArt As Label
     Friend WithEvents panelInfoArt As Panel
-    Friend WithEvents tboxAreaArt As TextBox
+    Friend WithEvents txtAreaArt As TextBox
     Friend WithEvents LabArticuloArt As Label
     Friend WithEvents txtCantidadArt As TextBox
     Friend WithEvents txtCodigoArt As TextBox
@@ -299,6 +299,6 @@ Partial Class CrearArticulo
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CBProveedor As ComboBox
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents MCFechaVencimiento As MonthCalendar
     Friend WithEvents Panel2 As Panel
 End Class

@@ -12,6 +12,16 @@ Public Class Articulo
 
     End Sub
 
+    Public Sub New(codigo As Integer, nombre As String, area As String, cantidad As Integer, descripcion As String, idUser As Integer, nitProv As Integer, fechaVencimiento As Date)
+
+        Me.Codigo = codigo
+        Me.Cantidad = nitProv
+        Me.Distribuidor = nitProv
+        Me.Usuario = idUser
+        Me.Nombre = nombre
+        Me.Descripcion = descripcion
+        Me.FechaVencimiento = fechaVencimiento
+    End Sub
     Public Sub New(id As Integer, codigo As Integer, cantidad As Integer, distribuidor As Integer, usuario As Integer, nombre As String, bodega As String, descripcion As String, fechaVencimiento As Date)
         Me.Id = id
         Me.Codigo = codigo
@@ -124,4 +134,34 @@ Public Class Articulo
         closeConn()
         datatable.Dispose()
     End Sub
+    Public Function nuevoArticulo() As Boolean
+        Dim create As Boolean = False
+        Dim query As String = "INSERT INTO articulo (codigo, nombre, fecha_vencimiento, cantidad, descripcion, FK_distribuidor, FK_usuario ) VALUES (@codigo, @nombre, @fecha_vencimiento, @cantidad, @descripcion, @FK_distribuidor, @FK_usuario )"
+        Try
+            openConn()
+
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@codigo", Codigo)
+            comando.Parameters.AddWithValue("@nombre", Nombre)
+            comando.Parameters.AddWithValue("@fecha_vencimiento", FechaVencimiento)
+            comando.Parameters.AddWithValue("@cantidad", Cantidad)
+            comando.Parameters.AddWithValue("@descripcion", Descripcion)
+            comando.Parameters.AddWithValue("@FK_distribuidor", Distribuidor)
+            comando.Parameters.AddWithValue("@FK_usuario", Usuario)
+
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                create = True
+            Else
+                create = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return create
+    End Function
 End Class

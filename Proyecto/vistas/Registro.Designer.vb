@@ -42,25 +42,28 @@ Partial Class Registro
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(460, 302)
+        Me.Label1.Location = New System.Drawing.Point(613, 372)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 29)
+        Me.Label1.Size = New System.Drawing.Size(88, 36)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "Email"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(465, 335)
+        Me.txtEmail.Location = New System.Drawing.Point(620, 412)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(300, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(399, 22)
         Me.txtEmail.TabIndex = 25
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(103, 178)
+        Me.PictureBox1.Location = New System.Drawing.Point(137, 219)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(307, 262)
+        Me.PictureBox1.Size = New System.Drawing.Size(409, 322)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
@@ -68,9 +71,10 @@ Partial Class Registro
         '
         'EntrarReg
         '
-        Me.EntrarReg.Location = New System.Drawing.Point(573, 557)
+        Me.EntrarReg.Location = New System.Drawing.Point(764, 686)
+        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EntrarReg.Name = "EntrarReg"
-        Me.EntrarReg.Size = New System.Drawing.Size(94, 23)
+        Me.EntrarReg.Size = New System.Drawing.Size(125, 28)
         Me.EntrarReg.TabIndex = 22
         Me.EntrarReg.Text = "Registrar"
         Me.EntrarReg.UseVisualStyleBackColor = True
@@ -79,9 +83,10 @@ Partial Class Registro
         '
         Me.contrasena.AutoSize = True
         Me.contrasena.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contrasena.Location = New System.Drawing.Point(460, 397)
+        Me.contrasena.Location = New System.Drawing.Point(613, 489)
+        Me.contrasena.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.contrasena.Name = "contrasena"
-        Me.contrasena.Size = New System.Drawing.Size(136, 29)
+        Me.contrasena.Size = New System.Drawing.Size(168, 36)
         Me.contrasena.TabIndex = 21
         Me.contrasena.Text = "Contraseña"
         '
@@ -89,68 +94,77 @@ Partial Class Registro
         '
         Me.nameUser.AutoSize = True
         Me.nameUser.Font = New System.Drawing.Font("Franklin Gothic Medium", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nameUser.Location = New System.Drawing.Point(460, 229)
+        Me.nameUser.Location = New System.Drawing.Point(613, 282)
+        Me.nameUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.nameUser.Name = "nameUser"
-        Me.nameUser.Size = New System.Drawing.Size(96, 30)
+        Me.nameUser.Size = New System.Drawing.Size(121, 38)
         Me.nameUser.TabIndex = 20
         Me.nameUser.Text = "Nombre"
         Me.nameUser.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'txtContrasena1
         '
-        Me.txtContrasena1.Location = New System.Drawing.Point(465, 430)
+        Me.txtContrasena1.Location = New System.Drawing.Point(620, 529)
+        Me.txtContrasena1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtContrasena1.Name = "txtContrasena1"
-        Me.txtContrasena1.Size = New System.Drawing.Size(303, 20)
+        Me.txtContrasena1.Size = New System.Drawing.Size(403, 22)
         Me.txtContrasena1.TabIndex = 19
+        Me.txtContrasena1.UseSystemPasswordChar = True
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(465, 263)
+        Me.txtNombre.Location = New System.Drawing.Point(620, 324)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(303, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(403, 22)
         Me.txtNombre.TabIndex = 18
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(460, 462)
+        Me.Label2.Location = New System.Drawing.Point(613, 569)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(242, 29)
+        Me.Label2.Size = New System.Drawing.Size(299, 36)
         Me.Label2.TabIndex = 28
         Me.Label2.Text = "Confirmar contraseña"
         '
         'txtContrasena2
         '
-        Me.txtContrasena2.Location = New System.Drawing.Point(465, 494)
+        Me.txtContrasena2.Location = New System.Drawing.Point(620, 608)
+        Me.txtContrasena2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtContrasena2.Name = "txtContrasena2"
-        Me.txtContrasena2.Size = New System.Drawing.Size(303, 20)
+        Me.txtContrasena2.Size = New System.Drawing.Size(403, 22)
         Me.txtContrasena2.TabIndex = 27
+        Me.txtContrasena2.UseSystemPasswordChar = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(460, 159)
+        Me.Label3.Location = New System.Drawing.Point(613, 196)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(269, 30)
+        Me.Label3.Size = New System.Drawing.Size(335, 38)
         Me.Label3.TabIndex = 30
         Me.Label3.Text = "Documento de identidad"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'txtDocumento
         '
-        Me.txtDocumento.Location = New System.Drawing.Point(465, 193)
+        Me.txtDocumento.Location = New System.Drawing.Point(620, 238)
+        Me.txtDocumento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDocumento.Name = "txtDocumento"
-        Me.txtDocumento.Size = New System.Drawing.Size(303, 20)
+        Me.txtDocumento.Size = New System.Drawing.Size(403, 22)
         Me.txtDocumento.TabIndex = 29
         '
         'Registro
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(980, 674)
+        Me.ClientSize = New System.Drawing.Size(1307, 830)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtDocumento)
         Me.Controls.Add(Me.Label2)
@@ -164,6 +178,7 @@ Partial Class Registro
         Me.Controls.Add(Me.txtContrasena1)
         Me.Controls.Add(Me.txtNombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Registro"
         Me.Text = "Registro"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

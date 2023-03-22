@@ -116,7 +116,12 @@ Public Class Form1
     End Sub
 
     Private Sub btnCrearUsuario_Click(sender As Object, e As EventArgs) Handles btnCrearUsuario.Click
-
+        Dim Registro As New Registro
+        Registro.MdiParent = Me
+        Registro.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        Registro.Left = 0
+        Registro.Top = 0
+        Registro.Show()
     End Sub
 
     Private Sub btnBuscarUsuarios_Click(sender As Object, e As EventArgs) Handles btnBuscarUsuarios.Click

@@ -149,7 +149,7 @@ Public Class Distribuidor
         closeConn()
         Return create
     End Function
-    Public Function ModificarDistribuido(snPas As String) As Boolean
+    Public Function modificarDistribuidor() As Boolean
 
         Dim modify As Boolean = False
         Dim query As String = "UPDATE Distribuidor SET telefono = @telefono, nombre = @Nombre, direccion = @Direccion, categoria = @categoria WHERE nit = @nit"

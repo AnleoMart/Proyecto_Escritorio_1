@@ -37,9 +37,10 @@ Partial Class Inicio_sesion
         '
         Me.olvidoContraseña.AutoSize = True
         Me.olvidoContraseña.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.olvidoContraseña.Location = New System.Drawing.Point(733, 387)
+        Me.olvidoContraseña.Location = New System.Drawing.Point(977, 476)
+        Me.olvidoContraseña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.olvidoContraseña.Name = "olvidoContraseña"
-        Me.olvidoContraseña.Size = New System.Drawing.Size(131, 18)
+        Me.olvidoContraseña.Size = New System.Drawing.Size(157, 21)
         Me.olvidoContraseña.TabIndex = 27
         Me.olvidoContraseña.Text = "Olvide la contraseña"
         '
@@ -48,9 +49,10 @@ Partial Class Inicio_sesion
         Me.EntrarReg.Cursor = System.Windows.Forms.Cursors.Hand
         Me.EntrarReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen
         Me.EntrarReg.Font = New System.Drawing.Font("Franklin Gothic Medium", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EntrarReg.Location = New System.Drawing.Point(658, 464)
+        Me.EntrarReg.Location = New System.Drawing.Point(877, 571)
+        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EntrarReg.Name = "EntrarReg"
-        Me.EntrarReg.Size = New System.Drawing.Size(114, 40)
+        Me.EntrarReg.Size = New System.Drawing.Size(152, 49)
         Me.EntrarReg.TabIndex = 26
         Me.EntrarReg.Text = "Entrar"
         Me.EntrarReg.UseVisualStyleBackColor = True
@@ -59,9 +61,10 @@ Partial Class Inicio_sesion
         '
         Me.txtContrasenaInSes.AutoSize = True
         Me.txtContrasenaInSes.Font = New System.Drawing.Font("Franklin Gothic Medium", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContrasenaInSes.Location = New System.Drawing.Point(555, 322)
+        Me.txtContrasenaInSes.Location = New System.Drawing.Point(740, 396)
+        Me.txtContrasenaInSes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtContrasenaInSes.Name = "txtContrasenaInSes"
-        Me.txtContrasenaInSes.Size = New System.Drawing.Size(142, 30)
+        Me.txtContrasenaInSes.Size = New System.Drawing.Size(174, 38)
         Me.txtContrasenaInSes.TabIndex = 25
         Me.txtContrasenaInSes.Text = "Contraseña"
         '
@@ -69,34 +72,38 @@ Partial Class Inicio_sesion
         '
         Me.txtNameUserInSes.AutoSize = True
         Me.txtNameUserInSes.Font = New System.Drawing.Font("Franklin Gothic Medium", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNameUserInSes.Location = New System.Drawing.Point(555, 213)
+        Me.txtNameUserInSes.Location = New System.Drawing.Point(740, 262)
+        Me.txtNameUserInSes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtNameUserInSes.Name = "txtNameUserInSes"
-        Me.txtNameUserInSes.Size = New System.Drawing.Size(102, 30)
+        Me.txtNameUserInSes.Size = New System.Drawing.Size(127, 38)
         Me.txtNameUserInSes.TabIndex = 24
         Me.txtNameUserInSes.Text = "Nombre"
         Me.txtNameUserInSes.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'txtContrasena
         '
-        Me.txtContrasena.Location = New System.Drawing.Point(561, 364)
+        Me.txtContrasena.Location = New System.Drawing.Point(748, 448)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.Size = New System.Drawing.Size(310, 20)
+        Me.txtContrasena.Size = New System.Drawing.Size(412, 22)
         Me.txtContrasena.TabIndex = 23
         Me.txtContrasena.UseSystemPasswordChar = True
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(561, 247)
+        Me.txtCorreo.Location = New System.Drawing.Point(748, 304)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(310, 20)
+        Me.txtCorreo.Size = New System.Drawing.Size(412, 22)
         Me.txtCorreo.TabIndex = 22
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(155, 214)
+        Me.PictureBox1.Location = New System.Drawing.Point(207, 263)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(307, 262)
+        Me.PictureBox1.Size = New System.Drawing.Size(409, 322)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
@@ -104,11 +111,11 @@ Partial Class Inicio_sesion
         '
         'Inicio_sesion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(980, 674)
+        Me.ClientSize = New System.Drawing.Size(1307, 830)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.olvidoContraseña)
         Me.Controls.Add(Me.EntrarReg)
@@ -117,6 +124,7 @@ Partial Class Inicio_sesion
         Me.Controls.Add(Me.txtContrasena)
         Me.Controls.Add(Me.txtCorreo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Inicio_sesion"
         Me.Text = "Inicio_sesion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
