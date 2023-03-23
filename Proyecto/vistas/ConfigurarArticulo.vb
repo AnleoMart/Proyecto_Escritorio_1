@@ -55,11 +55,25 @@ Public Class ConfigurarArticulo
         Me.Hide()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If contrlAriculo.eliminarArticulo(txtCodigo.Text) Then
-            MsgBox("El articulo se ha eliminado satisfactoriamente", vbInformation, "Eliminado")
-            volverArticulos()
-        Else
-            MsgBox("No se ha podido eliminar el articulo", vbCritical, "Error")
+        Dim result As DialogResult = MessageBox.Show("¿desea eliminar el articulo seleccinado?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            If contrlAriculo.eliminarArticulo(txtCodigo.Text) Then
+                MsgBox("El articulo se ha eliminado satisfactoriamente", vbInformation, "Eliminado")
+                volverArticulos()
+            Else
+                MsgBox("No se ha podido eliminar el articulo", vbCritical, "Error")
+            End If
         End If
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim verArticulos As New verArticulos
+        verArticulos.MdiParent = Form1
+        verArticulos.StartPosition = FormStartPosition.Manual
+        verArticulos.Left = 0
+        verArticulos.Top = 0
+        verArticulos.Show()
+        Me.Hide()
     End Sub
 End Class
