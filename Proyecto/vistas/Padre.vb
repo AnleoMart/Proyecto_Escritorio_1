@@ -115,7 +115,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub btnCrearUsuario_Click(sender As Object, e As EventArgs) Handles btnCrearUsuario.Click
+    Private Sub btnCrearUsuario_Click(sender As Object, e As EventArgs)
         Dim Registro As New Registro
         Registro.MdiParent = Me
         Registro.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -124,7 +124,7 @@ Public Class Form1
         Registro.Show()
     End Sub
 
-    Private Sub btnBuscarUsuarios_Click(sender As Object, e As EventArgs) Handles btnBuscarUsuarios.Click
+    Private Sub btnBuscarUsuarios_Click(sender As Object, e As EventArgs)
         Dim BuscarUsuarios As New BuscarUsuarios
         BuscarUsuarios.MdiParent = Me
         BuscarUsuarios.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -177,8 +177,14 @@ Public Class Form1
         ModiProveedor.Top = 0
         ModiProveedor.Show()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim BuscarUsuarios As New BuscarUsuarios
+        BuscarUsuarios.MdiParent = Me
+        BuscarUsuarios.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        BuscarUsuarios.Left = 0
+        BuscarUsuarios.Top = 0
+        BuscarUsuarios.Show()
+    End Sub
 End Class
 
-Friend Class Proveedor
-    Friend Mdiparent As Form1
-End Class

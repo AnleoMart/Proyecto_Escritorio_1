@@ -15,5 +15,12 @@
         Me.Hide()
     End Sub
 
-
+    Private Sub btnCrearArticulo_Click(sender As Object, e As EventArgs) Handles btnCrearArticulo.Click
+        Dim Registro As New Registro
+        Registro.MdiParent = Form1
+        Registro.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        Registro.Left = 0
+        Registro.Top = 0
+        Registro.Show()
+    End Sub
 End Class

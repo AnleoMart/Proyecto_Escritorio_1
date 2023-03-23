@@ -24,14 +24,14 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.panelLateral = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnCrearProvee = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnCrearUsuario = New System.Windows.Forms.Button()
         Me.PanelIs = New System.Windows.Forms.Panel()
         Me.btnInicioSesion = New System.Windows.Forms.Button()
         Me.PanelCP = New System.Windows.Forms.Panel()
@@ -44,7 +44,6 @@ Partial Class Form1
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.BarraPerfil = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.btnBuscarUsuarios = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.panelLateral.SuspendLayout()
         Me.PanelCS.SuspendLayout()
@@ -55,14 +54,14 @@ Partial Class Form1
         'panelLateral
         '
         Me.panelLateral.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.panelLateral.Controls.Add(Me.Panel8)
+        Me.panelLateral.Controls.Add(Me.Button4)
         Me.panelLateral.Controls.Add(Me.Panel6)
         Me.panelLateral.Controls.Add(Me.Panel5)
         Me.panelLateral.Controls.Add(Me.Button2)
         Me.panelLateral.Controls.Add(Me.Button1)
         Me.panelLateral.Controls.Add(Me.Panel2)
         Me.panelLateral.Controls.Add(Me.btnCrearProvee)
-        Me.panelLateral.Controls.Add(Me.Panel1)
-        Me.panelLateral.Controls.Add(Me.btnCrearUsuario)
         Me.panelLateral.Controls.Add(Me.PanelIs)
         Me.panelLateral.Controls.Add(Me.btnInicioSesion)
         Me.panelLateral.Controls.Add(Me.PanelCP)
@@ -79,10 +78,36 @@ Partial Class Form1
         Me.panelLateral.Size = New System.Drawing.Size(265, 853)
         Me.panelLateral.TabIndex = 7
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.Turquoise
+        Me.Panel8.Location = New System.Drawing.Point(5, 389)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(7, 28)
+        Me.Panel8.TabIndex = 20
+        '
+        'Button4
+        '
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(16, 389)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(240, 28)
+        Me.Button4.TabIndex = 19
+        Me.Button4.Text = "Usuarios"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel6.Location = New System.Drawing.Point(5, 388)
+        Me.Panel6.Location = New System.Drawing.Point(5, 353)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(7, 28)
@@ -91,7 +116,7 @@ Partial Class Form1
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel5.Location = New System.Drawing.Point(5, 352)
+        Me.Panel5.Location = New System.Drawing.Point(5, 317)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(7, 28)
@@ -106,7 +131,7 @@ Partial Class Form1
         Me.Button2.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(13, 352)
+        Me.Button2.Location = New System.Drawing.Point(13, 317)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(240, 28)
@@ -123,7 +148,7 @@ Partial Class Form1
         Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(16, 388)
+        Me.Button1.Location = New System.Drawing.Point(16, 353)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(240, 28)
@@ -134,7 +159,7 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel2.Location = New System.Drawing.Point(5, 316)
+        Me.Panel2.Location = New System.Drawing.Point(5, 281)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(7, 28)
@@ -149,39 +174,13 @@ Partial Class Form1
         Me.btnCrearProvee.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearProvee.ForeColor = System.Drawing.Color.White
         Me.btnCrearProvee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCrearProvee.Location = New System.Drawing.Point(13, 316)
+        Me.btnCrearProvee.Location = New System.Drawing.Point(13, 281)
         Me.btnCrearProvee.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCrearProvee.Name = "btnCrearProvee"
         Me.btnCrearProvee.Size = New System.Drawing.Size(240, 28)
         Me.btnCrearProvee.TabIndex = 15
         Me.btnCrearProvee.Text = "Crear Proveedor"
         Me.btnCrearProvee.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Turquoise
-        Me.Panel1.Location = New System.Drawing.Point(5, 281)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(7, 28)
-        Me.Panel1.TabIndex = 14
-        '
-        'btnCrearUsuario
-        '
-        Me.btnCrearUsuario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCrearUsuario.FlatAppearance.BorderSize = 0
-        Me.btnCrearUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray
-        Me.btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCrearUsuario.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearUsuario.ForeColor = System.Drawing.Color.White
-        Me.btnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCrearUsuario.Location = New System.Drawing.Point(13, 281)
-        Me.btnCrearUsuario.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCrearUsuario.Name = "btnCrearUsuario"
-        Me.btnCrearUsuario.Size = New System.Drawing.Size(240, 28)
-        Me.btnCrearUsuario.TabIndex = 13
-        Me.btnCrearUsuario.Text = "Crear usuario"
-        Me.btnCrearUsuario.UseVisualStyleBackColor = False
         '
         'PanelIs
         '
@@ -314,7 +313,6 @@ Partial Class Form1
         '
         Me.BarraPerfil.BackColor = System.Drawing.Color.Turquoise
         Me.BarraPerfil.Controls.Add(Me.Button3)
-        Me.BarraPerfil.Controls.Add(Me.btnBuscarUsuarios)
         Me.BarraPerfil.Controls.Add(Me.Panel7)
         Me.BarraPerfil.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraPerfil.Location = New System.Drawing.Point(0, 0)
@@ -332,16 +330,6 @@ Partial Class Form1
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Mod Prov"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'btnBuscarUsuarios
-        '
-        Me.btnBuscarUsuarios.Location = New System.Drawing.Point(347, 7)
-        Me.btnBuscarUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnBuscarUsuarios.Name = "btnBuscarUsuarios"
-        Me.btnBuscarUsuarios.Size = New System.Drawing.Size(167, 30)
-        Me.btnBuscarUsuarios.TabIndex = 10
-        Me.btnBuscarUsuarios.Text = "Buscar Usuarios"
-        Me.btnBuscarUsuarios.UseVisualStyleBackColor = True
         '
         'Panel7
         '
@@ -386,9 +374,6 @@ Partial Class Form1
     Friend WithEvents Panel7 As Panel
     Friend WithEvents PanelIs As Panel
     Friend WithEvents btnInicioSesion As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnCrearUsuario As Button
-    Friend WithEvents btnBuscarUsuarios As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnCrearProvee As Button
     Friend WithEvents Panel5 As Panel
@@ -396,4 +381,6 @@ Partial Class Form1
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Button4 As Button
 End Class
