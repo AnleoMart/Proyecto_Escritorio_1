@@ -32,4 +32,10 @@
         Dim modify As Boolean = articulo.modificarArticulo()
         Return modify
     End Function
+    Public Function eliminarArticulo(codigo As String) As Boolean
+        Dim cod As Integer = convertInt(codigo)
+        articulo = New Articulo
+        articulo.Codigo = cod
+        Return articulo.eliminarArticulo()
+    End Function
 End Class

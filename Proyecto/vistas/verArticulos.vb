@@ -14,4 +14,14 @@
         ConfigurarArticulo.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnCrearArticulo_Click(sender As Object, e As EventArgs) Handles btnCrearArticulo.Click
+        Dim CrearArticulo As New CrearArticulo
+        CrearArticulo.MdiParent = Form1
+        CrearArticulo.StartPosition = FormStartPosition.Manual
+        CrearArticulo.Left = 0
+        CrearArticulo.Top = 0
+        CrearArticulo.Show()
+        Me.Hide()
+    End Sub
 End Class

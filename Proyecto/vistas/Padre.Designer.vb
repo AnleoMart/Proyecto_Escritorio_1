@@ -74,7 +74,7 @@ Partial Class Form1
         Me.panelLateral.Controls.Add(Me.Logo)
         Me.panelLateral.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelLateral.Location = New System.Drawing.Point(0, 43)
-        Me.panelLateral.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelLateral.Margin = New System.Windows.Forms.Padding(4)
         Me.panelLateral.Name = "panelLateral"
         Me.panelLateral.Size = New System.Drawing.Size(265, 853)
         Me.panelLateral.TabIndex = 7
@@ -83,7 +83,7 @@ Partial Class Form1
         '
         Me.Panel6.BackColor = System.Drawing.Color.Turquoise
         Me.Panel6.Location = New System.Drawing.Point(5, 388)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(7, 28)
         Me.Panel6.TabIndex = 18
@@ -92,7 +92,7 @@ Partial Class Form1
         '
         Me.Panel5.BackColor = System.Drawing.Color.Turquoise
         Me.Panel5.Location = New System.Drawing.Point(5, 352)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(7, 28)
         Me.Panel5.TabIndex = 18
@@ -107,7 +107,7 @@ Partial Class Form1
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(13, 352)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(240, 28)
         Me.Button2.TabIndex = 17
@@ -124,18 +124,18 @@ Partial Class Form1
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(16, 388)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(240, 28)
         Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Crear Articulo"
+        Me.Button1.Text = "Articulos"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Turquoise
         Me.Panel2.Location = New System.Drawing.Point(5, 316)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(7, 28)
         Me.Panel2.TabIndex = 16
@@ -150,7 +150,7 @@ Partial Class Form1
         Me.btnCrearProvee.ForeColor = System.Drawing.Color.White
         Me.btnCrearProvee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCrearProvee.Location = New System.Drawing.Point(13, 316)
-        Me.btnCrearProvee.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCrearProvee.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCrearProvee.Name = "btnCrearProvee"
         Me.btnCrearProvee.Size = New System.Drawing.Size(240, 28)
         Me.btnCrearProvee.TabIndex = 15
@@ -161,7 +161,7 @@ Partial Class Form1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Turquoise
         Me.Panel1.Location = New System.Drawing.Point(5, 281)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(7, 28)
         Me.Panel1.TabIndex = 14
@@ -176,7 +176,7 @@ Partial Class Form1
         Me.btnCrearUsuario.ForeColor = System.Drawing.Color.White
         Me.btnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCrearUsuario.Location = New System.Drawing.Point(13, 281)
-        Me.btnCrearUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCrearUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCrearUsuario.Name = "btnCrearUsuario"
         Me.btnCrearUsuario.Size = New System.Drawing.Size(240, 28)
         Me.btnCrearUsuario.TabIndex = 13
@@ -187,7 +187,7 @@ Partial Class Form1
         '
         Me.PanelIs.BackColor = System.Drawing.Color.Turquoise
         Me.PanelIs.Location = New System.Drawing.Point(5, 730)
-        Me.PanelIs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelIs.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelIs.Name = "PanelIs"
         Me.PanelIs.Size = New System.Drawing.Size(7, 28)
         Me.PanelIs.TabIndex = 12
@@ -202,7 +202,7 @@ Partial Class Form1
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
         Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnInicioSesion.Location = New System.Drawing.Point(13, 730)
-        Me.btnInicioSesion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnInicioSesion.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInicioSesion.Name = "btnInicioSesion"
         Me.btnInicioSesion.Size = New System.Drawing.Size(240, 28)
         Me.btnInicioSesion.TabIndex = 11
@@ -214,7 +214,7 @@ Partial Class Form1
         '
         Me.PanelCP.BackColor = System.Drawing.Color.Turquoise
         Me.PanelCP.Location = New System.Drawing.Point(5, 766)
-        Me.PanelCP.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelCP.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelCP.Name = "PanelCP"
         Me.PanelCP.Size = New System.Drawing.Size(7, 28)
         Me.PanelCP.TabIndex = 10
@@ -229,7 +229,7 @@ Partial Class Form1
         Me.BtnCrearPerfil.ForeColor = System.Drawing.Color.White
         Me.BtnCrearPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnCrearPerfil.Location = New System.Drawing.Point(13, 766)
-        Me.BtnCrearPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCrearPerfil.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCrearPerfil.Name = "BtnCrearPerfil"
         Me.BtnCrearPerfil.Size = New System.Drawing.Size(240, 28)
         Me.BtnCrearPerfil.TabIndex = 9
@@ -241,7 +241,7 @@ Partial Class Form1
         Me.PanelCS.BackColor = System.Drawing.Color.Turquoise
         Me.PanelCS.Controls.Add(Me.Panel3)
         Me.PanelCS.Location = New System.Drawing.Point(5, 802)
-        Me.PanelCS.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelCS.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelCS.Name = "PanelCS"
         Me.PanelCS.Size = New System.Drawing.Size(7, 28)
         Me.PanelCS.TabIndex = 8
@@ -250,7 +250,7 @@ Partial Class Form1
         '
         Me.Panel3.BackColor = System.Drawing.Color.Turquoise
         Me.Panel3.Location = New System.Drawing.Point(-121, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(7, 28)
         Me.Panel3.TabIndex = 10
@@ -265,7 +265,7 @@ Partial Class Form1
         Me.btnCerrarSesion.ForeColor = System.Drawing.Color.White
         Me.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCerrarSesion.Location = New System.Drawing.Point(13, 802)
-        Me.btnCerrarSesion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCerrarSesion.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrarSesion.Name = "btnCerrarSesion"
         Me.btnCerrarSesion.Size = New System.Drawing.Size(240, 28)
         Me.btnCerrarSesion.TabIndex = 7
@@ -276,7 +276,7 @@ Partial Class Form1
         '
         Me.Panel4.BackColor = System.Drawing.Color.Turquoise
         Me.Panel4.Location = New System.Drawing.Point(5, 245)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(7, 28)
         Me.Panel4.TabIndex = 4
@@ -291,7 +291,7 @@ Partial Class Form1
         Me.btnPerfil.ForeColor = System.Drawing.Color.White
         Me.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPerfil.Location = New System.Drawing.Point(13, 245)
-        Me.btnPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPerfil.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPerfil.Name = "btnPerfil"
         Me.btnPerfil.Size = New System.Drawing.Size(240, 28)
         Me.btnPerfil.TabIndex = 1
@@ -303,7 +303,7 @@ Partial Class Form1
         Me.Logo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
         Me.Logo.Location = New System.Drawing.Point(13, 12)
-        Me.Logo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Logo.Margin = New System.Windows.Forms.Padding(4)
         Me.Logo.Name = "Logo"
         Me.Logo.Size = New System.Drawing.Size(240, 172)
         Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -318,7 +318,7 @@ Partial Class Form1
         Me.BarraPerfil.Controls.Add(Me.Panel7)
         Me.BarraPerfil.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraPerfil.Location = New System.Drawing.Point(0, 0)
-        Me.BarraPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BarraPerfil.Margin = New System.Windows.Forms.Padding(4)
         Me.BarraPerfil.Name = "BarraPerfil"
         Me.BarraPerfil.Size = New System.Drawing.Size(1581, 43)
         Me.BarraPerfil.TabIndex = 6
@@ -326,7 +326,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(216, 9)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 28)
         Me.Button3.TabIndex = 9
@@ -361,7 +361,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Inventarianding"

@@ -243,4 +243,26 @@ Public Class Articulo
         closeConn()
         Return modify
     End Function
+    Public Function eliminarArticulo() As Boolean
+        Dim modify As Boolean = False
+        Dim query As String = "DELETE FROM articulos WHERE codigo = @codigo "
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@codigo", Codigo)
+
+            Dim datos As Integer = comando.ExecuteNonQuery()
+            ' Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                modify = True
+            Else
+                modify = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return modify
+    End Function
 End Class

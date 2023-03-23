@@ -40,6 +40,7 @@ Partial Class ConfigurarArticulo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MCFechaVencimietto = New System.Windows.Forms.MonthCalendar()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -99,6 +100,7 @@ Partial Class ConfigurarArticulo
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.MCFechaVencimietto)
         Me.Panel3.Controls.Add(Me.txtDescripcion)
         Me.Panel3.Controls.Add(Me.Button1)
@@ -234,6 +236,15 @@ Partial Class ConfigurarArticulo
         Me.MCFechaVencimietto.ShowToday = False
         Me.MCFechaVencimietto.TabIndex = 19
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(24, 452)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(309, 29)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Volver"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ConfigurarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -271,4 +282,5 @@ Partial Class ConfigurarArticulo
     Friend WithEvents Label3 As Label
     Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents MCFechaVencimietto As MonthCalendar
+    Friend WithEvents Button3 As Button
 End Class

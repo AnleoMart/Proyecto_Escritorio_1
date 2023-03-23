@@ -147,12 +147,12 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim articulo As New crearArticulo
-        articulo.MdiParent = Me
-        articulo.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-        articulo.Left = 0
-        articulo.Top = 0
-        articulo.Show()
+        Dim verArticulos As New verArticulos
+        verArticulos.MdiParent = Me
+        verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+        verArticulos.Left = 0
+        verArticulos.Top = 0
+        verArticulos.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

@@ -14,7 +14,7 @@
 
 
     End Sub
-    Public Function iniciarSesion()
+    Public Sub iniciarSesion()
         Dim controllerUser As New ControladorUsuario
 
         Dim correo, contrasena As String
@@ -33,7 +33,7 @@
             MsgBox("Ha introducido usuario o contraseña erroneamente, por favor vuelva a intetntarlo", vbCritical, "Error")
 
         End If
-    End Function
+    End Sub
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
         iniciarSesion()
 

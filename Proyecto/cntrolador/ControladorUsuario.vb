@@ -67,7 +67,7 @@ Public Class ControladorUsuario
         'Console.WriteLine("<<<<<nueva contraseña>>>> = " & nuevaContraseña)
         Return nuevaContraseña
     End Function
-    Public Function recuperarContraseña(email As String)
+    Public Sub recuperarContraseña(email As String)
         Dim nuevaPass As String = cambioContraseña(email)
 
         Dim correo As New MailMessage()
@@ -93,7 +93,7 @@ Public Class ControladorUsuario
         Catch ex As Exception
             MsgBox("Ha ocurrido un error al enviar el mensaje", vbCritical, "Error al enviar Mensaje")
         End Try
-    End Function
+    End Sub
     Public Function modificarUsuario(cedula As String, nombre As String, apellido As String, email As String, telefono As String, contraseña As String, fecha As Date) As Boolean
 
         Dim pass As String = desHashear(contraseña)

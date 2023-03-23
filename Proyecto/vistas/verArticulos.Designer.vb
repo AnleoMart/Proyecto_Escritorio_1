@@ -22,74 +22,14 @@ Partial Class verArticulos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DgConsultaArticulos = New System.Windows.Forms.DataGridView()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.DgConsultaArticulos = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCrearArticulo = New System.Windows.Forms.Button()
         CType(Me.DgConsultaArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.DgConsultaArticulos)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(80, 111)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1135, 680)
-        Me.Panel1.TabIndex = 0
-        '
-        'DgConsultaArticulos
-        '
-        Me.DgConsultaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgConsultaArticulos.Location = New System.Drawing.Point(71, 192)
-        Me.DgConsultaArticulos.Name = "DgConsultaArticulos"
-        Me.DgConsultaArticulos.RowHeadersWidth = 51
-        Me.DgConsultaArticulos.RowTemplate.Height = 24
-        Me.DgConsultaArticulos.Size = New System.Drawing.Size(992, 443)
-        Me.DgConsultaArticulos.TabIndex = 23
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(58, 142)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(70, 24)
-        Me.ComboBox1.TabIndex = 21
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 123)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 16)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Mostrar"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(58, 71)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(231, 22)
-        Me.TextBox1.TabIndex = 18
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 36)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 32)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Buscar"
         '
         'Label2
         '
@@ -102,6 +42,47 @@ Partial Class verArticulos
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Buscar Articulo"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(66, 37)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 32)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Articulos"
+        '
+        'DgConsultaArticulos
+        '
+        Me.DgConsultaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgConsultaArticulos.Location = New System.Drawing.Point(72, 81)
+        Me.DgConsultaArticulos.Name = "DgConsultaArticulos"
+        Me.DgConsultaArticulos.RowHeadersWidth = 51
+        Me.DgConsultaArticulos.RowTemplate.Height = 24
+        Me.DgConsultaArticulos.Size = New System.Drawing.Size(992, 488)
+        Me.DgConsultaArticulos.TabIndex = 23
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnCrearArticulo)
+        Me.Panel1.Controls.Add(Me.DgConsultaArticulos)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Location = New System.Drawing.Point(73, 113)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1135, 636)
+        Me.Panel1.TabIndex = 0
+        '
+        'btnCrearArticulo
+        '
+        Me.btnCrearArticulo.Location = New System.Drawing.Point(918, 28)
+        Me.btnCrearArticulo.Name = "btnCrearArticulo"
+        Me.btnCrearArticulo.Size = New System.Drawing.Size(146, 41)
+        Me.btnCrearArticulo.TabIndex = 17
+        Me.btnCrearArticulo.Text = "Nuevo Articulo"
+        Me.btnCrearArticulo.UseVisualStyleBackColor = True
+        '
         'verArticulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -113,19 +94,16 @@ Partial Class verArticulos
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "verArticulos"
         Me.Text = "Buscar Articulos"
+        CType(Me.DgConsultaArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DgConsultaArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
     Friend WithEvents DgConsultaArticulos As DataGridView
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnCrearArticulo As Button
 End Class

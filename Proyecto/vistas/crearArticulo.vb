@@ -39,6 +39,13 @@ Public Class CrearArticulo
             create = cntrlArticulos.crearArticulo(codigo, nombre, bodega, cantidad, descripcion, idUser, nitProv, MCFechaVencimiento.SelectionStart)
             If create Then
                 MsgBox("Se ha creado correctamente el articulo", vbInformation, "aprovado")
+                Dim verArticulos As New verArticulos
+                verArticulos.MdiParent = Form1
+                verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+                verArticulos.Left = 0
+                verArticulos.Top = 0
+                verArticulos.Show()
+                Me.Hide()
             Else
                 MsgBox(" No se ha podido crear correctamente el articulo", vbCritical, "Error")
             End If
