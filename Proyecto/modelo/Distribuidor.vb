@@ -117,8 +117,8 @@ Public Class Distribuidor
         'Console.WriteLine("--------" & listaDistribuidores.Count)
         Return listaDistribuidores
     End Function
-    Public Function listarDitribuidores(data As Object)
-        Dim query As String = "SELECT nit, nombre, direccion, ciudad, categoria, telefono, descripcion FROM distribuidor"
+    Public Sub listarDitribuidores(data As Object)
+        Dim query As String = "SELECT nit, nombre, direccion, ciudad, categoria, telefono, descripcion FROM distribuidor WHERE estado = 'activo'"
         Dim datatable As New DataTable
         Try
             openConn()
@@ -135,11 +135,11 @@ Public Class Distribuidor
 
         closeConn()
         datatable.Dispose()
-    End Function
+    End Sub
     Public Function crearDistribuidor() As Boolean
-
+        Dim estado As String = "activo"
         Dim create As Boolean = False
-        Dim query As String = "INSERT INTO distribuidor ( nit, nombre, ciudad, direccion, telefono, categoria, descripcion) VALUES (@nit, @nombre, @ciudad, @direccion, @telefono, @categoria, @descripcion)"
+        Dim query As String = "INSERT INTO distribuidor ( nit, nombre, ciudad, direccion, telefono, categoria, descripcion,estado) VALUES (@nit, @nombre, @ciudad, @direccion, @telefono, @categoria, @descripcion, @estado)"
         Try
             openConn()
 
@@ -151,6 +151,7 @@ Public Class Distribuidor
             comando.Parameters.AddWithValue("@telefono", Telefono)
             comando.Parameters.AddWithValue("@categoria", Categoria)
             comando.Parameters.AddWithValue("@descripcion", Descripcion)
+            comando.Parameters.AddWithValue("@estado", estado)
             Dim datos As Integer = comando.ExecuteNonQuery()
             Console.WriteLine("columnas afectadas ---- " & datos)
             If datos > 0 Then
@@ -221,7 +222,7 @@ Public Class Distribuidor
     Public Function cargarInfoDitribuidor(nit As String) As Distribuidor
         Dim distri As Distribuidor
         Dim found As Boolean = False
-        Dim query As String = "SELECT * FROM usuario WHERE nit =  @nit "
+        Dim query As String = "SELECT * FROM distribuidor WHERE nit =  @nit "
         Try
             openConn()
             Dim comando As New MySqlCommand(query, MysqlConex)
@@ -247,6 +248,31 @@ Public Class Distribuidor
         End Try
 
         closeConn()
+        Console.WriteLine("me --------- " & distri.Nit)
         Return distri
+    End Function
+    Public Function modEstado(nit)
+        Dim estado As String = "desactivo"
+        Dim modify As Boolean = False
+        Dim query As String = "UPDATE distribuidor SET estado = @estado WHERE nit = @nit"
+        Try
+            openConn()
+            Dim Modi As New MySqlCommand(query, MysqlConex)
+            Modi.Parameters.AddWithValue("@nit", nit)
+            Modi.Parameters.AddWithValue("@estado", estado)
+
+            Dim datos As Integer = Modi.ExecuteNonQuery()
+            Console.WriteLine("columnas afectadas ---- " & datos)
+            If datos > 0 Then
+                modify = True
+            Else
+                modify = False
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        End Try
+
+        closeConn()
+        Return modify
     End Function
 End Class

@@ -133,7 +133,7 @@ Public Class Form1
         BuscarUsuarios.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCrearProvee.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Dim proveedor As New ModiProveedor
         proveedor.MdiParent = Me
         proveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -142,7 +142,7 @@ Public Class Form1
         proveedor.Show()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -161,7 +161,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs)
         Dim ModiProveedor As New ModiProveedor
         ModiProveedor.MdiParent = Me
         ModiProveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0

@@ -66,6 +66,7 @@ Partial Class ConfiguracionProveedor
         '
         Me.txtNit.Location = New System.Drawing.Point(517, 33)
         Me.txtNit.Name = "txtNit"
+        Me.txtNit.ReadOnly = True
         Me.txtNit.Size = New System.Drawing.Size(510, 22)
         Me.txtNit.TabIndex = 10
         '
