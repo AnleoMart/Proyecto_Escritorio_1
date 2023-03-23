@@ -45,6 +45,8 @@ Partial Class Form1
         Me.BarraPerfil = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.panelLateral.SuspendLayout()
         Me.PanelCS.SuspendLayout()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +56,8 @@ Partial Class Form1
         'panelLateral
         '
         Me.panelLateral.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.panelLateral.Controls.Add(Me.Panel1)
+        Me.panelLateral.Controls.Add(Me.Button5)
         Me.panelLateral.Controls.Add(Me.Panel8)
         Me.panelLateral.Controls.Add(Me.Button4)
         Me.panelLateral.Controls.Add(Me.Panel6)
@@ -339,6 +343,32 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(200, 100)
         Me.Panel7.TabIndex = 9
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Turquoise
+        Me.Panel1.Location = New System.Drawing.Point(5, 425)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(7, 28)
+        Me.Panel1.TabIndex = 22
+        '
+        'Button5
+        '
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(16, 425)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(240, 28)
+        Me.Button5.TabIndex = 21
+        Me.Button5.Text = "Distribuidor"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -383,4 +413,6 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Button4 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button5 As Button
 End Class

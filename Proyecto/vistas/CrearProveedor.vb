@@ -45,17 +45,17 @@ Public Class ModiProveedor
         telefono = txtTelProv.Text
         descripcion = txtCategProv.Text
         If controlDistribuidor.crearDistribuidor(nit, nombre, direccion, ciudad, categoria, telefono, descripcion) Then
-            Dim verArticulos As New verArticulos
-            verArticulos.MdiParent = Form1
-            verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-            verArticulos.Left = 0
-            verArticulos.Top = 0
-            verArticulos.Show()
+            Dim BusquedaProveedor As New BusquedaProveedor
+            BusquedaProveedor.MdiParent = Form1
+            BusquedaProveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+            BusquedaProveedor.Left = 0
+            BusquedaProveedor.Top = 0
+            BusquedaProveedor.Show()
             Me.Hide()
         End If
     End Sub
 
-    Private Sub LabArticuloArt_Click(sender As Object, e As EventArgs) Handles LabArticuloArt.Click
+    Private Sub LabArticuloArt_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

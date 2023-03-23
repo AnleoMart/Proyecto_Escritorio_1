@@ -22,16 +22,16 @@ Partial Class ConfiguracionProveedor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtCategoria = New System.Windows.Forms.TextBox()
+        Me.txtCiudad = New System.Windows.Forms.TextBox()
+        Me.txtNit = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -43,83 +43,85 @@ Partial Class ConfiguracionProveedor
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox6
+        'txtCategoria
         '
-        Me.TextBox6.Location = New System.Drawing.Point(502, 216)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox6.TabIndex = 12
+        Me.txtCategoria.Location = New System.Drawing.Point(517, 249)
+        Me.txtCategoria.Name = "txtCategoria"
+        Me.txtCategoria.Size = New System.Drawing.Size(510, 22)
+        Me.txtCategoria.TabIndex = 12
         '
-        'TextBox5
+        'txtCiudad
         '
-        Me.TextBox5.Location = New System.Drawing.Point(502, 176)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox5.TabIndex = 11
+        Me.txtCiudad.Location = New System.Drawing.Point(517, 209)
+        Me.txtCiudad.Name = "txtCiudad"
+        Me.txtCiudad.Size = New System.Drawing.Size(510, 22)
+        Me.txtCiudad.TabIndex = 11
         '
-        'TextBox4
+        'txtNit
         '
-        Me.TextBox4.Location = New System.Drawing.Point(502, 135)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox4.TabIndex = 10
+        Me.txtNit.Location = New System.Drawing.Point(517, 33)
+        Me.txtNit.Name = "txtNit"
+        Me.txtNit.Size = New System.Drawing.Size(510, 22)
+        Me.txtNit.TabIndex = 10
         '
-        'TextBox3
+        'txtTelefono
         '
-        Me.TextBox3.Location = New System.Drawing.Point(502, 96)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox3.TabIndex = 9
+        Me.txtTelefono.Location = New System.Drawing.Point(517, 162)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(510, 22)
+        Me.txtTelefono.TabIndex = 9
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(502, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox1.TabIndex = 7
+        Me.txtNombre.Location = New System.Drawing.Point(517, 78)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(510, 22)
+        Me.txtNombre.TabIndex = 7
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(739, 500)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(309, 54)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Eliminar proveedor"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnEliminar.BackColor = System.Drawing.Color.Red
+        Me.btnEliminar.ForeColor = System.Drawing.Color.White
+        Me.btnEliminar.Location = New System.Drawing.Point(739, 500)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(309, 54)
+        Me.btnEliminar.TabIndex = 15
+        Me.btnEliminar.Text = "Eliminar proveedor"
+        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(23, 356)
+        Me.Button1.Location = New System.Drawing.Point(71, 346)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(309, 54)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "Actualizar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtDireccion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(502, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(510, 22)
-        Me.TextBox2.TabIndex = 8
+        Me.txtDireccion.Location = New System.Drawing.Point(517, 121)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(510, 22)
+        Me.txtDireccion.TabIndex = 8
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel3.Controls.Add(Me.TextBox7)
+        Me.Panel3.Controls.Add(Me.Button3)
+        Me.Panel3.Controls.Add(Me.txtDescripcion)
         Me.Panel3.Controls.Add(Me.Button1)
-        Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox5)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.txtCategoria)
+        Me.Panel3.Controls.Add(Me.txtCiudad)
+        Me.Panel3.Controls.Add(Me.txtNit)
+        Me.Panel3.Controls.Add(Me.txtTelefono)
+        Me.Panel3.Controls.Add(Me.txtDireccion)
+        Me.Panel3.Controls.Add(Me.txtNombre)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label8)
@@ -127,25 +129,25 @@ Partial Class ConfiguracionProveedor
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(74, 47)
+        Me.Panel3.Location = New System.Drawing.Point(76, 25)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1052, 425)
+        Me.Panel3.Size = New System.Drawing.Size(1052, 469)
         Me.Panel3.TabIndex = 7
         '
-        'TextBox7
+        'txtDescripcion
         '
-        Me.TextBox7.Location = New System.Drawing.Point(502, 257)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(510, 96)
-        Me.TextBox7.TabIndex = 15
+        Me.txtDescripcion.Location = New System.Drawing.Point(517, 290)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(510, 96)
+        Me.txtDescripcion.TabIndex = 15
         '
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(9, 257)
+        Me.Label9.Location = New System.Drawing.Point(24, 290)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label9.Size = New System.Drawing.Size(453, 30)
@@ -157,7 +159,7 @@ Partial Class ConfiguracionProveedor
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(9, 12)
+        Me.Label2.Location = New System.Drawing.Point(24, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
         Me.Label2.Size = New System.Drawing.Size(453, 30)
@@ -169,7 +171,7 @@ Partial Class ConfiguracionProveedor
         Me.Label8.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(9, 216)
+        Me.Label8.Location = New System.Drawing.Point(24, 249)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label8.Size = New System.Drawing.Size(453, 30)
@@ -181,7 +183,7 @@ Partial Class ConfiguracionProveedor
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(9, 55)
+        Me.Label4.Location = New System.Drawing.Point(24, 121)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label4.Size = New System.Drawing.Size(453, 30)
@@ -193,7 +195,7 @@ Partial Class ConfiguracionProveedor
         Me.Label7.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(9, 176)
+        Me.Label7.Location = New System.Drawing.Point(24, 209)
         Me.Label7.Name = "Label7"
         Me.Label7.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label7.Size = New System.Drawing.Size(453, 30)
@@ -205,7 +207,7 @@ Partial Class ConfiguracionProveedor
         Me.Label5.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(9, 96)
+        Me.Label5.Location = New System.Drawing.Point(24, 162)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label5.Size = New System.Drawing.Size(453, 30)
@@ -217,7 +219,7 @@ Partial Class ConfiguracionProveedor
         Me.Label6.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 135)
+        Me.Label6.Location = New System.Drawing.Point(24, 33)
         Me.Label6.Name = "Label6"
         Me.Label6.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label6.Size = New System.Drawing.Size(453, 30)
@@ -238,7 +240,7 @@ Partial Class ConfiguracionProveedor
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.btnEliminar)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(65, 223)
         Me.Panel2.Name = "Panel2"
@@ -264,6 +266,15 @@ Partial Class ConfiguracionProveedor
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Editar Proveedor"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(71, 415)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(309, 33)
+        Me.Button3.TabIndex = 16
+        Me.Button3.Text = "Volver"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ConfiguracionProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -285,16 +296,15 @@ Partial Class ConfiguracionProveedor
 
     End Sub
 
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtCategoria As TextBox
+    Friend WithEvents txtCiudad As TextBox
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
@@ -306,4 +316,6 @@ Partial Class ConfiguracionProveedor
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtNit As TextBox
+    Friend WithEvents Button3 As Button
 End Class

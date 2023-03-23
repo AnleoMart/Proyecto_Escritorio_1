@@ -24,13 +24,18 @@ Partial Class BusquedaProveedor
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DGDistribuidor = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnCrearProveedor = New System.Windows.Forms.Button()
+        Me.nit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ciudad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGDistribuidor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -40,17 +45,15 @@ Partial Class BusquedaProveedor
         Me.Label2.Location = New System.Drawing.Point(512, 36)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(200, 32)
+        Me.Label2.Size = New System.Drawing.Size(214, 32)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Buscar Proveedor"
+        Me.Label2.Text = "Buscar Distribuidor"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.btnCrearProveedor)
+        Me.Panel1.Controls.Add(Me.DGDistribuidor)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(68, 94)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -58,52 +61,92 @@ Partial Class BusquedaProveedor
         Me.Panel1.Size = New System.Drawing.Size(1150, 669)
         Me.Panel1.TabIndex = 17
         '
-        'ComboBox1
+        'DGDistribuidor
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(59, 142)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(71, 24)
-        Me.ComboBox1.TabIndex = 21
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 123)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 16)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Mostrar"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(59, 71)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(231, 22)
-        Me.TextBox1.TabIndex = 18
+        Me.DGDistribuidor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDistribuidor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nit, Me.nombre, Me.direccion, Me.ciudad, Me.categoria, Me.telefono, Me.descripcion})
+        Me.DGDistribuidor.Location = New System.Drawing.Point(88, 94)
+        Me.DGDistribuidor.Name = "DGDistribuidor"
+        Me.DGDistribuidor.RowHeadersWidth = 51
+        Me.DGDistribuidor.RowTemplate.Height = 24
+        Me.DGDistribuidor.Size = New System.Drawing.Size(992, 537)
+        Me.DGDistribuidor.TabIndex = 23
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 36)
+        Me.Label3.Location = New System.Drawing.Point(82, 34)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 32)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Buscar"
         '
-        'DataGridView1
+        'btnCrearProveedor
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(88, 188)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(992, 443)
-        Me.DataGridView1.TabIndex = 23
+        Me.btnCrearProveedor.Location = New System.Drawing.Point(934, 25)
+        Me.btnCrearProveedor.Name = "btnCrearProveedor"
+        Me.btnCrearProveedor.Size = New System.Drawing.Size(146, 41)
+        Me.btnCrearProveedor.TabIndex = 24
+        Me.btnCrearProveedor.Text = "Nuevo Ditribuidor"
+        Me.btnCrearProveedor.UseVisualStyleBackColor = True
+        '
+        'nit
+        '
+        Me.nit.DataPropertyName = "nit"
+        Me.nit.HeaderText = "nit"
+        Me.nit.MinimumWidth = 6
+        Me.nit.Name = "nit"
+        Me.nit.Width = 125
+        '
+        'nombre
+        '
+        Me.nombre.DataPropertyName = "nombre"
+        Me.nombre.HeaderText = "nombre"
+        Me.nombre.MinimumWidth = 6
+        Me.nombre.Name = "nombre"
+        Me.nombre.Width = 125
+        '
+        'direccion
+        '
+        Me.direccion.DataPropertyName = "direccion"
+        Me.direccion.HeaderText = "direccion"
+        Me.direccion.MinimumWidth = 6
+        Me.direccion.Name = "direccion"
+        Me.direccion.Width = 125
+        '
+        'ciudad
+        '
+        Me.ciudad.DataPropertyName = "ciudad"
+        Me.ciudad.HeaderText = "ciudad"
+        Me.ciudad.MinimumWidth = 6
+        Me.ciudad.Name = "ciudad"
+        Me.ciudad.Width = 125
+        '
+        'categoria
+        '
+        Me.categoria.DataPropertyName = "categoria"
+        Me.categoria.HeaderText = "categoria"
+        Me.categoria.MinimumWidth = 6
+        Me.categoria.Name = "categoria"
+        Me.categoria.Width = 125
+        '
+        'telefono
+        '
+        Me.telefono.DataPropertyName = "telefono"
+        Me.telefono.HeaderText = "telefono"
+        Me.telefono.MinimumWidth = 6
+        Me.telefono.Name = "telefono"
+        Me.telefono.Width = 125
+        '
+        'descripcion
+        '
+        Me.descripcion.DataPropertyName = "descripcion"
+        Me.descripcion.HeaderText = "descripcion"
+        Me.descripcion.MinimumWidth = 6
+        Me.descripcion.Name = "descripcion"
+        Me.descripcion.Width = 125
         '
         'BusquedaProveedor
         '
@@ -119,7 +162,7 @@ Partial Class BusquedaProveedor
         Me.Text = "BusquedaProveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGDistribuidor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,9 +170,14 @@ Partial Class BusquedaProveedor
 
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGDistribuidor As DataGridView
+    Friend WithEvents btnCrearProveedor As Button
+    Friend WithEvents nit As DataGridViewTextBoxColumn
+    Friend WithEvents nombre As DataGridViewTextBoxColumn
+    Friend WithEvents direccion As DataGridViewTextBoxColumn
+    Friend WithEvents ciudad As DataGridViewTextBoxColumn
+    Friend WithEvents categoria As DataGridViewTextBoxColumn
+    Friend WithEvents telefono As DataGridViewTextBoxColumn
+    Friend WithEvents descripcion As DataGridViewTextBoxColumn
 End Class

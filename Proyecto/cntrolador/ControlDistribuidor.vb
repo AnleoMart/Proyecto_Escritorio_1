@@ -28,10 +28,10 @@ Public Class ControlDistribuidor
 
     Public Sub buscarDistribuidor(data As Object)
         Dim dis = New Distribuidor()
-        Dim distribuidors = dis.buscarDistribuidores(data)
+        Dim distribuidors = dis.listarDitribuidores(data)
 
     End Sub
-    Public Function ModificarDistribuidor(nit As String, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As Date) As Boolean
+    Public Function ModificarDistribuidor(nit As String, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As Date, descripcion As String) As Boolean
 
         Dim id As Integer = CInt(nit)
         Dim dis As New Distribuidor()
@@ -41,7 +41,7 @@ Public Class ControlDistribuidor
         dis.Ciudad = ciudad
         dis.Categoria = categoria
         dis.Telefono = telefono
-
+        dis.Descripcion = descripcion
         If dis.modificarDistribuidor() Then
             Return True
         Else
@@ -49,5 +49,8 @@ Public Class ControlDistribuidor
         End If
     End Function
 
-
+    Public Function cargarDatos(nit As String) As Distribuidor
+        Dim distri As New Distribuidor
+        Return distri.cargarInfoDitribuidor(nit)
+    End Function
 End Class

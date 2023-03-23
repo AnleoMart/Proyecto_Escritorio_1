@@ -17,6 +17,7 @@ Public Class Distribuidor
         Me.Nit = id
         Me.Nombre = nombre
     End Sub
+
     Public Sub New(nit As Integer, nombre As String, direccion As String, ciudad As String, categoria As String, telefono As String, descripcion As String)
         Me.Nit = nit
         Me.Nombre = nombre
@@ -96,11 +97,7 @@ Public Class Distribuidor
         End Set
     End Property
 
-    Friend ReadOnly Property buscarDistribuidores As List(Of Distribuidor)
-        Get
-            Throw New NotImplementedException()
-        End Get
-    End Property
+
     'funcion para devolver inicialmete la lista de los distribuidores a la hora de crear el articulo
     Public Function buscarDistribuidor() As List(Of Distribuidor)
         Dim listaDistribuidores As New List(Of Distribuidor)
@@ -119,6 +116,25 @@ Public Class Distribuidor
         closeConn()
         'Console.WriteLine("--------" & listaDistribuidores.Count)
         Return listaDistribuidores
+    End Function
+    Public Function listarDitribuidores(data As Object)
+        Dim query As String = "SELECT nit, nombre, direccion, ciudad, categoria, telefono, descripcion FROM distribuidor"
+        Dim datatable As New DataTable
+        Try
+            openConn()
+            command = New MySqlCommand(query, MysqlConex)
+            adapter = New MySqlDataAdapter
+            adapter.SelectCommand = command
+            adapter.Fill(datatable)
+            data.datasource = datatable
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+
+        End Try
+
+        closeConn()
+        datatable.Dispose()
     End Function
     Public Function crearDistribuidor() As Boolean
 
@@ -201,5 +217,36 @@ Public Class Distribuidor
     End Function
     Public Overrides Function ToString() As String
         Return Nombre
+    End Function
+    Public Function cargarInfoDitribuidor(nit As String) As Distribuidor
+        Dim distri As Distribuidor
+        Dim found As Boolean = False
+        Dim query As String = "SELECT * FROM usuario WHERE nit =  @nit "
+        Try
+            openConn()
+            Dim comando As New MySqlCommand(query, MysqlConex)
+            comando.Parameters.AddWithValue("@nit", nit)
+            Dim lector As MySqlDataReader = comando.ExecuteReader()
+
+            If lector.Read() Then
+                Me.Nit = lector.GetInt32("nit")
+                Me.Nombre = lector.GetString("nombre")
+                Me.Direccion = lector.GetString("direccion")
+                Me.Ciudad = lector.GetString("ciudad")
+                Me.Categoria = lector.GetString("categoria")
+                Me.Telefono = lector.GetString("telefono")
+                Me.Descripcion = lector.GetString("descripcion")
+
+            End If
+            'Console.WriteLine("aqui ---- " & lector.Read())
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        Finally
+
+            distri = New Distribuidor(Me.Nit, Me.Nombre, Me.Direccion, Me.Ciudad, Me.Categoria, Me.Telefono, Me.Descripcion)
+        End Try
+
+        closeConn()
+        Return distri
     End Function
 End Class
