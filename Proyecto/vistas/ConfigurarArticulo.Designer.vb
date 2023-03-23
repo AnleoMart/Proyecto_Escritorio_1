@@ -22,96 +22,62 @@ Partial Class ConfigurarArticulo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtcantidad = New System.Windows.Forms.TextBox()
+        Me.txtBodega = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.MCFechaVencimietto = New System.Windows.Forms.MonthCalendar()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ComboBox3
+        'txtcantidad
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(758, 96)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox3.TabIndex = 17
+        Me.txtcantidad.Location = New System.Drawing.Point(502, 154)
+        Me.txtcantidad.Name = "txtcantidad"
+        Me.txtcantidad.Size = New System.Drawing.Size(420, 22)
+        Me.txtcantidad.TabIndex = 12
         '
-        'ComboBox2
+        'txtBodega
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(631, 96)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 16
+        Me.txtBodega.Location = New System.Drawing.Point(502, 101)
+        Me.txtBodega.Name = "txtBodega"
+        Me.txtBodega.Size = New System.Drawing.Size(420, 22)
+        Me.txtBodega.TabIndex = 10
         '
-        'ComboBox1
+        'txtNombre
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(504, 96)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 15
+        Me.txtNombre.Location = New System.Drawing.Point(502, 55)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(420, 22)
+        Me.txtNombre.TabIndex = 8
         '
-        'TextBox6
+        'txtCodigo
         '
-        Me.TextBox6.Location = New System.Drawing.Point(502, 216)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(420, 22)
-        Me.TextBox6.TabIndex = 12
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(502, 176)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(420, 22)
-        Me.TextBox5.TabIndex = 11
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(502, 135)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(420, 22)
-        Me.TextBox4.TabIndex = 10
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(502, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(420, 22)
-        Me.TextBox2.TabIndex = 8
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(502, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(420, 22)
-        Me.TextBox1.TabIndex = 7
+        Me.txtCodigo.Location = New System.Drawing.Point(502, 12)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.ReadOnly = True
+        Me.txtCodigo.Size = New System.Drawing.Size(420, 22)
+        Me.txtCodigo.TabIndex = 7
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(687, 503)
+        Me.Button2.Location = New System.Drawing.Point(687, 562)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(309, 54)
         Me.Button2.TabIndex = 15
@@ -123,7 +89,7 @@ Partial Class ConfigurarArticulo
         Me.Label9.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(9, 257)
+        Me.Label9.Location = New System.Drawing.Point(9, 202)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label9.Size = New System.Drawing.Size(453, 30)
@@ -133,39 +99,35 @@ Partial Class ConfigurarArticulo
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.ComboBox3)
-        Me.Panel3.Controls.Add(Me.ComboBox2)
-        Me.Panel3.Controls.Add(Me.ComboBox1)
+        Me.Panel3.Controls.Add(Me.MCFechaVencimietto)
+        Me.Panel3.Controls.Add(Me.txtDescripcion)
         Me.Panel3.Controls.Add(Me.Button1)
-        Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox5)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.txtcantidad)
+        Me.Panel3.Controls.Add(Me.txtBodega)
+        Me.Panel3.Controls.Add(Me.txtNombre)
+        Me.Panel3.Controls.Add(Me.txtCodigo)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Location = New System.Drawing.Point(74, 47)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1029, 425)
+        Me.Panel3.Size = New System.Drawing.Size(1029, 509)
         Me.Panel3.TabIndex = 7
         '
-        'TextBox3
+        'txtDescripcion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(502, 261)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(420, 88)
-        Me.TextBox3.TabIndex = 18
+        Me.txtDescripcion.Location = New System.Drawing.Point(14, 248)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(448, 129)
+        Me.txtDescripcion.TabIndex = 18
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(23, 356)
+        Me.Button1.Location = New System.Drawing.Point(24, 392)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(309, 54)
         Me.Button1.TabIndex = 14
@@ -189,7 +151,7 @@ Partial Class ConfigurarArticulo
         Me.Label8.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(9, 216)
+        Me.Label8.Location = New System.Drawing.Point(9, 154)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label8.Size = New System.Drawing.Size(453, 30)
@@ -208,24 +170,12 @@ Partial Class ConfigurarArticulo
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Nombre"
         '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(9, 176)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
-        Me.Label7.Size = New System.Drawing.Size(453, 30)
-        Me.Label7.TabIndex = 4
-        Me.Label7.Text = "Area donde se dirige"
-        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(9, 96)
+        Me.Label5.Location = New System.Drawing.Point(497, 202)
         Me.Label5.Name = "Label5"
         Me.Label5.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label5.Size = New System.Drawing.Size(453, 30)
@@ -237,7 +187,7 @@ Partial Class ConfigurarArticulo
         Me.Label6.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 135)
+        Me.Label6.Location = New System.Drawing.Point(9, 101)
         Me.Label6.Name = "Label6"
         Me.Label6.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label6.Size = New System.Drawing.Size(453, 30)
@@ -251,7 +201,7 @@ Partial Class ConfigurarArticulo
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Location = New System.Drawing.Point(56, 162)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1191, 579)
+        Me.Panel2.Size = New System.Drawing.Size(1191, 640)
         Me.Panel2.TabIndex = 20
         '
         'Label1
@@ -277,6 +227,13 @@ Partial Class ConfigurarArticulo
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Informacion"
         '
+        'MCFechaVencimietto
+        '
+        Me.MCFechaVencimietto.Location = New System.Drawing.Point(565, 276)
+        Me.MCFechaVencimietto.Name = "MCFechaVencimietto"
+        Me.MCFechaVencimietto.ShowToday = False
+        Me.MCFechaVencimietto.TabIndex = 19
+        '
         'ConfigurarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -296,15 +253,10 @@ Partial Class ConfigurarArticulo
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtcantidad As TextBox
+    Friend WithEvents txtBodega As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel3 As Panel
@@ -312,11 +264,11 @@ Partial Class ConfigurarArticulo
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtDescripcion As TextBox
+    Friend WithEvents MCFechaVencimietto As MonthCalendar
 End Class

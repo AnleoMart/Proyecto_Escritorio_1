@@ -24,18 +24,24 @@ Public Class CrearArticulo
     End Sub
 
     Private Sub btnGuardarArt_Click(sender As Object, e As EventArgs) Handles btnGuardarArt.Click
-        Dim nombre, area, descripcion, codigo, cantidad As String
+        Dim create As Boolean
+        Dim nombre, bodega, descripcion, codigo, cantidad As String
         nombre = txtNombreArt.Text
-        area = txtAreaArt.Text
+        bodega = txtBodega.Text
         descripcion = txtDescripArt.Text
         codigo = txtCodigoArt.Text
         cantidad = txtCantidadArt.Text
-        Console.WriteLine("-----------------------" & CBProveedor.SelectedValue.ToString())
-        If nombre <> "" And area <> "" And descripcion <> "" And codigo <> "" And cantidad <> "" Then
+        'Console.WriteLine("-----------------------" & CBProveedor.SelectedValue.ToString())
+        If nombre <> "" And bodega <> "" And descripcion <> "" And codigo <> "" And cantidad <> "" Then
             Dim idUser As Integer = Form1.idUuario
             Dim nitProv As String = CBProveedor.SelectedValue.ToString()
             cntrlArticulos = New ControlArticulos
-            cntrlArticulos.crearArticulo(codigo, nombre, area, cantidad, descripcion, idUser, nitProv, MCFechaVencimiento.SelectionStart)
+            create = cntrlArticulos.crearArticulo(codigo, nombre, bodega, cantidad, descripcion, idUser, nitProv, MCFechaVencimiento.SelectionStart)
+            If create Then
+                MsgBox("Se ha creado correctamente el articulo", vbInformation, "aprovado")
+            Else
+                MsgBox(" No se ha podido crear correctamente el articulo", vbCritical, "Error")
+            End If
         End If
     End Sub
 

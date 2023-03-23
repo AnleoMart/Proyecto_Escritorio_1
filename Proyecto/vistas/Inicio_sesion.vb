@@ -14,8 +14,7 @@
 
 
     End Sub
-
-    Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
+    Public Function iniciarSesion()
         Dim controllerUser As New ControladorUsuario
 
         Dim correo, contrasena As String
@@ -25,15 +24,18 @@
             ocularMostrarBotones()
             Dim verArticulos As New verArticulos
             verArticulos.MdiParent = Form1
-                verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-                verArticulos.Left = 0
-                verArticulos.Top = 0
-                verArticulos.Show()
+            verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+            verArticulos.Left = 0
+            verArticulos.Top = 0
+            verArticulos.Show()
             Me.Hide()
         Else
             MsgBox("Ha introducido usuario o contraseña erroneamente, por favor vuelva a intetntarlo", vbCritical, "Error")
 
         End If
+    End Function
+    Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
+        iniciarSesion()
 
     End Sub
     Public Sub ocularMostrarBotones()
@@ -67,7 +69,23 @@
         End If
     End Sub
 
-    Private Sub Inicio_sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+    Private Sub Inicio_sesion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            iniciarSesion()
+        End If
+    End Sub
+
+    Private Sub txtCorreo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorreo.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            iniciarSesion()
+        End If
+    End Sub
+
+    Private Sub txtContrasena_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContrasena.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            iniciarSesion()
+        End If
     End Sub
 End Class

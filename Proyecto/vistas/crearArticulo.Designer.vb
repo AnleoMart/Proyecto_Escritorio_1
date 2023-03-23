@@ -32,7 +32,7 @@ Partial Class CrearArticulo
         Me.MCFechaVencimiento = New System.Windows.Forms.MonthCalendar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CBProveedor = New System.Windows.Forms.ComboBox()
-        Me.txtAreaArt = New System.Windows.Forms.TextBox()
+        Me.txtBodega = New System.Windows.Forms.TextBox()
         Me.LabArticuloArt = New System.Windows.Forms.Label()
         Me.txtCantidadArt = New System.Windows.Forms.TextBox()
         Me.txtCodigoArt = New System.Windows.Forms.TextBox()
@@ -111,7 +111,7 @@ Partial Class CrearArticulo
         Me.panelInfoArt.Controls.Add(Me.Label2)
         Me.panelInfoArt.Controls.Add(Me.CBProveedor)
         Me.panelInfoArt.Controls.Add(Me.txtDescripArt)
-        Me.panelInfoArt.Controls.Add(Me.txtAreaArt)
+        Me.panelInfoArt.Controls.Add(Me.txtBodega)
         Me.panelInfoArt.Controls.Add(Me.LabDescripArt)
         Me.panelInfoArt.Controls.Add(Me.LabArticuloArt)
         Me.panelInfoArt.Controls.Add(Me.txtCantidadArt)
@@ -153,13 +153,13 @@ Partial Class CrearArticulo
         Me.CBProveedor.Size = New System.Drawing.Size(259, 24)
         Me.CBProveedor.TabIndex = 10
         '
-        'txtAreaArt
+        'txtBodega
         '
-        Me.txtAreaArt.Location = New System.Drawing.Point(203, 159)
-        Me.txtAreaArt.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtAreaArt.Name = "txtAreaArt"
-        Me.txtAreaArt.Size = New System.Drawing.Size(259, 22)
-        Me.txtAreaArt.TabIndex = 9
+        Me.txtBodega.Location = New System.Drawing.Point(203, 159)
+        Me.txtBodega.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBodega.Name = "txtBodega"
+        Me.txtBodega.Size = New System.Drawing.Size(259, 22)
+        Me.txtBodega.TabIndex = 9
         '
         'LabArticuloArt
         '
@@ -168,9 +168,9 @@ Partial Class CrearArticulo
         Me.LabArticuloArt.Location = New System.Drawing.Point(130, 163)
         Me.LabArticuloArt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabArticuloArt.Name = "LabArticuloArt"
-        Me.LabArticuloArt.Size = New System.Drawing.Size(39, 20)
+        Me.LabArticuloArt.Size = New System.Drawing.Size(58, 20)
         Me.LabArticuloArt.TabIndex = 8
-        Me.LabArticuloArt.Text = "Area"
+        Me.LabArticuloArt.Text = "Bodega"
         '
         'txtCantidadArt
         '
@@ -287,7 +287,7 @@ Partial Class CrearArticulo
     Friend WithEvents txtDescripArt As TextBox
     Friend WithEvents LabDescripArt As Label
     Friend WithEvents panelInfoArt As Panel
-    Friend WithEvents txtAreaArt As TextBox
+    Friend WithEvents txtBodega As TextBox
     Friend WithEvents LabArticuloArt As Label
     Friend WithEvents txtCantidadArt As TextBox
     Friend WithEvents txtCodigoArt As TextBox
