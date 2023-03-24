@@ -35,6 +35,11 @@ Partial Class Registro
         Me.txtContrasena2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtDocumento = New System.Windows.Forms.TextBox()
+        Me.lblMsgNombre = New System.Windows.Forms.Label()
+        Me.lblMsgCorreo = New System.Windows.Forms.Label()
+        Me.lblMsgDoc = New System.Windows.Forms.Label()
+        Me.lblMsgContraseña = New System.Windows.Forms.Label()
+        Me.lblMsgcontraseña2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,7 +57,7 @@ Partial Class Registro
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(620, 412)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(399, 22)
         Me.txtEmail.TabIndex = 25
@@ -61,7 +66,7 @@ Partial Class Registro
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(137, 219)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(409, 322)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -72,7 +77,7 @@ Partial Class Registro
         'EntrarReg
         '
         Me.EntrarReg.Location = New System.Drawing.Point(764, 686)
-        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EntrarReg.Margin = New System.Windows.Forms.Padding(4)
         Me.EntrarReg.Name = "EntrarReg"
         Me.EntrarReg.Size = New System.Drawing.Size(125, 28)
         Me.EntrarReg.TabIndex = 22
@@ -105,7 +110,7 @@ Partial Class Registro
         'txtContrasena1
         '
         Me.txtContrasena1.Location = New System.Drawing.Point(620, 529)
-        Me.txtContrasena1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContrasena1.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena1.Name = "txtContrasena1"
         Me.txtContrasena1.Size = New System.Drawing.Size(403, 22)
         Me.txtContrasena1.TabIndex = 19
@@ -114,7 +119,7 @@ Partial Class Registro
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(620, 324)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(403, 22)
         Me.txtNombre.TabIndex = 18
@@ -133,7 +138,7 @@ Partial Class Registro
         'txtContrasena2
         '
         Me.txtContrasena2.Location = New System.Drawing.Point(620, 608)
-        Me.txtContrasena2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtContrasena2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena2.Name = "txtContrasena2"
         Me.txtContrasena2.Size = New System.Drawing.Size(403, 22)
         Me.txtContrasena2.TabIndex = 27
@@ -154,10 +159,65 @@ Partial Class Registro
         'txtDocumento
         '
         Me.txtDocumento.Location = New System.Drawing.Point(620, 238)
-        Me.txtDocumento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDocumento.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDocumento.Name = "txtDocumento"
         Me.txtDocumento.Size = New System.Drawing.Size(403, 22)
         Me.txtDocumento.TabIndex = 29
+        '
+        'lblMsgNombre
+        '
+        Me.lblMsgNombre.AutoSize = True
+        Me.lblMsgNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgNombre.Location = New System.Drawing.Point(642, 350)
+        Me.lblMsgNombre.Name = "lblMsgNombre"
+        Me.lblMsgNombre.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgNombre.TabIndex = 31
+        Me.lblMsgNombre.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgNombre.Visible = False
+        '
+        'lblMsgCorreo
+        '
+        Me.lblMsgCorreo.AutoSize = True
+        Me.lblMsgCorreo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCorreo.Location = New System.Drawing.Point(642, 438)
+        Me.lblMsgCorreo.Name = "lblMsgCorreo"
+        Me.lblMsgCorreo.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCorreo.TabIndex = 32
+        Me.lblMsgCorreo.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCorreo.Visible = False
+        '
+        'lblMsgDoc
+        '
+        Me.lblMsgDoc.AutoSize = True
+        Me.lblMsgDoc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgDoc.Location = New System.Drawing.Point(642, 264)
+        Me.lblMsgDoc.Name = "lblMsgDoc"
+        Me.lblMsgDoc.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgDoc.TabIndex = 33
+        Me.lblMsgDoc.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgDoc.Visible = False
+        '
+        'lblMsgContraseña
+        '
+        Me.lblMsgContraseña.AutoSize = True
+        Me.lblMsgContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgContraseña.Location = New System.Drawing.Point(642, 553)
+        Me.lblMsgContraseña.Name = "lblMsgContraseña"
+        Me.lblMsgContraseña.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgContraseña.TabIndex = 34
+        Me.lblMsgContraseña.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgContraseña.Visible = False
+        '
+        'lblMsgcontraseña2
+        '
+        Me.lblMsgcontraseña2.AutoSize = True
+        Me.lblMsgcontraseña2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgcontraseña2.Location = New System.Drawing.Point(642, 634)
+        Me.lblMsgcontraseña2.Name = "lblMsgcontraseña2"
+        Me.lblMsgcontraseña2.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgcontraseña2.TabIndex = 35
+        Me.lblMsgcontraseña2.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgcontraseña2.Visible = False
         '
         'Registro
         '
@@ -165,6 +225,11 @@ Partial Class Registro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(1307, 830)
+        Me.Controls.Add(Me.lblMsgcontraseña2)
+        Me.Controls.Add(Me.lblMsgContraseña)
+        Me.Controls.Add(Me.lblMsgDoc)
+        Me.Controls.Add(Me.lblMsgCorreo)
+        Me.Controls.Add(Me.lblMsgNombre)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtDocumento)
         Me.Controls.Add(Me.Label2)
@@ -178,7 +243,7 @@ Partial Class Registro
         Me.Controls.Add(Me.txtContrasena1)
         Me.Controls.Add(Me.txtNombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Registro"
         Me.Text = "Registro"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -199,4 +264,9 @@ Partial Class Registro
     Friend WithEvents txtContrasena2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtDocumento As TextBox
+    Friend WithEvents lblMsgNombre As Label
+    Friend WithEvents lblMsgCorreo As Label
+    Friend WithEvents lblMsgDoc As Label
+    Friend WithEvents lblMsgContraseña As Label
+    Friend WithEvents lblMsgcontraseña2 As Label
 End Class

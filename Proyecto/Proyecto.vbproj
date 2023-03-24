@@ -191,6 +191,7 @@
     <Compile Include="vistas\Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\Validaciones.vb" />
     <Compile Include="vistas\verArticulos.Designer.vb">
       <DependentUpon>verArticulos.vb</DependentUpon>
     </Compile>

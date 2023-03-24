@@ -1,4 +1,7 @@
-﻿Public Class Registro
+﻿Imports System.ComponentModel
+
+Public Class Registro
+    Private validacion As New Validaciones
 
 
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
@@ -34,6 +37,88 @@
 
 
     End Sub
+
+    Private Sub txtNombre_Validating(sender As Object, e As CancelEventArgs) Handles txtNombre.Validating
+        If txtNombre.Text <> "" Then
+            If validacion.rxNombre(txtNombre.Text) Then
+                lblMsgNombre.ForeColor = Color.Green
+                lblMsgNombre.Text = "aceptado"
+                lblMsgNombre.Visible = True
+            Else
+                lblMsgNombre.ForeColor = Color.Red
+                lblMsgNombre.Text = "letras de la 'a' a la 'z' minusculas o mayusculas, y espacios"
+                lblMsgNombre.Visible = True
+            End If
+        Else
+            lblMsgNombre.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub txtEmail_Validating(sender As Object, e As CancelEventArgs) Handles txtEmail.Validating
+        If txtEmail.Text <> "" Then
+            If validacion.rxCorreo(txtNombre.Text) Then
+                lblMsgCorreo.ForeColor = Color.Green
+                lblMsgCorreo.Text = "aceptado"
+                lblMsgCorreo.Visible = True
+            Else
+                lblMsgCorreo.ForeColor = Color.Red
+                lblMsgCorreo.Text = "Correo no aceptado, por fvor verificar"
+                lblMsgCorreo.Visible = True
+            End If
+        Else
+            lblMsgCorreo.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtDocumento_Validating(sender As Object, e As CancelEventArgs) Handles txtDocumento.Validating
+        If txtDocumento.Text <> "" Then
+            If validacion.rxDocumentoId(txtNombre.Text) Then
+                lblMsgDoc.ForeColor = Color.Green
+                lblMsgDoc.Text = "aceptado"
+                lblMsgDoc.Visible = True
+            Else
+                lblMsgDoc.ForeColor = Color.Red
+                lblMsgDoc.Text = "numeros de al 1 al 9, maximo 15 caracteres"
+                lblMsgDoc.Visible = True
+            End If
+        Else
+            lblMsgDoc.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtContrasena1_Validating(sender As Object, e As CancelEventArgs) Handles txtContrasena1.Validating
+        If txtContrasena1.Text <> "" Then
+            If validacion.rxContraseña(txtNombre.Text) Then
+                lblMsgContraseña.ForeColor = Color.Green
+                lblMsgContraseña.Text = "aceptado"
+                lblMsgContraseña.Visible = True
+            Else
+                lblMsgContraseña.ForeColor = Color.Red
+                lblMsgContraseña.Text = "max 20 caracteres sin espacios en blanco"
+                lblMsgContraseña.Visible = True
+            End If
+        Else
+            lblMsgContraseña.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtContrasena2_Validating(sender As Object, e As CancelEventArgs) Handles txtContrasena2.Validating
+        If txtContrasena2.Text <> "" Then
+            If validacion.rxContraseña(txtNombre.Text) Then
+                lblMsgcontraseña2.ForeColor = Color.Green
+                lblMsgcontraseña2.Text = "aceptado"
+                lblMsgcontraseña2.Visible = True
+            Else
+                lblMsgcontraseña2.ForeColor = Color.Red
+                lblMsgcontraseña2.Text = "max 20 caracteres sin espacios en blanco"
+                lblMsgcontraseña2.Visible = True
+            End If
+        Else
+            lblMsgcontraseña2.Visible = False
+        End If
+    End Sub
+
     Public Function valContraseñas(contra1 As String, contra2 As String) As Boolean
         If contra1 = contra2 Then
             Return True
@@ -41,5 +126,6 @@
             Return False
         End If
     End Function
+
 
 End Class
