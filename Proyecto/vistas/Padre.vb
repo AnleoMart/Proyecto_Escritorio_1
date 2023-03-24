@@ -101,17 +101,51 @@ Public Class Form1
     Public Sub ocularMostrarBotones()
         If btnInicioSesion.Visible = False Then
             btnInicioSesion.Visible = True
+            PanelIniciarSesion.Visible = True
+
             btnCerrarSesion.Visible = False
+            PanelCS.Visible = False
+
             BtnCrearPerfil.Visible = True
+            PanelCP.Visible = True
 
             btnPerfil.Visible = False
+            Panelperfil.Visible = False
+
+            btnUsuario.Visible = False
+            PanelUsuario.Visible = False
+
+
+            btnDistribuidor.Visible = False
+            PanelDitribuidor.Visible = False
+
+
+            btnArticulo.Visible = False
+            Panelarticulo.Visible = False
+
         Else
             btnInicioSesion.Visible = False
+            PanelIniciarSesion.Visible = False
+
             btnCerrarSesion.Visible = True
+            PanelCS.Visible = True
+
             BtnCrearPerfil.Visible = False
+            PanelCP.Visible = False
 
             btnPerfil.Visible = True
+            Panelperfil.Visible = True
+
+            btnUsuario.Visible = True
+            PanelUsuario.Visible = True
+
+            btnDistribuidor.Visible = True
+            PanelDitribuidor.Visible = True
+
+            btnArticulo.Visible = True
+            Panelarticulo.Visible = True
         End If
+
 
     End Sub
 
@@ -146,7 +180,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnArticulo.Click
         Dim verArticulos As New verArticulos
         verArticulos.MdiParent = Me
         verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -157,7 +191,7 @@ Public Class Form1
 
 
 
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panelarticulo.Paint
 
     End Sub
 
@@ -170,7 +204,7 @@ Public Class Form1
         ModiProveedor.Show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnUsuario.Click
         Dim BuscarUsuarios As New BuscarUsuarios
         BuscarUsuarios.MdiParent = Me
         BuscarUsuarios.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -179,7 +213,7 @@ Public Class Form1
         BuscarUsuarios.Show()
     End Sub
 
-    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles btnDistribuidor.Click
         Dim BusquedaProveedor As New BusquedaProveedor
         BusquedaProveedor.MdiParent = Me
         BusquedaProveedor.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0

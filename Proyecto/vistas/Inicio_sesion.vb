@@ -41,16 +41,49 @@ Public Class Inicio_sesion
     Public Sub ocularMostrarBotones()
         If Form1.btnInicioSesion.Visible = False Then
             Form1.btnInicioSesion.Visible = True
+            Form1.PanelIniciarSesion.Visible = True
+
             Form1.btnCerrarSesion.Visible = False
+            Form1.PanelCS.Visible = False
+
             Form1.BtnCrearPerfil.Visible = True
+            Form1.PanelCP.Visible = True
 
             Form1.btnPerfil.Visible = False
+            Form1.Panelperfil.Visible = False
+
+            Form1.btnUsuario.Visible = False
+            Form1.PanelUsuario.Visible = False
+
+
+            Form1.btnDistribuidor.Visible = False
+            Form1.PanelDitribuidor.Visible = False
+
+
+            Form1.btnArticulo.Visible = False
+            Form1.Panelarticulo.Visible = False
+
         Else
             Form1.btnInicioSesion.Visible = False
+            Form1.PanelIniciarSesion.Visible = False
+
             Form1.btnCerrarSesion.Visible = True
+            Form1.PanelCS.Visible = True
+
             Form1.BtnCrearPerfil.Visible = False
+            Form1.PanelCP.Visible = False
 
             Form1.btnPerfil.Visible = True
+            Form1.Panelperfil.Visible = True
+
+            Form1.btnUsuario.Visible = True
+            Form1.PanelUsuario.Visible = True
+
+            Form1.btnDistribuidor.Visible = True
+            Form1.PanelDitribuidor.Visible = True
+
+            Form1.btnArticulo.Visible = True
+            Form1.Panelarticulo.Visible = True
         End If
 
     End Sub
