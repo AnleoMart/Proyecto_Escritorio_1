@@ -29,6 +29,8 @@ Partial Class ConfigurarArticulo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.MCFechaVencimietto = New System.Windows.Forms.MonthCalendar()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,8 +41,11 @@ Partial Class ConfigurarArticulo
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.MCFechaVencimietto = New System.Windows.Forms.MonthCalendar()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.lblMsgCodigo = New System.Windows.Forms.Label()
+        Me.lblMsgNombre = New System.Windows.Forms.Label()
+        Me.lblMsgBodega = New System.Windows.Forms.Label()
+        Me.lblMsgCantidad = New System.Windows.Forms.Label()
+        Me.lblMsgDecripcion = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -100,6 +105,11 @@ Partial Class ConfigurarArticulo
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel3.Controls.Add(Me.lblMsgDecripcion)
+        Me.Panel3.Controls.Add(Me.lblMsgCantidad)
+        Me.Panel3.Controls.Add(Me.lblMsgBodega)
+        Me.Panel3.Controls.Add(Me.lblMsgNombre)
+        Me.Panel3.Controls.Add(Me.lblMsgCodigo)
         Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.MCFechaVencimietto)
         Me.Panel3.Controls.Add(Me.txtDescripcion)
@@ -119,9 +129,25 @@ Partial Class ConfigurarArticulo
         Me.Panel3.Size = New System.Drawing.Size(1029, 509)
         Me.Panel3.TabIndex = 7
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(24, 452)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(309, 29)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Volver"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'MCFechaVencimietto
+        '
+        Me.MCFechaVencimietto.Location = New System.Drawing.Point(565, 276)
+        Me.MCFechaVencimietto.Name = "MCFechaVencimietto"
+        Me.MCFechaVencimietto.ShowToday = False
+        Me.MCFechaVencimietto.TabIndex = 19
+        '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(14, 248)
+        Me.txtDescripcion.Location = New System.Drawing.Point(14, 235)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(448, 129)
@@ -229,21 +255,60 @@ Partial Class ConfigurarArticulo
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Informacion"
         '
-        'MCFechaVencimietto
+        'lblMsgCodigo
         '
-        Me.MCFechaVencimietto.Location = New System.Drawing.Point(565, 276)
-        Me.MCFechaVencimietto.Name = "MCFechaVencimietto"
-        Me.MCFechaVencimietto.ShowToday = False
-        Me.MCFechaVencimietto.TabIndex = 19
+        Me.lblMsgCodigo.AutoSize = True
+        Me.lblMsgCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCodigo.Location = New System.Drawing.Point(526, 36)
+        Me.lblMsgCodigo.Name = "lblMsgCodigo"
+        Me.lblMsgCodigo.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCodigo.TabIndex = 36
+        Me.lblMsgCodigo.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCodigo.Visible = False
         '
-        'Button3
+        'lblMsgNombre
         '
-        Me.Button3.Location = New System.Drawing.Point(24, 452)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(309, 29)
-        Me.Button3.TabIndex = 20
-        Me.Button3.Text = "Volver"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.lblMsgNombre.AutoSize = True
+        Me.lblMsgNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgNombre.Location = New System.Drawing.Point(526, 82)
+        Me.lblMsgNombre.Name = "lblMsgNombre"
+        Me.lblMsgNombre.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgNombre.TabIndex = 37
+        Me.lblMsgNombre.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgNombre.Visible = False
+        '
+        'lblMsgBodega
+        '
+        Me.lblMsgBodega.AutoSize = True
+        Me.lblMsgBodega.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgBodega.Location = New System.Drawing.Point(526, 126)
+        Me.lblMsgBodega.Name = "lblMsgBodega"
+        Me.lblMsgBodega.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgBodega.TabIndex = 38
+        Me.lblMsgBodega.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgBodega.Visible = False
+        '
+        'lblMsgCantidad
+        '
+        Me.lblMsgCantidad.AutoSize = True
+        Me.lblMsgCantidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCantidad.Location = New System.Drawing.Point(526, 179)
+        Me.lblMsgCantidad.Name = "lblMsgCantidad"
+        Me.lblMsgCantidad.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCantidad.TabIndex = 39
+        Me.lblMsgCantidad.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCantidad.Visible = False
+        '
+        'lblMsgDecripcion
+        '
+        Me.lblMsgDecripcion.AutoSize = True
+        Me.lblMsgDecripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgDecripcion.Location = New System.Drawing.Point(21, 367)
+        Me.lblMsgDecripcion.Name = "lblMsgDecripcion"
+        Me.lblMsgDecripcion.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgDecripcion.TabIndex = 40
+        Me.lblMsgDecripcion.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgDecripcion.Visible = False
         '
         'ConfigurarArticulo
         '
@@ -283,4 +348,9 @@ Partial Class ConfigurarArticulo
     Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents MCFechaVencimietto As MonthCalendar
     Friend WithEvents Button3 As Button
+    Friend WithEvents lblMsgCantidad As Label
+    Friend WithEvents lblMsgBodega As Label
+    Friend WithEvents lblMsgNombre As Label
+    Friend WithEvents lblMsgCodigo As Label
+    Friend WithEvents lblMsgDecripcion As Label
 End Class

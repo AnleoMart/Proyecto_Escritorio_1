@@ -29,6 +29,11 @@ Partial Class CrearArticulo
         Me.txtDescripArt = New System.Windows.Forms.TextBox()
         Me.LabDescripArt = New System.Windows.Forms.Label()
         Me.panelInfoArt = New System.Windows.Forms.Panel()
+        Me.lblMsgDescripcion = New System.Windows.Forms.Label()
+        Me.lblMsgCantidad = New System.Windows.Forms.Label()
+        Me.lblMsgBodega = New System.Windows.Forms.Label()
+        Me.lblCodigo = New System.Windows.Forms.Label()
+        Me.lblMsgNombre = New System.Windows.Forms.Label()
         Me.MCFechaVencimiento = New System.Windows.Forms.MonthCalendar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CBProveedor = New System.Windows.Forms.ComboBox()
@@ -88,7 +93,7 @@ Partial Class CrearArticulo
         Me.txtDescripArt.Multiline = True
         Me.txtDescripArt.Name = "txtDescripArt"
         Me.txtDescripArt.Size = New System.Drawing.Size(688, 114)
-        Me.txtDescripArt.TabIndex = 18
+        Me.txtDescripArt.TabIndex = 7
         '
         'LabDescripArt
         '
@@ -104,6 +109,11 @@ Partial Class CrearArticulo
         'panelInfoArt
         '
         Me.panelInfoArt.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.panelInfoArt.Controls.Add(Me.lblMsgDescripcion)
+        Me.panelInfoArt.Controls.Add(Me.lblMsgCantidad)
+        Me.panelInfoArt.Controls.Add(Me.lblMsgBodega)
+        Me.panelInfoArt.Controls.Add(Me.lblCodigo)
+        Me.panelInfoArt.Controls.Add(Me.lblMsgNombre)
         Me.panelInfoArt.Controls.Add(Me.picBoxAdjuntarArt)
         Me.panelInfoArt.Controls.Add(Me.btnEliminarArt)
         Me.panelInfoArt.Controls.Add(Me.MCFechaVencimiento)
@@ -127,12 +137,67 @@ Partial Class CrearArticulo
         Me.panelInfoArt.Size = New System.Drawing.Size(945, 557)
         Me.panelInfoArt.TabIndex = 16
         '
+        'lblMsgDescripcion
+        '
+        Me.lblMsgDescripcion.AutoSize = True
+        Me.lblMsgDescripcion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgDescripcion.Location = New System.Drawing.Point(236, 469)
+        Me.lblMsgDescripcion.Name = "lblMsgDescripcion"
+        Me.lblMsgDescripcion.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgDescripcion.TabIndex = 40
+        Me.lblMsgDescripcion.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgDescripcion.Visible = False
+        '
+        'lblMsgCantidad
+        '
+        Me.lblMsgCantidad.AutoSize = True
+        Me.lblMsgCantidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCantidad.Location = New System.Drawing.Point(213, 242)
+        Me.lblMsgCantidad.Name = "lblMsgCantidad"
+        Me.lblMsgCantidad.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCantidad.TabIndex = 38
+        Me.lblMsgCantidad.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCantidad.Visible = False
+        '
+        'lblMsgBodega
+        '
+        Me.lblMsgBodega.AutoSize = True
+        Me.lblMsgBodega.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgBodega.Location = New System.Drawing.Point(213, 185)
+        Me.lblMsgBodega.Name = "lblMsgBodega"
+        Me.lblMsgBodega.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgBodega.TabIndex = 37
+        Me.lblMsgBodega.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgBodega.Visible = False
+        '
+        'lblCodigo
+        '
+        Me.lblCodigo.AutoSize = True
+        Me.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblCodigo.Location = New System.Drawing.Point(213, 128)
+        Me.lblCodigo.Name = "lblCodigo"
+        Me.lblCodigo.Size = New System.Drawing.Size(369, 16)
+        Me.lblCodigo.TabIndex = 36
+        Me.lblCodigo.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblCodigo.Visible = False
+        '
+        'lblMsgNombre
+        '
+        Me.lblMsgNombre.AutoSize = True
+        Me.lblMsgNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgNombre.Location = New System.Drawing.Point(213, 66)
+        Me.lblMsgNombre.Name = "lblMsgNombre"
+        Me.lblMsgNombre.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgNombre.TabIndex = 35
+        Me.lblMsgNombre.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgNombre.Visible = False
+        '
         'MCFechaVencimiento
         '
         Me.MCFechaVencimiento.Location = New System.Drawing.Point(563, 84)
         Me.MCFechaVencimiento.Name = "MCFechaVencimiento"
         Me.MCFechaVencimiento.ShowToday = False
-        Me.MCFechaVencimiento.TabIndex = 12
+        Me.MCFechaVencimiento.TabIndex = 6
         '
         'Label2
         '
@@ -151,7 +216,7 @@ Partial Class CrearArticulo
         Me.CBProveedor.Location = New System.Drawing.Point(203, 267)
         Me.CBProveedor.Name = "CBProveedor"
         Me.CBProveedor.Size = New System.Drawing.Size(259, 24)
-        Me.CBProveedor.TabIndex = 10
+        Me.CBProveedor.TabIndex = 5
         '
         'txtBodega
         '
@@ -159,7 +224,7 @@ Partial Class CrearArticulo
         Me.txtBodega.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBodega.Name = "txtBodega"
         Me.txtBodega.Size = New System.Drawing.Size(259, 22)
-        Me.txtBodega.TabIndex = 9
+        Me.txtBodega.TabIndex = 3
         '
         'LabArticuloArt
         '
@@ -178,7 +243,7 @@ Partial Class CrearArticulo
         Me.txtCantidadArt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCantidadArt.Name = "txtCantidadArt"
         Me.txtCantidadArt.Size = New System.Drawing.Size(259, 22)
-        Me.txtCantidadArt.TabIndex = 7
+        Me.txtCantidadArt.TabIndex = 4
         '
         'txtCodigoArt
         '
@@ -186,7 +251,7 @@ Partial Class CrearArticulo
         Me.txtCodigoArt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigoArt.Name = "txtCodigoArt"
         Me.txtCodigoArt.Size = New System.Drawing.Size(259, 22)
-        Me.txtCodigoArt.TabIndex = 5
+        Me.txtCodigoArt.TabIndex = 2
         '
         'txtNombreArt
         '
@@ -194,7 +259,7 @@ Partial Class CrearArticulo
         Me.txtNombreArt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreArt.Name = "txtNombreArt"
         Me.txtNombreArt.Size = New System.Drawing.Size(259, 22)
-        Me.txtNombreArt.TabIndex = 4
+        Me.txtNombreArt.TabIndex = 1
         '
         'LabCantidadArt
         '
@@ -301,4 +366,9 @@ Partial Class CrearArticulo
     Friend WithEvents CBProveedor As ComboBox
     Friend WithEvents MCFechaVencimiento As MonthCalendar
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblMsgDescripcion As Label
+    Friend WithEvents lblMsgCantidad As Label
+    Friend WithEvents lblMsgBodega As Label
+    Friend WithEvents lblCodigo As Label
+    Friend WithEvents lblMsgNombre As Label
 End Class

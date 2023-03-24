@@ -35,6 +35,7 @@ Public Class Inicio_sesion
         End If
     End Sub
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
+
         iniciarSesion()
 
     End Sub
@@ -106,44 +107,29 @@ Public Class Inicio_sesion
 
     Private Sub Inicio_sesion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
+            valEmail()
+            valPass()
             iniciarSesion()
         End If
     End Sub
 
     Private Sub txtCorreo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorreo.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
+            valEmail()
+            valPass()
             iniciarSesion()
         End If
     End Sub
 
     Private Sub txtContrasena_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContrasena.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
+            valEmail()
+            valPass()
             iniciarSesion()
         End If
     End Sub
 
-
-    Private Sub txtContrasena_Validating(sender As Object, e As CancelEventArgs) Handles txtContrasena.Validating
-        If txtContrasena.Text <> "" Then
-            Console.Write("pass")
-            If validacion.rxContraseña(txtContrasena.Text) Then
-                lblMsgContraseña.ForeColor = Color.Green
-                lblMsgContraseña.Text = "aceptado"
-                lblMsgContraseña.Visible = True
-                pass = True
-            Else
-                lblMsgContraseña.ForeColor = Color.Red
-                lblMsgContraseña.Text = "Correo no aceptado, por fvor verificar"
-                lblMsgContraseña.Visible = True
-                pass = False
-            End If
-        Else
-            lblMsgContraseña.Visible = False
-            pass = False
-        End If
-    End Sub
-
-    Private Sub txtCorreo_Validating(sender As Object, e As CancelEventArgs) Handles txtCorreo.Validating
+    Private Sub valEmail()
         If txtCorreo.Text <> "" Then
             Console.Write("corro")
             If validacion.rxCorreo(txtCorreo.Text) Then
@@ -154,7 +140,7 @@ Public Class Inicio_sesion
                 email = True
             Else
                 lblMsgCorreo.ForeColor = Color.Red
-                lblMsgCorreo.Text = "Correo no aceptado, por fvor verificar"
+                lblMsgCorreo.Text = "Correo no aceptado, por favor verificar"
                 lblMsgCorreo.Visible = True
                 email = False
             End If
@@ -162,6 +148,32 @@ Public Class Inicio_sesion
             lblMsgCorreo.Visible = False
             email = False
         End If
+    End Sub
+    Private Sub valPass()
+        If txtContrasena.Text <> "" Then
+            Console.Write("pass")
+            If validacion.rxContraseña(txtContrasena.Text) Then
+                lblMsgContraseña.ForeColor = Color.Green
+                lblMsgContraseña.Text = "aceptado"
+                lblMsgContraseña.Visible = True
+                pass = True
+            Else
+                lblMsgContraseña.ForeColor = Color.Red
+                lblMsgContraseña.Text = "Correo no aceptado, por favor verificar"
+                lblMsgContraseña.Visible = True
+                pass = False
+            End If
+        Else
+            lblMsgContraseña.Visible = False
+            pass = False
+        End If
+    End Sub
+    Private Sub txtContrasena_Validating(sender As Object, e As CancelEventArgs) Handles txtContrasena.Validating
+        valPass()
+    End Sub
 
+    Private Sub txtCorreo_Validating(sender As Object, e As CancelEventArgs) Handles txtCorreo.Validating
+
+        valEmail()
     End Sub
 End Class

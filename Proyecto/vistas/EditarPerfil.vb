@@ -23,6 +23,10 @@ Public Class EditarPerfil
         calendar.SelectionStart = usu.FechaNacimiento
         calendar.SetSelectionRange(calendar.SelectionStart, calendar.SelectionStart)
 
+        nom = True
+        apell = True
+        tel = True
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -43,6 +47,8 @@ Public Class EditarPerfil
                     Else
                         MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
                     End If
+                Else
+                    MsgBox("lass cosnstraseñas no estan diligenciadas correctamente", vbCritical, "Error")
                 End If
             End If
         ElseIf txtContraseña.Text = "" And txtContraseña.Text = "" Then
@@ -52,6 +58,8 @@ Public Class EditarPerfil
                 Else
                     MsgBox("Ha ocurrido un error, no se ha podido completar la modificacion", vbCritical, "Error")
                 End If
+            Else
+                MsgBox("Uno o mas campos no esta diligenciados correctamente", vbCritical, "Error")
             End If
         End If
     End Sub
