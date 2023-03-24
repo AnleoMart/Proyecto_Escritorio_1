@@ -30,6 +30,8 @@ Partial Class Inicio_sesion
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblMsgCorreo = New System.Windows.Forms.Label()
+        Me.lblMsgContraseña = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,7 +39,7 @@ Partial Class Inicio_sesion
         '
         Me.olvidoContraseña.AutoSize = True
         Me.olvidoContraseña.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.olvidoContraseña.Location = New System.Drawing.Point(977, 476)
+        Me.olvidoContraseña.Location = New System.Drawing.Point(873, 638)
         Me.olvidoContraseña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.olvidoContraseña.Name = "olvidoContraseña"
         Me.olvidoContraseña.Size = New System.Drawing.Size(157, 21)
@@ -109,6 +111,28 @@ Partial Class Inicio_sesion
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.WaitOnLoad = True
         '
+        'lblMsgCorreo
+        '
+        Me.lblMsgCorreo.AutoSize = True
+        Me.lblMsgCorreo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCorreo.Location = New System.Drawing.Point(778, 330)
+        Me.lblMsgCorreo.Name = "lblMsgCorreo"
+        Me.lblMsgCorreo.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCorreo.TabIndex = 34
+        Me.lblMsgCorreo.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCorreo.Visible = False
+        '
+        'lblMsgContraseña
+        '
+        Me.lblMsgContraseña.AutoSize = True
+        Me.lblMsgContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgContraseña.Location = New System.Drawing.Point(778, 474)
+        Me.lblMsgContraseña.Name = "lblMsgContraseña"
+        Me.lblMsgContraseña.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgContraseña.TabIndex = 35
+        Me.lblMsgContraseña.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgContraseña.Visible = False
+        '
         'Inicio_sesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -116,6 +140,8 @@ Partial Class Inicio_sesion
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(1307, 830)
+        Me.Controls.Add(Me.lblMsgContraseña)
+        Me.Controls.Add(Me.lblMsgCorreo)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.olvidoContraseña)
         Me.Controls.Add(Me.EntrarReg)
@@ -139,4 +165,6 @@ Partial Class Inicio_sesion
     Friend WithEvents txtContrasena As TextBox
     Friend WithEvents txtCorreo As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblMsgCorreo As Label
+    Friend WithEvents lblMsgContraseña As Label
 End Class

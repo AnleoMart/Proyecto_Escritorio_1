@@ -154,7 +154,7 @@ Partial Class Form1
         'PanelIs
         '
         Me.PanelIs.BackColor = System.Drawing.Color.Turquoise
-        Me.PanelIs.Location = New System.Drawing.Point(5, 730)
+        Me.PanelIs.Location = New System.Drawing.Point(5, 594)
         Me.PanelIs.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelIs.Name = "PanelIs"
         Me.PanelIs.Size = New System.Drawing.Size(7, 28)
@@ -169,7 +169,7 @@ Partial Class Form1
         Me.btnInicioSesion.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInicioSesion.ForeColor = System.Drawing.Color.White
         Me.btnInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInicioSesion.Location = New System.Drawing.Point(13, 730)
+        Me.btnInicioSesion.Location = New System.Drawing.Point(13, 594)
         Me.btnInicioSesion.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInicioSesion.Name = "btnInicioSesion"
         Me.btnInicioSesion.Size = New System.Drawing.Size(240, 28)
@@ -181,7 +181,7 @@ Partial Class Form1
         'PanelCP
         '
         Me.PanelCP.BackColor = System.Drawing.Color.Turquoise
-        Me.PanelCP.Location = New System.Drawing.Point(5, 766)
+        Me.PanelCP.Location = New System.Drawing.Point(5, 630)
         Me.PanelCP.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelCP.Name = "PanelCP"
         Me.PanelCP.Size = New System.Drawing.Size(7, 28)
@@ -196,7 +196,7 @@ Partial Class Form1
         Me.BtnCrearPerfil.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCrearPerfil.ForeColor = System.Drawing.Color.White
         Me.BtnCrearPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCrearPerfil.Location = New System.Drawing.Point(13, 766)
+        Me.BtnCrearPerfil.Location = New System.Drawing.Point(13, 630)
         Me.BtnCrearPerfil.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCrearPerfil.Name = "BtnCrearPerfil"
         Me.BtnCrearPerfil.Size = New System.Drawing.Size(240, 28)
@@ -208,7 +208,7 @@ Partial Class Form1
         '
         Me.PanelCS.BackColor = System.Drawing.Color.Turquoise
         Me.PanelCS.Controls.Add(Me.Panel3)
-        Me.PanelCS.Location = New System.Drawing.Point(5, 802)
+        Me.PanelCS.Location = New System.Drawing.Point(5, 666)
         Me.PanelCS.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelCS.Name = "PanelCS"
         Me.PanelCS.Size = New System.Drawing.Size(7, 28)
@@ -232,7 +232,7 @@ Partial Class Form1
         Me.btnCerrarSesion.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCerrarSesion.ForeColor = System.Drawing.Color.White
         Me.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCerrarSesion.Location = New System.Drawing.Point(13, 802)
+        Me.btnCerrarSesion.Location = New System.Drawing.Point(13, 666)
         Me.btnCerrarSesion.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrarSesion.Name = "btnCerrarSesion"
         Me.btnCerrarSesion.Size = New System.Drawing.Size(240, 28)

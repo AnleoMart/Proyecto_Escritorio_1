@@ -26,6 +26,13 @@ Partial Class EditarPerfil
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblMsgApellidos = New System.Windows.Forms.Label()
+        Me.lblMsgpass1 = New System.Windows.Forms.Label()
+        Me.pass2 = New System.Windows.Forms.Label()
+        Me.lblMsgemail = New System.Windows.Forms.Label()
+        Me.lblTelefono = New System.Windows.Forms.Label()
+        Me.lblMsgNombre = New System.Windows.Forms.Label()
+        Me.lblMsgIdentificacion = New System.Windows.Forms.Label()
         Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.calendar = New System.Windows.Forms.MonthCalendar()
@@ -70,7 +77,7 @@ Partial Class EditarPerfil
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(682, 597)
+        Me.Button2.Location = New System.Drawing.Point(682, 607)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(309, 54)
         Me.Button2.TabIndex = 15
@@ -80,6 +87,13 @@ Partial Class EditarPerfil
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel3.Controls.Add(Me.lblMsgApellidos)
+        Me.Panel3.Controls.Add(Me.lblMsgpass1)
+        Me.Panel3.Controls.Add(Me.pass2)
+        Me.Panel3.Controls.Add(Me.lblMsgemail)
+        Me.Panel3.Controls.Add(Me.lblTelefono)
+        Me.Panel3.Controls.Add(Me.lblMsgNombre)
+        Me.Panel3.Controls.Add(Me.lblMsgIdentificacion)
         Me.Panel3.Controls.Add(Me.txtCedula)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.calendar)
@@ -97,14 +111,91 @@ Partial Class EditarPerfil
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(83, 37)
+        Me.Panel3.Location = New System.Drawing.Point(83, 19)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(918, 554)
+        Me.Panel3.Size = New System.Drawing.Size(918, 582)
         Me.Panel3.TabIndex = 7
+        '
+        'lblMsgApellidos
+        '
+        Me.lblMsgApellidos.AutoSize = True
+        Me.lblMsgApellidos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgApellidos.Location = New System.Drawing.Point(520, 152)
+        Me.lblMsgApellidos.Name = "lblMsgApellidos"
+        Me.lblMsgApellidos.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgApellidos.TabIndex = 42
+        Me.lblMsgApellidos.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgApellidos.Visible = False
+        '
+        'lblMsgpass1
+        '
+        Me.lblMsgpass1.AutoSize = True
+        Me.lblMsgpass1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgpass1.Location = New System.Drawing.Point(520, 197)
+        Me.lblMsgpass1.Name = "lblMsgpass1"
+        Me.lblMsgpass1.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgpass1.TabIndex = 41
+        Me.lblMsgpass1.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgpass1.Visible = False
+        '
+        'pass2
+        '
+        Me.pass2.AutoSize = True
+        Me.pass2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pass2.Location = New System.Drawing.Point(520, 245)
+        Me.pass2.Name = "pass2"
+        Me.pass2.Size = New System.Drawing.Size(369, 16)
+        Me.pass2.TabIndex = 40
+        Me.pass2.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.pass2.Visible = False
+        '
+        'lblMsgemail
+        '
+        Me.lblMsgemail.AutoSize = True
+        Me.lblMsgemail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgemail.Location = New System.Drawing.Point(520, 293)
+        Me.lblMsgemail.Name = "lblMsgemail"
+        Me.lblMsgemail.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgemail.TabIndex = 39
+        Me.lblMsgemail.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgemail.Visible = False
+        '
+        'lblTelefono
+        '
+        Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblTelefono.Location = New System.Drawing.Point(520, 343)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(369, 16)
+        Me.lblTelefono.TabIndex = 38
+        Me.lblTelefono.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblTelefono.Visible = False
+        '
+        'lblMsgNombre
+        '
+        Me.lblMsgNombre.AutoSize = True
+        Me.lblMsgNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgNombre.Location = New System.Drawing.Point(520, 102)
+        Me.lblMsgNombre.Name = "lblMsgNombre"
+        Me.lblMsgNombre.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgNombre.TabIndex = 37
+        Me.lblMsgNombre.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgNombre.Visible = False
+        '
+        'lblMsgIdentificacion
+        '
+        Me.lblMsgIdentificacion.AutoSize = True
+        Me.lblMsgIdentificacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgIdentificacion.Location = New System.Drawing.Point(520, 55)
+        Me.lblMsgIdentificacion.Name = "lblMsgIdentificacion"
+        Me.lblMsgIdentificacion.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgIdentificacion.TabIndex = 36
+        Me.lblMsgIdentificacion.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgIdentificacion.Visible = False
         '
         'txtCedula
         '
-        Me.txtCedula.Location = New System.Drawing.Point(504, 44)
+        Me.txtCedula.Location = New System.Drawing.Point(504, 30)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.ReadOnly = True
         Me.txtCedula.Size = New System.Drawing.Size(346, 22)
@@ -115,7 +206,7 @@ Partial Class EditarPerfil
         Me.Label10.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(11, 44)
+        Me.Label10.Location = New System.Drawing.Point(11, 26)
         Me.Label10.Name = "Label10"
         Me.Label10.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
         Me.Label10.Size = New System.Drawing.Size(453, 30)
@@ -124,7 +215,7 @@ Partial Class EditarPerfil
         '
         'calendar
         '
-        Me.calendar.Location = New System.Drawing.Point(504, 333)
+        Me.calendar.Location = New System.Drawing.Point(504, 368)
         Me.calendar.MaxDate = New Date(2023, 3, 10, 0, 0, 0, 0)
         Me.calendar.Name = "calendar"
         Me.calendar.ShowToday = False
@@ -142,14 +233,14 @@ Partial Class EditarPerfil
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(504, 292)
+        Me.txtTelefono.Location = New System.Drawing.Point(504, 318)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(346, 22)
         Me.txtTelefono.TabIndex = 12
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(504, 252)
+        Me.txtCorreo.Location = New System.Drawing.Point(504, 268)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.ReadOnly = True
         Me.txtCorreo.Size = New System.Drawing.Size(346, 22)
@@ -157,7 +248,7 @@ Partial Class EditarPerfil
         '
         'txtContrasena2
         '
-        Me.txtContrasena2.Location = New System.Drawing.Point(504, 211)
+        Me.txtContrasena2.Location = New System.Drawing.Point(504, 220)
         Me.txtContrasena2.Name = "txtContrasena2"
         Me.txtContrasena2.Size = New System.Drawing.Size(346, 22)
         Me.txtContrasena2.TabIndex = 10
@@ -173,14 +264,14 @@ Partial Class EditarPerfil
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(504, 131)
+        Me.txtApellido.Location = New System.Drawing.Point(504, 130)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(346, 22)
         Me.txtApellido.TabIndex = 8
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(504, 88)
+        Me.txtNombre.Location = New System.Drawing.Point(504, 77)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(346, 22)
         Me.txtNombre.TabIndex = 7
@@ -190,7 +281,7 @@ Partial Class EditarPerfil
         Me.Label9.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(11, 333)
+        Me.Label9.Location = New System.Drawing.Point(11, 368)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label9.Size = New System.Drawing.Size(453, 30)
@@ -202,7 +293,7 @@ Partial Class EditarPerfil
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(11, 88)
+        Me.Label2.Location = New System.Drawing.Point(11, 77)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5, 3, 10, 0)
         Me.Label2.Size = New System.Drawing.Size(453, 30)
@@ -214,7 +305,7 @@ Partial Class EditarPerfil
         Me.Label8.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(11, 292)
+        Me.Label8.Location = New System.Drawing.Point(11, 318)
         Me.Label8.Name = "Label8"
         Me.Label8.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label8.Size = New System.Drawing.Size(453, 30)
@@ -226,7 +317,7 @@ Partial Class EditarPerfil
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(11, 131)
+        Me.Label4.Location = New System.Drawing.Point(11, 130)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label4.Size = New System.Drawing.Size(453, 30)
@@ -238,7 +329,7 @@ Partial Class EditarPerfil
         Me.Label7.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(11, 252)
+        Me.Label7.Location = New System.Drawing.Point(11, 268)
         Me.Label7.Name = "Label7"
         Me.Label7.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label7.Size = New System.Drawing.Size(453, 30)
@@ -262,7 +353,7 @@ Partial Class EditarPerfil
         Me.Label6.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(11, 211)
+        Me.Label6.Location = New System.Drawing.Point(11, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Padding = New System.Windows.Forms.Padding(5, 3, 20, 0)
         Me.Label6.Size = New System.Drawing.Size(453, 30)
@@ -336,4 +427,11 @@ Partial Class EditarPerfil
     Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents calendar As MonthCalendar
+    Friend WithEvents lblMsgIdentificacion As Label
+    Friend WithEvents lblMsgApellidos As Label
+    Friend WithEvents lblMsgpass1 As Label
+    Friend WithEvents pass2 As Label
+    Friend WithEvents lblMsgemail As Label
+    Friend WithEvents lblTelefono As Label
+    Friend WithEvents lblMsgNombre As Label
 End Class

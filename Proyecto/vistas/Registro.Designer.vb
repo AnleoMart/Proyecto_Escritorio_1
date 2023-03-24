@@ -60,7 +60,7 @@ Partial Class Registro
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(399, 22)
-        Me.txtEmail.TabIndex = 25
+        Me.txtEmail.TabIndex = 2
         '
         'PictureBox1
         '
@@ -113,7 +113,7 @@ Partial Class Registro
         Me.txtContrasena1.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena1.Name = "txtContrasena1"
         Me.txtContrasena1.Size = New System.Drawing.Size(403, 22)
-        Me.txtContrasena1.TabIndex = 19
+        Me.txtContrasena1.TabIndex = 3
         Me.txtContrasena1.UseSystemPasswordChar = True
         '
         'txtNombre
@@ -122,7 +122,7 @@ Partial Class Registro
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(403, 22)
-        Me.txtNombre.TabIndex = 18
+        Me.txtNombre.TabIndex = 1
         '
         'Label2
         '
@@ -141,7 +141,7 @@ Partial Class Registro
         Me.txtContrasena2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContrasena2.Name = "txtContrasena2"
         Me.txtContrasena2.Size = New System.Drawing.Size(403, 22)
-        Me.txtContrasena2.TabIndex = 27
+        Me.txtContrasena2.TabIndex = 4
         Me.txtContrasena2.UseSystemPasswordChar = True
         '
         'Label3
@@ -162,7 +162,7 @@ Partial Class Registro
         Me.txtDocumento.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDocumento.Name = "txtDocumento"
         Me.txtDocumento.Size = New System.Drawing.Size(403, 22)
-        Me.txtDocumento.TabIndex = 29
+        Me.txtDocumento.TabIndex = 0
         '
         'lblMsgNombre
         '
@@ -201,7 +201,7 @@ Partial Class Registro
         '
         Me.lblMsgContraseña.AutoSize = True
         Me.lblMsgContraseña.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblMsgContraseña.Location = New System.Drawing.Point(642, 553)
+        Me.lblMsgContraseña.Location = New System.Drawing.Point(642, 555)
         Me.lblMsgContraseña.Name = "lblMsgContraseña"
         Me.lblMsgContraseña.Size = New System.Drawing.Size(369, 16)
         Me.lblMsgContraseña.TabIndex = 34

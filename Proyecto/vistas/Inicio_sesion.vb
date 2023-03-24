@@ -1,8 +1,9 @@
-﻿Public Class Inicio_sesion
-    Private Sub olvidoContraseña_Click(sender As Object, e As EventArgs) Handles olvidoContraseña.Click
-        'Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Registro").SingleOrDefault()
-        'If fr Is Nothing Then
+﻿Imports System.ComponentModel
 
+Public Class Inicio_sesion
+    Private email, pass As Boolean
+    Private validacion As New Validaciones
+    Private Sub olvidoContraseña_Click(sender As Object, e As EventArgs) Handles olvidoContraseña.Click
         Dim RecuperarContrasena As New RecuperarContrasena
         RecuperarContrasena.MdiParent = Form1
         RecuperarContrasena.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
@@ -10,9 +11,6 @@
         RecuperarContrasena.Top = 0
         RecuperarContrasena.Show()
         Me.Hide()
-        'End If
-
-
     End Sub
     Public Sub iniciarSesion()
         Dim controllerUser As New ControladorUsuario
@@ -20,18 +18,20 @@
         Dim correo, contrasena As String
         correo = txtCorreo.Text
         contrasena = txtContrasena.Text
-        If controllerUser.login(correo, contrasena) Then
-            ocularMostrarBotones()
-            Dim verArticulos As New verArticulos
-            verArticulos.MdiParent = Form1
-            verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-            verArticulos.Left = 0
-            verArticulos.Top = 0
-            verArticulos.Show()
-            Me.Hide()
-        Else
-            MsgBox("Ha introducido usuario o contraseña erroneamente, por favor vuelva a intetntarlo", vbCritical, "Error")
+        If email And pass Then
+            If controllerUser.login(correo, contrasena) Then
+                ocularMostrarBotones()
+                Dim verArticulos As New verArticulos
+                verArticulos.MdiParent = Form1
+                verArticulos.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+                verArticulos.Left = 0
+                verArticulos.Top = 0
+                verArticulos.Show()
+                Me.Hide()
+            Else
+                MsgBox("Ha introducido usuario o contraseña erroneamente, por favor vuelva a intetntarlo", vbCritical, "Error")
 
+            End If
         End If
     End Sub
     Private Sub EntrarReg_Click(sender As Object, e As EventArgs) Handles EntrarReg.Click
@@ -54,20 +54,20 @@
         End If
 
     End Sub
-    Public Sub navegacion(destino As String)
-        Console.WriteLine("destino ---- " & destino)
-        Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = destino).SingleOrDefault()
-        If fr Is Nothing Then
-
-            Dim RecuperarContrasena As New RecuperarContrasena
-            RecuperarContrasena.MdiParent = Form1
-            RecuperarContrasena.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
-            RecuperarContrasena.Left = 0
-            RecuperarContrasena.Top = 0
-            RecuperarContrasena.Show()
-            Me.Hide()
-        End If
-    End Sub
+    'Public Sub navegacion(destino As String)
+    '   Console.WriteLine("destino ---- " & destino)
+    'Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = destino).SingleOrDefault()
+    'If fr Is Nothing Then
+    '
+    'Dim RecuperarContrasena As New RecuperarContrasena
+    '       RecuperarContrasena.MdiParent = Form1
+    '      RecuperarContrasena.StartPosition = FormStartPosition.Manual ' establece posision inicial del formulario en 0, 0
+    '     RecuperarContrasena.Left = 0
+    '    RecuperarContrasena.Top = 0
+    '   RecuperarContrasena.Show()
+    'Me.Hide()
+    'End If
+    'End Sub
 
 
 
@@ -87,5 +87,48 @@
         If e.KeyChar = ChrW(Keys.Enter) Then
             iniciarSesion()
         End If
+    End Sub
+
+
+    Private Sub txtContrasena_Validating(sender As Object, e As CancelEventArgs) Handles txtContrasena.Validating
+        If txtContrasena.Text <> "" Then
+            Console.Write("pass")
+            If validacion.rxContraseña(txtContrasena.Text) Then
+                lblMsgContraseña.ForeColor = Color.Green
+                lblMsgContraseña.Text = "aceptado"
+                lblMsgContraseña.Visible = True
+                pass = True
+            Else
+                lblMsgContraseña.ForeColor = Color.Red
+                lblMsgContraseña.Text = "Correo no aceptado, por fvor verificar"
+                lblMsgContraseña.Visible = True
+                pass = False
+            End If
+        Else
+            lblMsgContraseña.Visible = False
+            pass = False
+        End If
+    End Sub
+
+    Private Sub txtCorreo_Validating(sender As Object, e As CancelEventArgs) Handles txtCorreo.Validating
+        If txtCorreo.Text <> "" Then
+            Console.Write("corro")
+            If validacion.rxCorreo(txtCorreo.Text) Then
+
+                lblMsgCorreo.ForeColor = Color.Green
+                lblMsgCorreo.Text = "aceptado"
+                lblMsgCorreo.Visible = True
+                email = True
+            Else
+                lblMsgCorreo.ForeColor = Color.Red
+                lblMsgCorreo.Text = "Correo no aceptado, por fvor verificar"
+                lblMsgCorreo.Visible = True
+                email = False
+            End If
+        Else
+            lblMsgCorreo.Visible = False
+            email = False
+        End If
+
     End Sub
 End Class

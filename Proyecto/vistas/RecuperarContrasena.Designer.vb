@@ -29,6 +29,7 @@ Partial Class RecuperarContrasena
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblMsgCorreo = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,6 +38,7 @@ Partial Class RecuperarContrasena
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Panel1.Controls.Add(Me.lblMsgCorreo)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txtCorreo)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -52,7 +54,7 @@ Partial Class RecuperarContrasena
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(384, 572)
+        Me.Label1.Location = New System.Drawing.Point(412, 572)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 20)
@@ -72,7 +74,7 @@ Partial Class RecuperarContrasena
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(363, 506)
+        Me.Button1.Location = New System.Drawing.Point(388, 532)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(155, 26)
@@ -101,6 +103,17 @@ Partial Class RecuperarContrasena
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "¿Olvidaste tu contraseña?"
         '
+        'lblMsgCorreo
+        '
+        Me.lblMsgCorreo.AutoSize = True
+        Me.lblMsgCorreo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblMsgCorreo.Location = New System.Drawing.Point(358, 475)
+        Me.lblMsgCorreo.Name = "lblMsgCorreo"
+        Me.lblMsgCorreo.Size = New System.Drawing.Size(369, 16)
+        Me.lblMsgCorreo.TabIndex = 33
+        Me.lblMsgCorreo.Text = " letras de la ""a"" a la ""z"" minusculas o mayusculas, y espacios" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lblMsgCorreo.Visible = False
+        '
         'RecuperarContrasena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -125,4 +138,5 @@ Partial Class RecuperarContrasena
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txtCorreo As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblMsgCorreo As Label
 End Class

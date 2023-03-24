@@ -4,7 +4,8 @@ Public Class Validaciones
     Private nombre As New Regex("^[a-zA-Z ]+$")
     Private documento As New Regex("^[1-9]{1,15}$")
     Private correo As New Regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
-    Private contrasena As New Regex("^[^\s]{1,20}$")
+    Private contrasena As New Regex("^[^\s]{6,20}$")
+    Private telefono As New Regex("^[1-9]{6,10}$")
     Public Function rxNombre(cadena As String) As Boolean
         Dim resp As Boolean = False
         If cadena <> "" Then
@@ -27,6 +28,13 @@ Public Class Validaciones
         Return resp
     End Function
     Public Function rxContraseña(cadena As String) As Boolean
+        Dim resp As Boolean = False
+        If cadena <> "" Then
+            resp = contrasena.IsMatch(cadena)
+        End If
+        Return resp
+    End Function
+    Public Function rxTelefono(cadena As String) As Boolean
         Dim resp As Boolean = False
         If cadena <> "" Then
             resp = contrasena.IsMatch(cadena)

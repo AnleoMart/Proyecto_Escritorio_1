@@ -1,21 +1,19 @@
-﻿Public Class RecuperarContrasena
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+﻿Imports System.ComponentModel
 
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
+Public Class RecuperarContrasena
+    Private validacion As New Validaciones
+    Private email As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim cntrlUsuario As New ControladorUsuario
-        cntrlUsuario.recuperarContraseña(txtCorreo.Text)
+        If email And txtCorreo.Text <> "" Then
+            cntrlUsuario.recuperarContraseña(txtCorreo.Text)
+        Else
+            MsgBox("Debe ingresar un correo valido primero", vbCritical, "Error")
+        End If
+
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles Label1.Click
-
-        'Dim fr As Form = Application.OpenForms.OfType(Of Form)().Where(Function(frm) frm.Name = "Inicio_sesion").SingleOrDefault()
-        'If fr Is Nothing Then
 
         Dim Inicio_sesion As New Inicio_sesion
         Inicio_sesion.MdiParent = Form1
@@ -24,7 +22,6 @@
         Inicio_sesion.Top = 0
         Inicio_sesion.Show()
         Me.Hide()
-        ' End If
     End Sub
 
     Private Sub txtCorreo_Click(sender As Object, e As EventArgs) Handles txtCorreo.Click
@@ -38,7 +35,22 @@
 
     End Sub
 
-    Private Sub txtCorreo_TextChanged(sender As Object, e As EventArgs) Handles txtCorreo.TextChanged
-
+    Private Sub txtCorreo_Validating(sender As Object, e As CancelEventArgs) Handles txtCorreo.Validating
+        If txtCorreo.Text <> "" Then
+            If validacion.rxCorreo(txtCorreo.Text) Then
+                lblMsgCorreo.ForeColor = Color.Green
+                lblMsgCorreo.Text = "aceptado"
+                lblMsgCorreo.Visible = True
+                email = True
+            Else
+                lblMsgCorreo.ForeColor = Color.Red
+                lblMsgCorreo.Text = "Correo no aceptado, por fvor verificar"
+                lblMsgCorreo.Visible = True
+                email = False
+            End If
+        Else
+            lblMsgCorreo.Visible = False
+            email = False
+        End If
     End Sub
 End Class
