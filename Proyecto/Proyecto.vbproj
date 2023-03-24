@@ -266,6 +266,7 @@
     <Content Include="Resouces\logo_Empresa.png" />
     <Content Include="Resouces\adjuntar.png" />
     <Content Include="Resouces\Recuperar contraseña.png" />
+    <Content Include="Resouces\user.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

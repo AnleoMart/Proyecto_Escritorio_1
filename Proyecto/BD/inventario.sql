@@ -20,7 +20,9 @@ create table Distribuidor(
     ciudad varchar(30) not null,
     categoria varchar(30) not null, 
     telefono varchar(50),
-    descripcion varchar(255)
+    descripcion varchar(255),
+    estado varchar(20)
+    
 );
 create table Articulos (
     id int not null primary key,
